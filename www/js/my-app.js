@@ -492,7 +492,11 @@ myApp.onPageInit('home', function(page) {
 
     var map;
     var div = document.getElementById("map_canvas");
+
+    // Initialize the map view
     map = plugin.google.maps.Map.getMap(div);
+
+    // Wait until the map is ready status.
     map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
 
     function onMapReady() {
@@ -502,7 +506,6 @@ myApp.onPageInit('home', function(page) {
 
     function onBtnClicked() {
 
-      alert('map clicked');
       // Move to the position with animation
       map.animateCamera({
         target: {lat: 37.422359, lng: -122.084344},
@@ -534,9 +537,6 @@ myApp.onPageInit('home', function(page) {
         });
       });
     }
-
-    
-
 
 
     $('#open-application').click(function() {

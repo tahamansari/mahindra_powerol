@@ -67,111 +67,110 @@ function logout() {
 }
 
 
-//back button
+//back buttons
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-
-    // alert('my device is now ready');
     console.log('my device is now ready');
     console.log("file :" + cordova.file);
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
 
 
+
     // download ppsx
-    var fileTransfer = new FileTransfer();
+    // var fileTransfer = new FileTransfer();
 
-    var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindra.ppsx");
-    // applicationStorageDirectory
-    fileTransfer.download(
-        uri,
-        cordova.file.externalApplicationStorageDirectory + 'files/download/mahindra.ppsx',
-        function(entry) {
-            // alert("download complete: " + entry.toURL());
-        },
-        function(error) {
-            alert("download error source " + error.source);
-            alert("download error target " + error.target);
-            alert("download error code" + error.code);
-        },
-        false, {
-            headers: {
-                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-            }
-        }
-    );
+    // var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindra.ppsx");
+    // // applicationStorageDirectory
+    // fileTransfer.download(
+    //     uri,
+    //     cordova.file.externalApplicationStorageDirectory + 'files/download/mahindra.ppsx',
+    //     function(entry) {
+    //         // alert("download complete: " + entry.toURL());
+    //     },
+    //     function(error) {
+    //         alert("download error source " + error.source);
+    //         alert("download error target " + error.target);
+    //         alert("download error code" + error.code);
+    //     },
+    //     false, {
+    //         headers: {
+    //             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //         }
+    //     }
+    // );
 
-    // download NEPAL-BANGLADESH-BROCHURE.pdf
-    var fileTransfer = new FileTransfer();
+    // // download NEPAL-BANGLADESH-BROCHURE.pdf
+    // var fileTransfer = new FileTransfer();
 
-    var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/NEPAL-BANGLADESH-BROCHURE.pdf");
-    // applicationStorageDirectory
-    fileTransfer.download(
-        uri,
-        cordova.file.externalApplicationStorageDirectory + 'files/download/NEPAL-BANGLADESH-BROCHURE.pdf',
-        function(entry) {
-            // alert("download complete: " + entry.toURL());
-        },
-        function(error) {
-            alert("download error source " + error.source);
-            alert("download error target " + error.target);
-            alert("download error code" + error.code);
-        },
-        false, {
-            headers: {
-                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-            }
-        }
-    );
+    // var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/NEPAL-BANGLADESH-BROCHURE.pdf");
+    // // applicationStorageDirectory
+    // fileTransfer.download(
+    //     uri,
+    //     cordova.file.externalApplicationStorageDirectory + 'files/download/NEPAL-BANGLADESH-BROCHURE.pdf',
+    //     function(entry) {
+    //         // alert("download complete: " + entry.toURL());
+    //     },
+    //     function(error) {
+    //         alert("download error source " + error.source);
+    //         alert("download error target " + error.target);
+    //         alert("download error code" + error.code);
+    //     },
+    //     false, {
+    //         headers: {
+    //             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //         }
+    //     }
+    // );
 
 
-    // download REST-OF-THE-WORLD-BROCHURE.pdf
-    var fileTransfer = new FileTransfer();
+    // // download REST-OF-THE-WORLD-BROCHURE.pdf
+    // var fileTransfer = new FileTransfer();
 
-    var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/REST-OF-THE-WORLD-BROCHURE.pdf");
-    // applicationStorageDirectory
-    fileTransfer.download(
-        uri,
-        cordova.file.externalApplicationStorageDirectory + 'files/download/REST-OF-THE-WORLD-BROCHURE.pdf',
-        function(entry) {
-            // alert("download complete: " + entry.toURL());
-        },
-        function(error) {
-            alert("download error source " + error.source);
-            alert("download error target " + error.target);
-            alert("download error code" + error.code);
-        },
-        false, {
-            headers: {
-                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-            }
-        }
-    );
+    // var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/REST-OF-THE-WORLD-BROCHURE.pdf");
+    // // applicationStorageDirectory
+    // fileTransfer.download(
+    //     uri,
+    //     cordova.file.externalApplicationStorageDirectory + 'files/download/REST-OF-THE-WORLD-BROCHURE.pdf',
+    //     function(entry) {
+    //         // alert("download complete: " + entry.toURL());
+    //     },
+    //     function(error) {
+    //         alert("download error source " + error.source);
+    //         alert("download error target " + error.target);
+    //         alert("download error code" + error.code);
+    //     },
+    //     false, {
+    //         headers: {
+    //             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //         }
+    //     }
+    // );
 
-    // download AXE-debug.apk
-    var fileTransfer = new FileTransfer();
+    // // download AXE-debug.apk
+    // var fileTransfer = new FileTransfer();
 
-    var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/AXE-debug.apk");
-    // applicationStorageDirectory
-    fileTransfer.download(
-        uri,
-        cordova.file.externalApplicationStorageDirectory + 'files/download/AXE-debug.apk',
-        function(entry) {
-            // alert("download complete: " + entry.toURL());
-        },
-        function(error) {
-            alert("download error source " + error.source);
-            alert("download error target " + error.target);
-            alert("download error code" + error.code);
-        },
-        false, {
-            headers: {
-                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-            }
-        }
-    );
+    // var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/AXE-debug.apk");
+    // // applicationStorageDirectory
+    // fileTransfer.download(
+    //     uri,
+    //     cordova.file.externalApplicationStorageDirectory + 'files/download/AXE-debug.apk',
+    //     function(entry) {
+    //         // alert("download complete: " + entry.toURL());
+    //     },
+    //     function(error) {
+    //         alert("download error source " + error.source);
+    //         alert("download error target " + error.target);
+    //         alert("download error code" + error.code);
+    //     },
+    //     false, {
+    //         headers: {
+    //             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //         }
+    //     }
+    // );
 
     document.addEventListener("backbutton", function(e) {
 
