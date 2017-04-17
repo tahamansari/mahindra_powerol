@@ -18,6 +18,9 @@
         },
         "cordova-plugin-fileopener": {
             "PACKAGE_NAME": "com.kreaserv.powerol"
+        },
+        "cordova-plugin-googlemaps": {
+            "PACKAGE_NAME": "com.kreaserv.powerol"
         }
     },
     "dependent_plugins": {}
