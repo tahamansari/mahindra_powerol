@@ -42,7 +42,7 @@
       </gap:plugin> -->
 
     <plugin spec="https://github.com/mapsplugin/cordova-plugin-googlemaps" source="git">
-        <param name="API_KEY_FOR_ANDROID" value="AIzaSyBCtW04-U5FobhrjZbPiUOwvsy_JmfFA0Q" />
+        <param name="API_KEY_FOR_ANDROID" value="AIzaSyCSjtcjl4raoEN4rZSkpeFVQGWlOAxJpxY" />
         <!-- <param name="API_KEY_FOR_IOS" value="XXXXXXXXXXXXX" /> -->
     </plugin>
 
