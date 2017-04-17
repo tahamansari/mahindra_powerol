@@ -1,0 +1,235 @@
+<!-- Page, "data-page" contains page name -->
+<style type="text/css"></style>
+<div data-page="book_now" class="page">
+  <!-- Top Navbar. In Material theme it should be inside of the page-->
+  <div class="panel-overlay"></div>
+  <div class="panel panel-right panel-cover menu_sub_container">
+    <div class="content-block" style="margin:0px">
+      <div class="vz-sidebar-menus">
+        <div class="col-100" style="text-align:center">
+          <img style="width:50%;margin:auto" src="img/logo.png">
+        </div>
+        <div class="row">
+
+            <ul class="col-100 mar0">
+
+                <a class="close-panel"  href="product_listing.html">
+                  <li class="vz-sidebar-menu-header col-100 mar0 headingbold">Powerol</li>
+                  <ul class="col-100">
+                      <li class="">Product List</li>
+                      <li class="">Customer List</li>
+                  </ul> 
+                </a>
+
+                <a class="close-panel"  href="video.html">
+                  <li class="vz-sidebar-menu-header col-100 headingbold">Power 2 Empower</li>
+                  <ul class="col-100">
+                      <li class="about1">Bank</li>
+                      <li class="">Hotel</li>
+                      <li class="">College</li>
+                      <li class="">Hospital</li>
+                  </ul>
+                </a>
+
+            </ul>
+
+
+            <ul class="col-100 mar0">
+                <a class="close-panel"  href="5k_punch.html">
+                  <li class="col-100 vz-sidebar-menu-header headingbold">5 ka Punch</li>
+                  <ul class="col-100">
+                      <li class="">Silence Certified</li>
+                      <li class="">Peace of Mind</li>
+                      <li class="">Fuel Intelligent</li>
+                      <li class="">Fastest Delivery</li>
+                      <li class="">Power Band</li>
+                  </ul>
+                </a>
+            </ul>
+
+            <ul class="col-100 mar0">
+                <a class="close-panel"  href="our_story.html">
+                  <li class="vz-sidebar-menu-header col-100 headingbold">Our Story</li>
+                  <ul class="col-100">
+                      <li class="">Mahindra Group</li>
+                      <li class="">Mahindra Group Video</li>
+                      <li class="">Mahindra Powerol</li>
+                      <li class="">Mahindra Powerol Video</li>
+                  </ul>
+                </a>
+
+            </ul>
+
+
+            <ul class="col-100 mar0">
+                <a class="close-panel"  href="enquiry_form.html">
+                    <li class="col-100 vz-sidebar-menu-header headingbold">Enquiry Form</li>
+                    <ul class="col-100">
+                        <a class="close-panel" href="book_now.html"><li class="">Listed Bookings</li></a>
+                        <a class="close-panel" href="enquiry_form.html"><li class="">New Enquiry</li></a>
+                    </ul>
+                </a>
+            </ul>
+
+
+            <ul class="col-100 mar0">
+
+                <a class="close-panel"  href="cba.html">
+                  <li class="vz-sidebar-menu-header col-100 headingbold">Smart Tools</li>
+                  <ul class="col-100">
+                      <li class="">Cost Benefit Analysis</li>
+                      <li class="">Load Calculator</li>
+                  </ul>
+                </a>
+
+            </ul>
+            
+            
+            <ul class="col-100 mar0">
+
+                <a class="close-panel"  href="faq.html">
+                  <li class="col-100 vz-sidebar-menu-header headingbold">Faq's</li>
+                  <ul class="col-100">
+                      <a class="close-panel" href="faq.html">
+                        <li class="">Listed Booking</li>
+                      </a>
+                      <li class="">New Enquiry</li>
+                  </ul>
+                </a>
+
+            </ul>
+
+                  
+            <a class="close-panel"  href="findus_map.html">
+              <ul class="col-100 mar0">
+                  <li class="col-100 vz-sidebar-menu-header headingbold">Locate Us</li>
+              </ul>
+            </a>
+
+            <ul class="col-100">
+                <a href="#" class="button button-big button-red" onclick="logout()">LOGOUT</a>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="navbar">
+      <div class="navbar-inner">
+          <div class="right">
+              <a href="home.html" class="link icon-only vz-sidebar-icon" onclick="goto_page('home.html')">
+                  <img class="right_home" src="img/home.png">
+              </a>
+              <a href="#" data-panel="right" class="link icon-only open-panel vz-sidebar-icon">
+                  <img class="right_menu" src="img/menu.png">
+              </a>
+          </div>
+      </div>
+  </div>
+
+  <!-- Scrollable page content -->
+  <div class="page-content">
+
+      <div class="powerol_bg">
+
+        <!-- <a href="findus_dealer.html" class="goto">goto findus</a>      -->           
+
+        <div class="top_bg red_top_bg">
+          <a href="" class="backbutton"><img class="left_arrow floating" src="img/left_arrow.png"></a>
+          <h1 class="top_headers" id="book_now_h1"></h1>
+        </div>
+
+        <div class="book_content">
+            <h2 class="book_heading" id="book_now_title"></h2>
+            <!-- <input class="book_now" type="submit" value="BOOK NOW" name=""> -->
+        </div>
+
+        <div class="book_now_input">
+        
+          <div class="col-50">
+            <input type="text" name="" placeholder="Full Name" id="book_now_name">
+          </div>
+
+          <div class="col-50">
+            <input type="text" name="" placeholder="Company" id="book_now_company">
+          </div>
+
+          <div class="col-50">
+            <input type="text" name="" placeholder="Mobile No" id="book_now_mobile">
+          </div>
+
+          <div class="col-50">
+            <input type="text" name="" placeholder="Email-ID" id="book_now_email">
+          </div>
+
+          <div class="col-50">
+            <select name="book_now_product_range"  style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;border: 1px solid rgba(0,0,0,.5);padding: 2% 4%;font-size: 17px;letter-spacing: 1px;" id="book_now_product_range">
+              <option value="">Product Range</option>
+              <option value="5KVA*">5KVA*</option>
+              <option value="200KVA - 500KVA">200KVA - 500KVA</option>
+              <option value="5KVA*">5KVA*</option>
+              <option value="200KVA - 500KVA">200KVA - 500KVA</option>
+            </select>
+          </div>
+
+          <div class="col-50">
+            <select name="book_now_state"   style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;border: 1px solid rgba(0,0,0,.5);padding: 2% 4%;font-size: 17px;letter-spacing: 1px;" id="book_now_state">
+              <option value="">State</option>
+              <option value="Kathmandu">Kathmandu</option>
+              <option value="Bagmati">Bagmati</option>
+              <option value="Bheri">Bheri</option>
+              <option value="Dhawalagiri">Dhawalagiri</option>
+              <option value="Gandaki">Gandaki</option>
+              <option value="Janakpur">Janakpur</option>
+              <option value="Karnali">Karnali</option>
+              <option value="Kosi">Kosi</option>
+              <option value="Lumbini">Lumbini</option>
+              <option value="Mahakali">Mahakali</option>
+              <option value="Mechi">Mechi</option>
+              <option value="Narayani">Narayani</option>
+              <option value="Rapti">Rapti</option>
+              <option value="Sagarmatha">Sagarmatha</option>
+              <option value="Seti">Seti</option>
+            </select>
+          </div>
+
+
+          <div class="col-50">
+            <select name="book_now_segment"  style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;border: 1px solid rgba(0,0,0,.5);padding: 2% 4%;font-size: 17px;letter-spacing: 1px;" id="book_now_segment">
+              <option value="">Segment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-50">
+            <select name="book_now_dg_user"  style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;border: 1px solid rgba(0,0,0,.5);padding: 2% 4%;font-size: 17px;letter-spacing: 1px;" id="book_now_dg_user">
+              <option value="">Are you an existing DG set user</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="col-50">
+            <select name="book_now_dg_user_product_range"  style="display:none;width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;border: 1px solid rgba(0,0,0,.5);padding: 2% 4%;font-size: 17px;letter-spacing: 1px;" id="book_now_dg_user_product_range">
+              <option value="">Select Existing Product Range</option>
+              <option value="5KVA*">5KVA*</option>
+              <option value="200KVA - 500KVA">200KVA - 500KVA</option>
+              <option value="5KVA*">5KVA*</option>
+              <option value="200KVA - 500KVA">200KVA - 500KVA</option>
+            </select>
+          </div>
+
+          <input class="submit_enq" type="submit" value="Submit" onclick="book_now_form_submit()">
+          <input class="submit_enq" type="submit" value="Reset" onclick="book_now_form_reset()" style="background: #3c73c0;margin-left: 2%;">
+                    
+        </div>
+
+        <img class="left_logo" src="img/logo.png">
+        <img class="right_logo" src="img/right_logo_silver.png">
+      </div>
+
+  </div>
+
+</div>

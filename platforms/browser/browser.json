@@ -1,0 +1,48 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "org.devgirl.framework7.mediaexplorer"
+        },
+        "cordova-plugin-fileopener": {
+            "PACKAGE_NAME": "com.kreaserv.powerol"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-fileopener/www/FileOpener.js",
+            "id": "cordova-plugin-fileopener.FileOpener",
+            "pluginId": "cordova-plugin-fileopener",
+            "clobbers": [
+                "cordova.plugins.FileOpener"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-console": "1.0.5",
+        "cordova-plugin-statusbar": "1.0.1",
+        "cordova-plugin-fileopener": "1.0.5"
+    }
+}

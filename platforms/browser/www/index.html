@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- <meta http-equiv="Content-Security-Policy"  content="default-src * gap: ws: https://ssl.gstatic.com;img-src 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;"> -->
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="./lib/framework7/css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <!-- Path to your custom app styles-->
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link href="css/icon.css"
+      rel="stylesheet">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <!-- <link rel="stylesheet" href="./lib/framework7/css/framework7.material.colors.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  </head>
+  <body>
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+          <div data-page="index" class="page">
+            <!-- <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="right">
+                        <a href="home.html" class="link icon-only vz-sidebar-icon">
+                            <i class="material-icons vz-goto-home">home</i>
+                        </a>
+                        <a href="#" class="link icon-only open-panel vz-sidebar-icon">
+                            <i class="material-icons vz-rotate-90">line_weight</i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="page-content">
+              <div class="menu_bg">
+                  <img class="left_logo_login mahindra_logo" src="img/mahindra_logo.png">
+                  <img class="right_logo_login" src="img/logo1.png">
+                  <img class="login_page_machine_image" src="img/login_page_machine.png">
+                  <div class="login_username">
+                      <input class="login-textbox" type="text" name="username" placeholder="LOGIN" id="login-email">              
+                  </div>
+                  <br>
+                  <div class="login_password">
+                      <input class="login-textbox" type="password" name="username" placeholder="PASSWORD" id="login-password">
+                  </div>
+                  <div class="login_password">
+                    <center>
+                      <div class="anchor-container">
+                        <a class="anchor-forgot-pass" href="forgot.html">FORGOT PASSWORD ? </a>
+                      </div>
+                    </center>
+                  </div>
+                  <br>
+                  <div class="btn_login_conainer">
+                      <a href="" onclick="login()">
+                        <span>LOGIN IN</span>
+                       <!--  <a href="enquiry_form.html">goto enquiry</a> -->
+                      </a>
+                  </div>
+                  <!-- google map code -->
+                  <!-- <div id="map"></div> -->
+                  <!-- <a href="5k_punch.html">5ks</a> -->
+              </div>
+            </div>
+            <!-- <div class="toolbar">
+              <div class="toolbar-inner">
+                <a href="#" class="link">Link 1</a>
+                <a href="#" class="link">Link 2</a>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="./js/framework7.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="./js/lockr.min.js"></script>
+
+      <!-- google map code -->
+      <!-- <script type="text/javascript">
+          function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+          }
+      </script> -->
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMXZN8_63FDKaEPjtjfn6FaYlkmTN0UM&callback=initMap"> </script> -->
+
+        <script type="text/javascript" src="./plugins/cordova-plugin-fileopener/www/FileOpener.js"></script>
+        <script type="text/javascript" src="./js/my-app.js"></script>
+        <script type="text/javascript" src="./js/util.js"></script>
+        <script type="text/javascript" src="./js/owl.carousel.js"></script>
+        <!-- 5kapunch js -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script> -->
+        <!-- <script type="text/javascript" src="./js/high_pie.js"></script> -->
+        
+  </body>
+</html> 
