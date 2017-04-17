@@ -41,10 +41,10 @@
         <param name="API_KEY_FOR_ANDROID" value="AIzaSyBCtW04-U5FobhrjZbPiUOwvsy_JmfFA0Q" />
       </gap:plugin> -->
 
-    <gap:plugin spec="https://github.com/mapsplugin/cordova-plugin-googlemaps" source="git">
+    <plugin spec="https://github.com/mapsplugin/cordova-plugin-googlemaps" source="git">
         <param name="API_KEY_FOR_ANDROID" value="AIzaSyBCtW04-U5FobhrjZbPiUOwvsy_JmfFA0Q" />
         <!-- <param name="API_KEY_FOR_IOS" value="XXXXXXXXXXXXX" /> -->
-    </gap:plugin>
+    </plugin>
 
 
     <!-- file work on phonegap serve -->
