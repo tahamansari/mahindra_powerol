@@ -30,8 +30,11 @@
     <plugin name="cordova-plugin-console" spec="~1.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
 
-    <plugin name="cordova-plugin-googlemaps"/>
-
+    <!-- <plugin name="cordova-plugin-googlemaps"/> -->
+    <feature name="cordova-plugin-googlemaps">
+        <param name="API_KEY_FOR_ANDROID" value="AIzaSyBCtW04-U5FobhrjZbPiUOwvsy_JmfFA0Q" />
+        <param name="APP_NAME" value="My Project" />
+    </feature>
 
 
     <!-- file work on phonegap serve -->
