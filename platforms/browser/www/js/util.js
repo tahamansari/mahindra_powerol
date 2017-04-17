@@ -196,6 +196,8 @@ function onDeviceReady() {
         }
 
     }, false);
+
+    
 }
 
 
