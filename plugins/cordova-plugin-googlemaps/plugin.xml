@@ -21,7 +21,7 @@
 
     <!-- android -->
     <platform name="android">
-        <!-- <preference name="API_KEY_FOR_ANDROID" /> -->
+        <preference name="API_KEY_FOR_ANDROID" />
 
         <info>
              In order to run this plugin, you need to obtain Google Maps API key for Android.
@@ -74,12 +74,12 @@
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data
               android:name="com.google.android.geo.API_KEY"
-              android:value="AIzaSyAlqpmD2l9INTUVzyhXo9nIxaLrgF7jRAg" />
+              android:value="$API_KEY_FOR_ANDROID" />
             <!-- Google Play Services SDK -->
             <meta-data android:name="com.google.android.gms.version"
                        android:value="@integer/google_play_services_version" />
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -98,7 +98,7 @@
 
     <!-- ios -->
     <platform name="ios">
-        <!-- <preference name="API_KEY_FOR_IOS" /> -->
+        <preference name="API_KEY_FOR_IOS" />
 
         <info>
              In order to run this plugin, you need to obtain Google Maps API key for iOS.
