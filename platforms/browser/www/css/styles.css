@@ -130,6 +130,7 @@ h1,h2,h3,h4,h5,h6{
     top: 10%;
     height: 20%;
     width: 100%;
+        z-index: 1;
     /*z-index: 9;*/
 
 }
@@ -594,6 +595,7 @@ div{
     background: url(../img/enquiry_form_bule_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+        z-index: 1;
 }
 .enquiry_form_content{
     width: 100%;
@@ -658,6 +660,7 @@ div{
     background: url(../img/faq_red_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
+        z-index: 1;
 }
 
 .faq_content{
@@ -1659,4 +1662,6 @@ text{
     margin-top: -25% !important;
     margin-left: -175% !important;
 }
+
+
 

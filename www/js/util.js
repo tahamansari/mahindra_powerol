@@ -327,10 +327,12 @@ function enquiry_form_submit() {
         '</div>';
     $('#enquiry_data').append(html);
     myApp.showTab('#tab2');
-    $("#tab2_button").css("background-color", "#3c73c0");
-    $("#tab2_button").css("color", "#fff");
-    $("#tab1_button").css("background-color", "");
-    $("#tab1_button").css("color", "#3c73c0");
+
+    $("#tab2_button").animate({"background-color": "#3c73c0"});
+    $("#tab2_button").animate({"color": "#fff"});
+    $("#tab1_button").animate({"background-color": ""});
+    $("#tab1_button").animate({"color": "#3c73c0"});
+
     $("#state,#product_range,#segment,#dg_user,#name,#company,#mobile,#email").val('');
     $("#dg_user_product_range").hide();
     $("#dg_user").show();
@@ -465,10 +467,12 @@ function book_now_form_submit() {
         ignoreCache: false,
     });
     myApp.showTab('#tab2');
-    $("#tab2_button").css("background-color", "#3c73c0");
-    $("#tab2_button").css("color", "#fff");
-    $("#tab1_button").css("background-color", "");
-    $("#tab1_button").css("color", "#3c73c0");
+
+    $("#tab2_button").animate({"background-color":"#3c73c0"});
+    $("#tab2_button").animate({"color":"#fff"});
+    $("#tab1_button").animate({"background-color":""});
+    $("#tab1_button").animate({"color":"#3c73c0"});
+
     $("#book_now_state,#book_now_product_range,#book_now_segment,#book_now_dg_user,#book_now_name,#book_now_company,#book_now_mobile,#book_now_email").val('');
     $("#book_now_dg_user_product_range").hide();
     $("#book_now_dg_user").show();
@@ -655,7 +659,9 @@ function update_data(count) {
     } else {
         border_color = '6px solid #3c73c0';
     }
-    $("#enquiry_list_" + count).css("border-left", border_color);
+
+    $("#enquiry_list_" + count).animate({"border-left": border_color});
+
     var update_data = Lockr.get('data');
     console.log(update_data);
     update_data[count].company = $("#update_company_" + count).val();
@@ -683,7 +689,9 @@ function update_data(count) {
 function redirect_product_specification(inp) {
     // console.log($('#'+inp+'').val());
 
-    $('#' + inp).css('background-color', 'rgba(197, 195, 195, 0.25)');
+    $('#' + inp).addClass("hvr-wobble-horizontal");
+    // return false;
+    $('#' + inp).animate({'background-color':'rgba(197, 195, 195, 0.25)'});
 
     // return false;
 
