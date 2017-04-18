@@ -5,14 +5,18 @@ function j2s(json) {
 }
 
 function goto_page(page) {
+
     mainView.router.load({
+
         url: page,
         ignoreCache: false,
+        
     });
 }
 
 //app login
 function login() {
+
     var email = $('#login-email').val();
     var password = $('#login-password').val();
     if (email == '') {
@@ -72,11 +76,11 @@ function logout() {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+
     console.log('my device is now ready');
     console.log("file :" + cordova.file);
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
-
 
 
     // download ppsx
@@ -195,6 +199,14 @@ function onDeviceReady() {
         }
 
     }, false);
+
+    // console.log('navigating to findus map');
+
+
+    mainView.router.load({
+        url: 'findus_map.html',
+        ignoreCache: false,
+    });
 
     
 }
