@@ -46,6 +46,7 @@ function login() {
             console.log('done: ' + j2s(res));
             myApp.hideIndicator();
             if (res.status == 'SUCCESS') {
+
                 Lockr.set('token', res.data);
                 token = Lockr.get('token');
                 mainView.router.load({

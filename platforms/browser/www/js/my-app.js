@@ -142,151 +142,165 @@ myApp.onPageInit('cba', function(page) {
 
 myApp.onPageInit('findus_map', function(page) {
 
+        var element = document.getElementById("map");
+        var mapTypeIds = [];
+        for (var type in google.maps.MapTypeId) {
+            mapTypeIds.push(google.maps.MapTypeId[type]);
+        }
+
+        mapTypeIds.push("OSM");
+        mapTypeIds.push("MyGmap");
+        mapTypeIds.push("LocalGmap");
+        mapTypeIds.push("WebStorageGmap");
+        mapTypeIds.push("LocalMyGmap");
+        mapTypeIds.push("WebStorageMyGmap");
+
+        var map = new google.maps.Map(element, {
+
+            center: new google.maps.LatLng(28.394857, 84.124008),
+            zoom: 8,
+            mapTypeId: "MyGmap",
+            mapTypeControlOptions: {
+                mapTypeIds: mapTypeIds,
+                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+            }
+        });
+
+        map.mapTypes.set("OSM", new google.maps.ImageMapType({
+            getTileUrl: getOsmTileImgSrc,
+            tileSize: new google.maps.Size(256, 256),
+            name: "OSM",
+            maxZoom: 15
+        }));
+
+        map.mapTypes.set("MyGmap", new google.maps.ImageMapType({
+            getTileUrl: getGmapTileImgSrc,
+            tileSize: new google.maps.Size(256, 256),
+            name: "MyGmap",
+            maxZoom: 15
+        }));
+
+        map.mapTypes.set("LocalGmap", new google.maps.ImageMapType({
+            getTileUrl: getLocalTileImgSrc,
+            tileSize: new google.maps.Size(256, 256),
+            name: "LocalGmap",
+            maxZoom: 15
+        }));
+
+        map.mapTypes.set("WebStorageGmap", new google.maps.ImageMapType({
+            getTileUrl: getWebStorageTileImgSrc,
+            tileSize: new google.maps.Size(256, 256),
+            name: "WebStorageGmap",
+            maxZoom: 15
+        }));
+
+        map.mapTypes.set("LocalMyGmap", new google.maps.ImageMapType({
+            getTileUrl: function(coord, zoom) {
+                return checkTileInSprites(coord, zoom) ?
+                    getLocalTileImgSrc(coord, zoom) :
+                    getGmapTileImgSrc(coord, zoom);
+            },
+            tileSize: new google.maps.Size(256, 256),
+            name: "LocalMyGmap",
+            maxZoom: 15
+        }));
+
+        map.mapTypes.set("WebStorageMyGmap", new google.maps.ImageMapType({
+            getTileUrl: function(coord, zoom) {
+                var image = getWebStorageTileImgSrc(coord, zoom);
+                return image ? image : getGmapTileImgSrc(coord, zoom);
+            },
+            tileSize: new google.maps.Size(256, 256),
+            name: "WebStorageMyGmap",
+            maxZoom: 15
+        }));
+
+        google.maps.event.addListener(map, 'click', function(point) {
+
+            var marker = new google.maps.Marker({
+                position: point.latLng,
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'dblclick', function() {
+                marker.setMap(null);
+            });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                new google.maps.InfoWindow({
+                    content: 'lat: ' + point.latLng.lat() + '<br>lng:' + point.latLng.lng()
+                }).open(map, marker);
+            });
+        });
+
+        function CustomControl(controlDiv, map, title, handler) {
+            controlDiv.style.padding = '5px';
+
+            var controlUI = document.createElement('DIV');
+            controlUI.style.backgroundColor = 'white';
+            controlUI.style.borderStyle = 'solid';
+            controlUI.style.borderWidth = '2px';
+            controlUI.style.cursor = 'pointer';
+            controlUI.style.textAlign = 'center';
+            controlUI.title = title;
+            controlDiv.appendChild(controlUI);
+
+            var controlText = document.createElement('DIV');
+            controlText.style.fontFamily = 'Arial,sans-serif';
+            controlText.style.fontSize = '12px';
+            controlText.style.paddingLeft = '4px';
+            controlText.style.paddingRight = '4px';
+            controlText.innerHTML = title;
+            controlUI.appendChild(controlText);
+
+            google.maps.event.addDomListener(controlUI, 'click', handler);
+        }
+
+        var clearWebStorageDiv = document.createElement('DIV');
+        var clearWebStorageButton = new CustomControl(clearWebStorageDiv, map,
+            'Clear Web Storage', clearWebStorage);
+
+        var prepareWebStorageDiv = document.createElement('DIV');
+        var prepareWebStorageButton = new CustomControl(prepareWebStorageDiv, map,
+            'Prepare Web Storage', prepareWebStorage);
+
+        clearWebStorageDiv.index = 1;
+        prepareWebStorageDiv.index = 1;
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(clearWebStorageDiv);
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(prepareWebStorageDiv);
+        
+        // console.log("Map Count After Increment is  "+countmap);
+
+        if(countmap==1){
+
+            $('.mapoverlay').css('display','block');
+            
+            countmap++;
+            setTimeout(function(){ 
+               console.log('navigating to home');
+
+                var token = Lockr.get('token');
+                if (token != undefined) {
+                    mainView.router.load({
+                        url: 'home.html',
+                        ignoreCache: false,
+                    });
+                }else{
+
+                    mainView.router.load({
+                        url: 'index.html',
+                        ignoreCache: false,
+                    });
+                }
+               
+            }, 2000);
+        }
+
 
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
 
-
-    var element = document.getElementById("map");
-
-var mapTypeIds = [];
-for(var type in google.maps.MapTypeId) {
-    mapTypeIds.push(google.maps.MapTypeId[type]);
-}
-
-mapTypeIds.push("OSM");
-mapTypeIds.push("MyGmap");
-mapTypeIds.push("LocalGmap");
-mapTypeIds.push("WebStorageGmap");
-mapTypeIds.push("LocalMyGmap");
-mapTypeIds.push("WebStorageMyGmap");    
-
-var map = new google.maps.Map(element, {
-    
-    center: new google.maps.LatLng(28.394857, 84.124008),
-    zoom: 8,
-    mapTypeId: "MyGmap",
-    mapTypeControlOptions: {
-        mapTypeIds: mapTypeIds,
-        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-    }
-});
-
-map.mapTypes.set("OSM", new google.maps.ImageMapType({
-    getTileUrl: getOsmTileImgSrc,
-    tileSize: new google.maps.Size(256, 256),
-    name: "OSM",
-    maxZoom: 15
-}));
-
-map.mapTypes.set("MyGmap", new google.maps.ImageMapType({
-    getTileUrl: getGmapTileImgSrc,
-    tileSize: new google.maps.Size(256, 256),
-    name: "MyGmap",
-    maxZoom: 15
-}));
-
-map.mapTypes.set("LocalGmap", new google.maps.ImageMapType({
-    getTileUrl: getLocalTileImgSrc,
-    tileSize: new google.maps.Size(256, 256),
-    name: "LocalGmap",
-    maxZoom: 15
-}));
-
-map.mapTypes.set("WebStorageGmap", new google.maps.ImageMapType({
-    getTileUrl: getWebStorageTileImgSrc,
-    tileSize: new google.maps.Size(256, 256),
-    name: "WebStorageGmap",
-    maxZoom: 15
-}));
-
-map.mapTypes.set("LocalMyGmap", new google.maps.ImageMapType({
-    getTileUrl: function(coord, zoom) {
-        return checkTileInSprites(coord, zoom) ?
-            getLocalTileImgSrc(coord, zoom) :
-            getGmapTileImgSrc(coord, zoom);
-    },
-    tileSize: new google.maps.Size(256, 256),
-    name: "LocalMyGmap",
-    maxZoom: 15
-}));
-
-map.mapTypes.set("WebStorageMyGmap", new google.maps.ImageMapType({
-    getTileUrl: function(coord, zoom) {
-        var image = getWebStorageTileImgSrc(coord, zoom);
-        return image ? image :  getGmapTileImgSrc(coord, zoom);
-    },
-    tileSize: new google.maps.Size(256, 256),
-    name: "WebStorageMyGmap",
-    maxZoom: 15
-}));
-
-google.maps.event.addListener(map, 'click', function(point) {
-
-    var marker = new google.maps.Marker({
-        position: point.latLng,
-        map: map
-    });
-
-    google.maps.event.addListener(marker, 'dblclick', function() {
-        marker.setMap(null);
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        new google.maps.InfoWindow({
-            content: 'lat: ' + point.latLng.lat() + '<br>lng:' + point.latLng.lng()
-        }).open(map, marker);
-    });
-});
-
-function CustomControl(controlDiv, map, title, handler) {
-    controlDiv.style.padding = '5px';
-
-    var controlUI = document.createElement('DIV');
-    controlUI.style.backgroundColor = 'white';
-    controlUI.style.borderStyle = 'solid';
-    controlUI.style.borderWidth = '2px';
-    controlUI.style.cursor = 'pointer';
-    controlUI.style.textAlign = 'center';
-    controlUI.title = title;
-    controlDiv.appendChild(controlUI);
-
-    var controlText = document.createElement('DIV');
-    controlText.style.fontFamily = 'Arial,sans-serif';
-    controlText.style.fontSize = '12px';
-    controlText.style.paddingLeft = '4px';
-    controlText.style.paddingRight = '4px';
-    controlText.innerHTML = title;
-    controlUI.appendChild(controlText);
-
-    google.maps.event.addDomListener(controlUI, 'click', handler);
-}
-
-var clearWebStorageDiv = document.createElement('DIV');
-var clearWebStorageButton = new CustomControl(clearWebStorageDiv, map,
-    'Clear Web Storage',  clearWebStorage);
-
-var prepareWebStorageDiv = document.createElement('DIV');
-var prepareWebStorageButton = new CustomControl(prepareWebStorageDiv, map,
-    'Prepare Web Storage', prepareWebStorage);
-
-clearWebStorageDiv.index = 1;
-prepareWebStorageDiv.index = 1;
-map.controls[google.maps.ControlPosition.TOP_RIGHT].push(clearWebStorageDiv);
-map.controls[google.maps.ControlPosition.TOP_RIGHT].push(prepareWebStorageDiv);
-
-
-    if(countmap==1){
-          setTimeout(function(){ 
-            console.log('navigating to home');
-            mainView.router.load({
-                url: 'index.html',
-                ignoreCache: false,
-            });
-         }, 3000);
-          countmap++;
-    }
 });
 
 myApp.onPageInit('findus_dealer', function(page) {
@@ -346,25 +360,19 @@ myApp.onPageInit('product_listing', function(page) {
 });
 
 myApp.onPageInit('product_specification', function(page) {
-
-
     $('.outzoom').click(function() {
-        console.log(this);
         $('.listzoom').removeClass('show');
         $('.listzoom').removeClass('zoominlisting');
         $('.listzoom').removeClass('blur');
     })
 
     $('.outzoombottom').click(function() {
-        console.log(this);
         $('.listzoom').removeClass('show');
         $('.listzoom').removeClass('zoominlisting');
         $('.listzoom').removeClass('blur');
     })
 
     $('.listzoom').click(function() {
-
-        console.log(this);
         $('.listzoom').removeClass('show');
         $('.listzoom').addClass('blur');
         $(this).removeClass('blur');
@@ -374,16 +382,17 @@ myApp.onPageInit('product_specification', function(page) {
         $(this).addClass('show');
     })
 
-
-
-
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
 
     var title = page.query.title;
     $('#product_specification_h1').text('PRODUCT LISTING /' + title);
-    $('#product_specification_title').text(title);
+
+ 
+    $('#product_specification_title').append(title);
+    $('#product_specification_title').append('<hr class="cust-line hvr-underline-from-left">');
+    $(".hvr-underline-from-left").animate({right: '0'}, 500);
 
     // console.log(title)
 
@@ -675,7 +684,13 @@ myApp.onPageInit('home', function(page) {
 
     getdate();
     days();
-    $(".owl-carousel").owlCarousel();
+
+
+    $(".owl-carousel").owlCarousel({
+        animateOut: 'flipInX',
+        animateIn: 'flipInX',
+        smartSpeed:600
+    });
 
     function days() {
         var m_names = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec");
@@ -751,27 +766,27 @@ myApp.onPageInit('5k_punch', function(page) {
             name: '5 KA PUNCH',
             innerSize: '45%',
             data: [{
-                name: 'Silence Certified <br> <img src="img/popup_inner_icon.png" class="pie_sec1">',
+                name: '<span>Silence Certified </span><br> <img src="img/popup_inner_icon.png" class="pie_sec1">',
                 y: 20,
                 drilldown: 'Silence Certified',
                 color: '#eb113b',
             }, {
-                name: 'Peace of Mind <br> <img src="img/popup_inner_icon.png" class="pie_sec2">',
+                name: '<span>Peace of Mind</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec2">',
                 y: 20,
                 color: '#0075b6',
                 drilldown: 'Peace of Mind'
             }, {
-                name: 'Fuel Intelligent <br> <img src="img/popup_inner_icon.png" class="pie_sec3">',
+                name: '<span>Fuel Intelligent</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec3">',
                 y: 20,
                 color: '#eb113b',
                 drilldown: 'Fuel Intelligent'
             }, {
-                name: 'Fastest Delivery <br> <img src="img/popup_inner_icon.png" class="pie_sec4">',
+                name: '<span>Fastest Delivery</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec4">',
                 y: 20,
                 color: '#0075b6',
                 drilldown: 'Fastest Delivery'
             }, {
-                name: 'Power Brand <br> <img src="img/popup_inner_icon.png" class="pie_sec5">',
+                name: '<span>Power Brand</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec5">',
                 y: 20,
                 color: '#eb113b',
                 drilldown: 'Power Brand'
