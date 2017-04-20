@@ -130,7 +130,7 @@ function onDeviceReady() {
     );
 
 
-    
+
 
     // just download ones pdf1
 
@@ -518,6 +518,7 @@ function book_now_form_submit() {
 }
 
 function edit_list_book(count) {
+
     console.log($("#list_state_" + count).val());
     if ($('.picker-modal.modal-in').length > 0) {
         myApp.closeModal('.picker-modal.modal-in');
@@ -527,7 +528,7 @@ function edit_list_book(count) {
         '<div class="toolbar">' +
         '<div class="toolbar-inner">' +
         '<div class="left" style="margin-top: 2%;">' +
-        '<a href="#" class="close-picker" style="color: #fff;font-size: 33px;margin-left: 20%;" onclick="update_data(' + count + ');">UPDATE</a></div>' +
+        '<a href="#" class="update-btn" style="color: #fff;font-size: 33px;margin-left: 20%;" onclick="update_data(' + count + ');">UPDATE</a></div>' +
         '</div>' +
         '<div class="right" style="float: right;margin-right: 1%;margin-top: 1%;">' +
         '<a href="#" class="close-picker" style="color: #fff;" ><i class="material-icons" style="font-size: 40px">close</i></a>' +

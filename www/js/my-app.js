@@ -257,12 +257,14 @@ myApp.onPageInit('findus_map', function(page) {
         }
 
         var clearWebStorageDiv = document.createElement('DIV');
+
         var clearWebStorageButton = new CustomControl(clearWebStorageDiv, map,
-            'Clear Web Storage', clearWebStorage);
+            '', clearWebStorage);
 
         var prepareWebStorageDiv = document.createElement('DIV');
+
         var prepareWebStorageButton = new CustomControl(prepareWebStorageDiv, map,
-            'Prepare Web Storage', prepareWebStorage);
+            '', prepareWebStorage);
 
         clearWebStorageDiv.index = 1;
         prepareWebStorageDiv.index = 1;
@@ -656,25 +658,6 @@ myApp.onPageInit('home', function(page) {
             alert(error);
         });
     })
-
-
-    $('#date').click(function() {
-
-        alert('date clicked');
-        // This method accepts a JSON object, which contains the
-        // message response
-        var onSuccess = function(data) {
-            alert('success message: ' + data.message);
-        };
-        // onError Callback receives a json object
-        function onError(error) {
-            alert('error message: ' + error.message);
-        }
-
-        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraone.ppsx", onSuccess, onError);
-    })
-
-
 
     getdate();
     days();

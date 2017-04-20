@@ -1776,8 +1776,20 @@ tspan{
     z-index: 999!important;
 }
 
+.font30{
+   font-size: 30px!important;
+}
+.update-btn{
 
-
+    color: #fff;
+    font-size: 33px;
+    margin-left: 20%;
+    font-size: 20px!important;
+    background: #208fca;
+    color: black!important;
+    padding: 10px;
+    
+}
 
 
 
