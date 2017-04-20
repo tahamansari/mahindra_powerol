@@ -77,17 +77,6 @@ myApp.onPageInit('findus', function(page) {
 
 myApp.onPageInit('cba', function(page) {
 
-
-
-    // setTimeout(function(){ 
-    //     myApp.showIndicator();
-    // }, 3000);
-
-
-
-
-
-
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -285,7 +274,10 @@ myApp.onPageInit('findus_map', function(page) {
         var map = Lockr.get('map');
         if (map == undefined) {
             $('.mapoverlay').css('display','block');
+
+            // redirect after 2 seconds
             setTimeout(function(){ 
+
                 Lockr.set('map','loaded');
                 var token = Lockr.get('token');
                 if (token != undefined) {
@@ -299,6 +291,7 @@ myApp.onPageInit('findus_map', function(page) {
                         ignoreCache: false,
                     });
                 }
+
             }, 2000);
         }
 
@@ -325,6 +318,7 @@ myApp.onPageInit('product_listing', function(page) {
         // onSuccess Callback
         // This method accepts a JSON object, which contains the
         // message response
+
         var onSuccess = function(data) {
             // alert('message: ' + data.message);
         };
@@ -349,6 +343,7 @@ myApp.onPageInit('product_listing', function(page) {
         function onError(error) {
             alert('message: ' + error.message);
         }
+
         window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
     })
 
@@ -365,6 +360,7 @@ myApp.onPageInit('product_listing', function(page) {
 });
 
 myApp.onPageInit('product_specification', function(page) {
+
     $('.outzoom').click(function() {
         $('.listzoom').removeClass('show');
         $('.listzoom').removeClass('zoominlisting');
@@ -378,12 +374,10 @@ myApp.onPageInit('product_specification', function(page) {
     })
 
     $('.listzoom').click(function() {
+
         $('.listzoom').removeClass('show');
         $('.listzoom').addClass('blur');
         $(this).removeClass('blur');
-
-        $('.listzoom').removeClass('zoominlisting');
-        $(this).addClass('zoominlisting');
         $(this).addClass('show');
     })
 
@@ -517,47 +511,42 @@ myApp.onPageInit('enquiry_form', function(page) {
 myApp.onPageInit('our_story', function(page) {
 
 
-    $('.showppt').on('click', function() {
+    $('.showpptRise').on('click', function() {
 
-        // alert('show ppt clicked');
-        // onSuccess Callback
-        // This method accepts a JSON object, which contains the
-        // message response
         var onSuccess = function(data) {
-            // alert('message: ' + data.message);
         };
-        // onError Callback receives a json object
         function onError(error) {
             alert('message: ' + error.message);
         }
-
-        // window.cordova.plugins.FileOpener.openFile("file:///android_assets/data/data/com.kreaserv.Powerol/files/Download/mahindra.pptx", onSuccess, onError);
-        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraone.ppsx", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraPowerol.ppsx", onSuccess, onError);
         // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    })
 
+    $('.showpptPowerol').on('click', function() {
+
+        var onSuccess = function(data) {
+        };
+        function onError(error) {
+            alert('message: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraPowerol.ppsx", onSuccess, onError);
+        // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    })
+
+    $('.showpptAgni').on('click', function() {
+
+        var onSuccess = function(data) {
+        };
+        function onError(error) {
+            alert('Amessage: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/agni.ppsx", onSuccess, onError);
+        // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
     })
 
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
-    // onSuccess Callback
-    // This method accepts a JSON object, which contains the
-    // boolean response
-    //
-    // var onSuccess = function(data) {
-    //     alert('extension: ' + data.extension + '\n' +
-    //           'canBeOpen: ' + data.canBeOpen);
-    // };
-
-    // // onError Callback receives a json object
-    // //
-    // function onError(error) {
-    //     alert('message: '  + error.message);
-    // }
-
-
-
-    // window.cordova.plugins.FileOpener.canOpenFile("file:///storage/emulated/0/Download/local_file.pdf", onSuccess, onError);
 
 });
 

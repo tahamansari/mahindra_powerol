@@ -1183,52 +1183,6 @@ width: 15%;
 
 }*/
 
-.zoomin{
-    -moz-transform: scale(2);
-    -webkit-transform: scale(2);
-    transform: scale(2);
-
-}
-
-.zoomout{
-    -moz-transform: scale(0);
-    -webkit-transform: scale(0);
-    transform: scale(0);
-
-}
-
-
-.blur{
-
-    -webkit-filter: blur(1px); /* Safari 6.0 - 9.0 */
-    filter: blur(1px);
-}
-
-.listzoom {
-    -moz-transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-    transition: all 0.1s;
-
-}
-
-.zoominlisting{
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    border: 1px solid #de3e35!important;
-
-}
-
-.zoomoutlisting{
-    -moz-transform: scale(0);
-    -webkit-transform: scale(0);
-    transform: scale(0);
-
-}
-
-.show{
-    z-index: 999!important;
-}
 
 
 .punch{
@@ -1787,9 +1741,7 @@ tspan{
     margin: 3%;
 }
 
-
 .cba_top_bg{
-
     background-color: #232323;
     position: absolute;
     top: 10%;
@@ -1799,7 +1751,30 @@ tspan{
     /* z-index: 9; */
 }
 
+.zoomin{
+    -moz-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
 
+.zoomout{
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.blur{
+
+/*    transition: 0.5s -webkit-filter linear;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);*/
+
+        /*background: rgba(0, 0, 0, 0.11)!important;*/
+}
+
+.show{
+    z-index: 999!important;
+}
 
 
 
