@@ -3,7 +3,6 @@ var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var token = {};
 var list_data = {};
 
-var countmap = 1;
 
 
 var myApp = new Framework7({
@@ -77,6 +76,18 @@ myApp.onPageInit('findus', function(page) {
 });
 
 myApp.onPageInit('cba', function(page) {
+
+
+
+    // setTimeout(function(){ 
+    //     myApp.showIndicator();
+    // }, 3000);
+
+
+
+
+
+
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -271,14 +282,11 @@ myApp.onPageInit('findus_map', function(page) {
         
         // console.log("Map Count After Increment is  "+countmap);
 
-        if(countmap==1){
-
+        var map = Lockr.get('map');
+        if (map == undefined) {
             $('.mapoverlay').css('display','block');
-            
-            countmap++;
             setTimeout(function(){ 
-               console.log('navigating to home');
-
+                Lockr.set('map','loaded');
                 var token = Lockr.get('token');
                 if (token != undefined) {
                     mainView.router.load({
@@ -286,16 +294,13 @@ myApp.onPageInit('findus_map', function(page) {
                         ignoreCache: false,
                     });
                 }else{
-
                     mainView.router.load({
                         url: 'index.html',
                         ignoreCache: false,
                     });
                 }
-               
             }, 2000);
         }
-
 
     $('.backbutton').on('click', function() {
         mainView.router.back();

@@ -666,7 +666,7 @@ div{
     background: url(../img/faq_red_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-        z-index: 1;
+    z-index: 999;
 }
 
 .faq_content{
@@ -1789,12 +1789,23 @@ tspan{
 
 
 .cba_top_bg{
-    background-color:#232323;
+
+    background-color: #232323;
     position: absolute;
-    /* position: absolute; */
     top: 10%;
     height: 20%;
     width: 100%;
-    z-index: 1;
-    /* z-index: 9; */"
+    z-index: 99;
+    /* z-index: 9; */
 }
+
+
+
+
+
+
+
+
+
+
+

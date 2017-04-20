@@ -78,6 +78,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
+
     console.log('my device is now ready');
     console.log("file :" + cordova.file);
     console.log("file opener :" + cordova.FileOpener);
@@ -201,15 +202,14 @@ function onDeviceReady() {
 
     }, false);
 
-    // console.log('navigating to findus map');
-
-
-    mainView.router.load({
-        url: 'findus_map.html',
-        ignoreCache: false,
-    });
-
-    
+    var map = Lockr.get('map');
+    if (map == undefined) {
+        // alert('undefined going to load findus');
+        mainView.router.load({
+            url: 'findus_map.html',
+            ignoreCache: false,
+        });
+    }
 }
 
 
