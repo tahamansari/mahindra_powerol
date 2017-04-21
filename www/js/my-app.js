@@ -77,6 +77,16 @@ myApp.onPageInit('findus', function(page) {
 
 myApp.onPageInit('cba', function(page) {
 
+    $('#open-application').click(function() {
+        navigator.startApp.start("com.phonegap.helloworld", function(message) { /* success */
+        },
+        function(error) { /* error */
+            alert(error);
+        });
+    })
+
+
+
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -679,17 +689,6 @@ myApp.onPageInit('faq', function(page) {
 });
 
 myApp.onPageInit('home', function(page) {
-
-    
-
-    $('#open-application').click(function() {
-        navigator.startApp.start("com.phonegap.helloworld", function(message) { /* success */
-
-        },
-        function(error) { /* error */
-            alert(error);
-        });
-    })
 
     getdate();
     days();
