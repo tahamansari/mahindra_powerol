@@ -450,7 +450,8 @@ myApp.onPageInit('video', function(page) {
 
     $('.openVideo').click(function(){
 
-        VideoPlayer.play("files/Download/mahindraPowerol.ppsx");
+        alert();
+        VideoPlayer.play("files/Download/small.mp4");
     })
 
 
