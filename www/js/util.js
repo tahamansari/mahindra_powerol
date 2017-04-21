@@ -93,7 +93,29 @@ function onDeviceReady() {
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
 
-    // just download ones mahindraPowerol ppsx
+    // just download ones video 
+
+    var fileTransfer = new FileTransfer();
+    var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/small.mp4");
+    // applicationStorageDirectory
+    fileTransfer.download(
+        uri,
+        cordova.file.externalApplicationStorageDirectory + 'files/download/small.mp4',
+        function(entry) {
+            // alert("download complete: " + entry.toURL());
+        },
+        function(error) {
+            alert("download error source " + error.source);
+            alert("download error target " + error.target);
+            alert("download error code" + error.code);
+        },
+        false, {
+            headers: {
+                "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+            }
+        }
+    );
+
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
@@ -115,6 +137,7 @@ function onDeviceReady() {
             }
         }
     );
+
 
 
 
@@ -278,13 +301,13 @@ function enquiry_form_submit() {
         myApp.alert("Enter Mobile");
         return false;
     } else if ($('#email').val() == '') {    
-         myApp.alert("Enter Email id");
+         myApp.alert("Enter Email Id");
          return false;
-    }else if(!validateEmail($('#email').val())){
-         myApp.alert("Invalid Email id");
+    }else if(!validateEmail($('#email').val().trim())){
+         myApp.alert("Invalid Email Id");
          return false;
     } else if ($('#product_range').val() == '' ){
-        myApp.alert("Select Product_range");
+        myApp.alert("Select Product Range");
         return false;
     } else if ($('#state').val() == '' ){
         myApp.alert("Select State");
@@ -293,11 +316,12 @@ function enquiry_form_submit() {
         myApp.alert("Select Segment");
         return false;
     } else if ($('#dg_user').val() == '' ){
-        myApp.alert("Select DG set user");
+        myApp.alert("Select DG Set User");
         return false;
     }
 
     if (!Lockr.get('data')) {
+
         Lockr.set('data', [{
             name: $('#name').val(),
             company: $('#company').val(),
@@ -310,8 +334,11 @@ function enquiry_form_submit() {
             dg_user_product_range: $('#dg_user_product_range').val()
         }]);
         console.log(Lockr.get('data'));
+
     } else {
+
         data = Lockr.get('data');
+
         data = data.concat([{
             name: $('#name').val(),
             company: $('#company').val(),
@@ -378,7 +405,15 @@ function enquiry_form_submit() {
         '</tr>' +
         '</table>' +
         '</div>';
-    $('#enquiry_data').append(html);
+
+
+        console.log("html is "+html);
+
+    // $('#enquiry_data').append(html);
+
+
+
+
     myApp.showTab('#tab2');
 
     $("#tab2_button").animate({"background-color": "#3c73c0"});
@@ -420,7 +455,7 @@ function book_now_form_submit() {
     } else if ($('#book_now_email').val() == '') {    
         myApp.alert("Enter Email id");
          return false;
-    }else if (!validateEmail($('#book_now_email').val())){    
+    }else if (!validateEmail($('#book_now_email').val().trim())){    
         myApp.alert("Invalid Email id");
          return false;
     } else if ($('#book_now_product_range').val() == '' ){
@@ -564,7 +599,7 @@ function edit_list_book(count) {
         '</div>' +
 
         '<div class="col-50">' +
-        '<input type="text" name="" value="' + $("#list_mobile_" + count).val() + '" placeholder="Mobile No" id="update_mobile_' + count + '" style="color: #808080;border: 1px solid;width: 80%;margin: 1% 3%;padding: 2%;border-radius: 5px;font-size: 20px;">' +
+        '<input type="number" name="" value="' + $("#list_mobile_" + count).val() + '" placeholder="Mobile No" id="update_mobile_' + count + '" style="color: #808080;border: 1px solid;width: 80%;margin: 1% 3%;padding: 2%;border-radius: 5px;font-size: 20px;">' +
         '</div>' +
 
         '<div class="col-50">' +
@@ -722,7 +757,7 @@ function update_data(count) {
     } else if ($('#update_email_0').val() == '') {    
          myApp.alert("Enter Email id");
          return false;
-    }else if(!validateEmail($('#email').val())){
+    }else if(!validateEmail($('#update_email_0').val().trim())){
          myApp.alert("Invalid Email id");
          return false;
     } else if ($('#update_product_range_0').val() == '' ){
@@ -1020,3 +1055,15 @@ function redirect_book_now() {
         },
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -405,16 +405,20 @@ myApp.onPageInit('product_listing', function(page) {
 
 myApp.onPageInit('product_specification', function(page) {
 
+    $('.listzoom').click(function(){
+        $('.listzoom').removeClass('pro_spec_hover');
+        $(this).addClass('pro_spec_hover');
+    })
+
     $('.outzoom').click(function() {
-        $('.listzoom').removeClass('show');
-        $('.listzoom').removeClass('zoominlisting');
-        $('.listzoom').removeClass('blur');
+
+        $('.listzoom').removeClass('pro_spec_hover');
+
     })
 
     $('.outzoombottom').click(function() {
-        $('.listzoom').removeClass('show');
-        $('.listzoom').removeClass('zoominlisting');
-        $('.listzoom').removeClass('blur');
+
+        $('.listzoom').removeClass('pro_spec_hover');
     })
 
     $('.listzoom').click(function() {
@@ -442,6 +446,14 @@ myApp.onPageInit('product_specification', function(page) {
 });
 
 myApp.onPageInit('video', function(page) {
+
+
+    $('.openVideo').click(function(){
+
+        VideoPlayer.play("files/Download/mahindraPowerol.ppsx");
+    })
+
+
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -495,6 +507,11 @@ myApp.onPageInit('enquiry_form', function(page) {
         }
     });
     var data = Lockr.get('data');
+
+    if(data){
+        var data = data.reverse();
+    }
+
     var html = '';
     count = 0;
     $.each(data, function(key, value) {

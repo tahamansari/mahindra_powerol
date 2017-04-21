@@ -302,6 +302,7 @@ div{
     border-radius: 15px;
     margin: 1%;
     font-size: 25px;
+
 }
 
 .listing_input_blue{
@@ -415,7 +416,7 @@ div{
     padding: 2%;
     border-radius: 7px;
     color: white;
-    margin: 3%;
+    margin: 2%;
     width: 25%;
     font-size:25px;
     letter-spacing: 2px;
@@ -521,8 +522,8 @@ div{
     color: #000;
     border: 1px solid #ddd;
     padding: 5px;
-    height: 102px;
-  }
+    height: 130px;
+}
 
 
 .table-conntent{
@@ -1512,9 +1513,8 @@ width: 15%;
     width: 54%;
     height: 100px;
     position: absolute;
-    top: 17%;
-    left: 16%;
-    /*border: 1px solid black;*/
+    top: -6%;
+    left: 17%;
 }
 
 .outzoombottom{
@@ -1806,5 +1806,36 @@ tspan{
 }
 
 
+.pro_spec_hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31);
+}
 
+.listzoom{
+    padding: 10px 3%!important;
+}
+
+
+.text-left{
+    text-align: left;
+}
+
+
+.text-right{
+    text-align: right;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+
+
+.content-block{
+
+    border-left: 1px solid red;
+}
 
