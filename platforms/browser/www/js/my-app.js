@@ -143,6 +143,7 @@ myApp.onPageInit('cba', function(page) {
 myApp.onPageInit('findus_map', function(page) {
 
         var element = document.getElementById("map");
+
         var mapTypeIds = [];
         for (var type in google.maps.MapTypeId) {
             mapTypeIds.push(google.maps.MapTypeId[type]);
@@ -215,23 +216,54 @@ myApp.onPageInit('findus_map', function(page) {
             maxZoom: 15
         }));
 
-        google.maps.event.addListener(map, 'click', function(point) {
 
-            var marker = new google.maps.Marker({
-                position: point.latLng,
-                map: map
-            });
+         var locations = [
+          ['Dhaulagiri',28.698465, 83.487350, 3],
+          ['Manaslu', 28.549711, 84.559677, 2],
+          ['Bharatpur', 27.216981,  77.489515, 1],
+          ['Kathmandu', 27.717245,  85.323960, 4],
 
-            google.maps.event.addListener(marker, 'dblclick', function() {
-                marker.setMap(null);
-            });
+        ];
 
-            google.maps.event.addListener(marker, 'click', function() {
-                new google.maps.InfoWindow({
-                    content: 'lat: ' + point.latLng.lat() + '<br>lng:' + point.latLng.lng()
-                }).open(map, marker);
-            });
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: new google.maps.LatLng(28.394857, 84.124008),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) { 
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
+
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+
+
+        // google.maps.event.addListener(map, 'click', function(point) {
+        //     var marker = new google.maps.Marker({
+        //         position: point.latLng,
+        //         map: map
+        //     });
+        //     google.maps.event.addListener(marker, 'dblclick', function() {
+        //         marker.setMap(null);
+        //     });
+        //     google.maps.event.addListener(marker, 'click', function() {
+        //         new google.maps.InfoWindow({
+        //             content: 'lat: ' + point.latLng.lat() + '<br>lng:' + point.latLng.lng()
+        //         }).open(map, marker);
+        //     });
+        // });
 
         function CustomControl(controlDiv, map, title, handler) {
             controlDiv.style.padding = '5px';
