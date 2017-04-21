@@ -448,11 +448,11 @@ myApp.onPageInit('product_specification', function(page) {
 myApp.onPageInit('video', function(page) {
 
 
-    $('.openVideo').click(function(){
+    // $('.openVideo').click(function(){
 
-        alert();
-        VideoPlayer.play("files/Download/small.mp4");
-    })
+    //     alert("video");
+    //     VideoPlayer.play("files/Download/small.mp4");
+    // })
 
 
     $('.backbutton').on('click', function() {
