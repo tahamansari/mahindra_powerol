@@ -14,6 +14,18 @@ function goto_page(page) {
     });
 }
 
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+
+
+
+
+
+
 //app login
 function login() {
 
@@ -255,32 +267,35 @@ function inside_outside_text() {
 
 function enquiry_form_submit() {
 
-    // console.log(list_data);
-    // if ($('#name').val() == '' ) {
-    //     myApp.alert(" Enter First Name");
-    //     return false;
-    // } else if ($('#company').val() == '') {    
-    //     myApp.alert(" Enter Company Name"); 
-    //     return false;        
-    // } else if ($('#mobile').val() == '') {
-    //     myApp.alert("Enter Mobile");
-    //     return false;
-    // } else if ($('#email').val() == '') {    
-    //     myApp.alert("Enter Email id");
-    //      return false;
-    // } else if ($('#product_range').val() == '' ){
-    //     myApp.alert("Select Product_range");
-    //     return false;
-    // } else if ($('#state').val() == '' ){
-    //     myApp.alert("Select State");
-    //     return false;
-    // } else if ($('#segment').val() == '' ){
-    //     myApp.alert("Select Segment");
-    //     return false;
-    // } else if ($('#dg_user').val() == '' ){
-    //     myApp.alert("Select DG set user");
-    //     return false;
-    // }
+
+    if ($('#name').val() == '' ) {
+        myApp.alert(" Enter First Name");
+        return false;
+    } else if ($('#company').val() == '') {    
+        myApp.alert(" Enter Company Name"); 
+        return false;        
+    } else if ($('#mobile').val() == '') {
+        myApp.alert("Enter Mobile");
+        return false;
+    } else if ($('#email').val() == '') {    
+         myApp.alert("Enter Email id");
+         return false;
+    }else if(!validateEmail($('#email').val())){
+         myApp.alert("Invalid Email id");
+         return false;
+    } else if ($('#product_range').val() == '' ){
+        myApp.alert("Select Product_range");
+        return false;
+    } else if ($('#state').val() == '' ){
+        myApp.alert("Select State");
+        return false;
+    } else if ($('#segment').val() == '' ){
+        myApp.alert("Select Segment");
+        return false;
+    } else if ($('#dg_user').val() == '' ){
+        myApp.alert("Select DG set user");
+        return false;
+    }
 
     if (!Lockr.get('data')) {
         Lockr.set('data', [{
@@ -392,31 +407,35 @@ function book_now_form_reset() {
 function book_now_form_submit() {
 
     // console.log(list_data);
-    // if ($('#book_now_name').val() == '' ) {
-    //     myApp.alert(" Enter First Name");
-    //     return false;
-    // } else if ($('#book_now_company').val() == '') {    
-    //     myApp.alert(" Enter Company Name"); 
-    //     return false;        
-    // } else if ($('#book_now_mobile').val() == '') {
-    //     myApp.alert("Enter Mobile");
-    //     return false;
-    // } else if ($('#book_now_email').val() == '') {    
-    //     myApp.alert("Enter Email id");
-    //      return false;
-    // } else if ($('#book_now_product_range').val() == '' ){
-    //     myApp.alert("Select Product_range");
-    //     return false;
-    // } else if ($('#book_now_state').val() == '' ){
-    //     myApp.alert("Select State");
-    //     return false;
-    // } else if ($('#book_now_segment').val() == '' ){
-    //     myApp.alert("Select Segment");
-    //     return false;
-    // } else if ($('#book_now_dg_user').val() == '' ){
-    //     myApp.alert("Select DG set user");
-    //     return false;
-    // }
+
+    if ($('#book_now_name').val() == '' ) {
+        myApp.alert(" Enter First Name");
+        return false;
+    } else if ($('#book_now_company').val() == '') {    
+        myApp.alert(" Enter Company Name"); 
+        return false;        
+    } else if ($('#book_now_mobile').val() == '') {
+        myApp.alert("Enter Mobile");
+        return false;
+    } else if ($('#book_now_email').val() == '') {    
+        myApp.alert("Enter Email id");
+         return false;
+    }else if (!validateEmail($('#book_now_email').val())){    
+        myApp.alert("Invalid Email id");
+         return false;
+    } else if ($('#book_now_product_range').val() == '' ){
+        myApp.alert("Select Product_range");
+        return false;
+    } else if ($('#book_now_state').val() == '' ){
+        myApp.alert("Select State");
+        return false;
+    } else if ($('#book_now_segment').val() == '' ){
+        myApp.alert("Select Segment");
+        return false;
+    } else if ($('#book_now_dg_user').val() == '' ){
+        myApp.alert("Select DG set user");
+        return false;
+    }
 
     if (!Lockr.get('data')) {
         Lockr.set('data', [{
@@ -691,6 +710,39 @@ function showppt() {
 
 function update_data(count) {
 
+    if ($('#update_name_0').val() == '' ) {
+        myApp.alert(" Enter First Name");
+        return false;
+    } else if ($('#update_company_0').val() == '') {    
+        myApp.alert(" Enter Company Name"); 
+        return false;        
+    } else if ($('#update_mobile_0').val() == '') {
+        myApp.alert("Enter Mobile");
+        return false;
+    } else if ($('#update_email_0').val() == '') {    
+         myApp.alert("Enter Email id");
+         return false;
+    }else if(!validateEmail($('#email').val())){
+         myApp.alert("Invalid Email id");
+         return false;
+    } else if ($('#update_product_range_0').val() == '' ){
+        myApp.alert("Select Product_range");
+        return false;
+    } else if ($('#update_state_0').val() == '' ){
+        myApp.alert("Select State");
+        return false;
+    } else if ($('#update_segment_0').val() == '' ){
+        myApp.alert("Select Segment");
+        return false;
+    } else if ($('#update_dg_user_0').val() == '' ){
+        myApp.alert("Select DG set user");
+        return false;
+    }
+
+
+
+
+
     console.log($("#update_company_" + count).val(), $("#update_dg_user_" + count).val());
     var border_color = '';
     if ($("#update_product_range_" + count).val() == '5KVA*') {
@@ -723,6 +775,12 @@ function update_data(count) {
     $("#list_dg_user_product_range_" + count).val($("#update_dg_user_product_range_" + count).val());
     $("#list_segment_" + count).val($("#update_segment_" + count).val());
     $("#list_state_" + count).val($("#update_state_" + count).val());
+
+
+    myApp.alert('Updated');
+
+
+
 }
 
 function redirect_product_specification(inp) {
@@ -749,6 +807,103 @@ function redirect_product_specification(inp) {
 
 
 function cba_submit() {
+
+
+    if(!$("#p_no_of_year").val()){
+        myApp.alert('No Of Years Required');
+        return false;
+    }
+    if(!$("#k_no_of_year").val()){
+        myApp.alert('No Of Years Required');
+        return false;
+    }
+    if(!$("#p_rating").val()){
+        myApp.alert('Rating Required');
+        return false;
+    }
+    if(!$("#k_rating").val()){
+        myApp.alert('Rating Required');
+        return false;
+    }
+
+    if(!$("#p_avg_usage_hrs").val()){
+        myApp.alert('Usage Required');
+        return false;
+    }
+    if(!$("#k_avg_usage_hrs").val()){
+        myApp.alert('Usage Required');
+        return false;
+    }
+
+    // if($("p_price_of_brand").empty()){
+    //     myApp.alert('Price Required');
+    //     return false;
+    // }
+
+    if(!$("#k_price_of_brand").val()){
+        myApp.alert('Price Required');
+        return false;
+    }
+
+    // if($("p_fuel_consumption").empty()){
+    //     myApp.alert('Fuel Consumption Required');
+    //     return false;
+    // }
+
+    if(!$("#k_fuel_consumption").val()){
+        myApp.alert('Fuel Consumption Required');
+        return false;
+    }
+    // if($("p_running_fuel").empty()){
+    //     myApp.alert('Running Fuel Required');
+    //     return false;
+    // }
+    // if($("k_running_fuel").empty()){
+    //     myApp.alert('Running Fuel Required');
+    //     return false;
+    // }
+
+    if(!$("#p_service_period").val()){
+        myApp.alert('Service Period Required');
+        return false;
+    }
+    if(!$("#k_service_period").val()){
+        myApp.alert('Service Period Required');
+        return false;
+    }
+
+    // if($("p_no_of_service").empty()){
+    //     myApp.alert('No Of Service Required');
+    //     return false;
+    // }
+    // if($("k_no_of_service").empty()){
+    //     myApp.alert('No Of Service Required');
+    //     return false;
+    // }
+
+    if(!$("#p_service_cost").val()){
+        myApp.alert('Service Cost Required');
+        return false;
+    }
+    if(!$("#k_service_cost").val()){
+        myApp.alert('Service Cost Required');
+        return false;
+    }
+
+
+    // if($("p_service_cost5").empty()){
+    //     myApp.alert('Service Cost 5 Years Required');
+    //     return false;
+    // }
+    // if($("k_service_cost5").empty()){
+    //     myApp.alert('Service Cost 5 Years Required');
+    //     return false;
+    // }
+
+
+
+
+
     var p_no_of_service = parseFloat($("#p_no_of_service").val());
     var k_no_of_service = parseFloat($("#k_no_of_service").val());
     var p_no_of_year = parseFloat($("#p_no_of_year").val());

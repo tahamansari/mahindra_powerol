@@ -1791,7 +1791,19 @@ tspan{
     
 }
 
+.number{
 
+    border: 1px solid rgba(0,0,0,.5);
+    width: 75%;
+    padding: 2% 4%;
+    background: transparent;
+    margin: 2% 1%;
+    font-family: inherit;
+    font-size: 20px;
+    color: grey;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
 
 
 

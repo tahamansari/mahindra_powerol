@@ -10,7 +10,7 @@ var myApp = new Framework7({
     pushState: true,
     // swipePanel: 'right',
     swipeBackPage: false,
-    preloadPreviousPage: false,
+    preloadPreviousPage: true,
     uniqueHistory: true,
     uniqueHistoryIgnoreGetParameters: true,
     modalTitle: 'Powerol',
