@@ -145,6 +145,13 @@ myApp.onPageInit('cba', function(page) {
 
 myApp.onPageInit('findus_map', function(page) {
 
+
+        // <script>window.google && window.google.maps || document.write('<script src="gmapapi.js"><\/script>')</script>
+        // <script type="text/javascript" src="webStorage.js"></script>
+        // <script type="text/javascript" src="script.js"></script>
+        // <script type="text/javascript" src="map.js"></script>
+
+
         var element = document.getElementById("map");
 
         var mapTypeIds = [];
@@ -567,11 +574,13 @@ myApp.onPageInit('product_specification', function(page) {
 myApp.onPageInit('video', function(page) {
 
 
-    // $('.openVideo').click(function(){
+    $('.openVideo').click(function(){
 
-    //     alert("video");
-    //     VideoPlayer.play("files/Download/small.mp4");
-    // })
+        console.log("video open");
+        alert("video open");
+        VideoPlayer.play("http://kreaserv-tech.com/mahindra_admin/small.mp4");
+        
+    })
 
 
     $('.backbutton').on('click', function() {
@@ -911,27 +920,27 @@ myApp.onPageInit('5k_punch', function(page) {
             name: '5 KA PUNCH',
             innerSize: '45%',
             data: [{
-                name: '<span>Silence Certified </span><br> <img src="img/popup_inner_icon.png" class="pie_sec1">',
+                name: '<span>Silence Certified </span><br> <img src="img/5k_punch_rupee.png" class="pie_sec1">',
                 y: 20,
                 drilldown: 'Silence Certified',
                 color: '#eb113b',
             }, {
-                name: '<span>Peace of Mind</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec2">',
+                name: '<span>Peace of Mind</span> <br> <img src="img/5k_punch_yoga.png" class="pie_sec2">',
                 y: 20,
                 color: '#0075b6',
                 drilldown: 'Peace of Mind'
             }, {
-                name: '<span>Fuel Intelligent</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec3">',
+                name: '<span>Fuel Intelligent</span> <br> <img src="img/5k_punch_mid.png" class="pie_sec3">',
                 y: 20,
                 color: '#eb113b',
                 drilldown: 'Fuel Intelligent'
             }, {
-                name: '<span>Fastest Delivery</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec4">',
+                name: '<span>Fastest Delivery</span> <br> <img src="img/5k_punch_clock.png" class="pie_sec4">',
                 y: 20,
                 color: '#0075b6',
                 drilldown: 'Fastest Delivery'
             }, {
-                name: '<span>Power Brand</span> <br> <img src="img/popup_inner_icon.png" class="pie_sec5">',
+                name: '<span>Power Brand</span> <br> <img src="img/5k_punch_charg.png" class="pie_sec5">',
                 y: 20,
                 color: '#eb113b',
                 drilldown: 'Power Brand'
@@ -980,7 +989,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Peace of Mind',
                 id: 'Peace of Mind',
                 data: [{
-                    name: '<img src="img/popup_inner_icon1.png" style="width: 50%;"><h1 style="margin: 4%;">Peace of Mind</h1><p style="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_yoga.png" style="width: 30%;"><h1 style="margin: 4%;">Peace of Mind</h1><p style="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
                     y: 100,
                     color: '#0075b6',
                 }],
@@ -992,7 +1001,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Fuel Intelligent',
                 id: 'Fuel Intelligent',
                 data: [{
-                    name: '<img src="img/popup_inner_icon1.png" style="width: 50%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_mid.png" style="width: 30%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
                     y: 100,
                     color: '#eb113b',
                 }],
@@ -1004,7 +1013,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Fastest Delivery',
                 id: 'Fastest Delivery',
                 data: [{
-                    name: '<img src="img/popup_inner_icon1.png" style="width: 50%;"><h1 style="margin: 4%;">Fastest Delivery</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_clock.png" style="width: 30%;"><h1 style="margin: 4%;">Fastest Delivery</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
                     y: 100,
                     color: '#0075b6',
                 }],
@@ -1016,7 +1025,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Power Brand',
                 id: 'Power Brand',
                 data: [{
-                    name: '<img src="img/popup_inner_icon1.png" style="width: 50%;"><h1 style="margin: 4%;">Power Brand</h1><p sty="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_charg.png" style="width: 30%;"><h1 style="margin: 4%;">Power Brand</h1><p sty="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
                     y: 100,
                     color: '#eb113b',
                 }],

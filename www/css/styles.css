@@ -1666,19 +1666,20 @@ html, body, #map {
 }
 
 .pie_sec4 {
-    margin-top: 15% !important;
-    margin-left: -100% !important;
+margin-top: 28% !important;
+    margin-left: -94% !important;
+    width: 55%;
 }
 
 .pie_sec3 {
-    margin-top: 35% !important;
-    width: 108%;
+    margin-top: 55% !important;
+    width: 60%;
 }
 
 .pie_sec2 {
-    margin-top: 18% !important;
-    margin-left: 55%;
-    width: 112%;
+    margin-top: 42% !important;
+    margin-left: 74%;
+    width: 60%;
 }
 
 .pie_sec1 {
@@ -1688,9 +1689,9 @@ html, body, #map {
 }
 
 .pie_sec5 {
-    margin-top: -35% !important;
+    margin-top: -6% !important;
     margin-left: -210% !important;
-    width: 125%;
+    width: 65%;
 }
 
 .hover_line_effect{

@@ -95,10 +95,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-    console.log('my device is now ready');
+    console.log('device is now ready');
     console.log("file :" + cordova.file);
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
+    console.log("video Player :" + VideoPlayer);
+
 
     // Lockr.rm('map');
     // // just download ones video 

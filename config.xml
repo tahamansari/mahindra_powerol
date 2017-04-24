@@ -46,10 +46,8 @@
         <!-- <param name="API_KEY_FOR_IOS" value="XXXXXXXXXXXXX" /> -->
     </plugin>
 
-
-        <!-- file work on phonegap serve -->
+    <!-- file work on phonegap serve -->
     <plugin spec="https://github.com/moust/cordova-plugin-videoplayer.git" source="git"/>
-
     <!-- file work on phonegap serve -->
     <plugin spec="https://github.com/apache/cordova-plugin-file.git#rel/4.3.2" source="git"/>
     
