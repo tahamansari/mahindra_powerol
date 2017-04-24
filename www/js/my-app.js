@@ -43,14 +43,7 @@ var mainView = myApp.addView('.view-main', {
 mainView.hideNavbar();
 
 
-var token = Lockr.get('token');
 
-if (token != undefined) {
-    mainView.router.load({
-        url: 'home.html',
-        ignoreCache: false,
-    });
-}
 
 
 
@@ -312,18 +305,13 @@ myApp.onPageInit('findus_map', function(page) {
         prepareWebStorageDiv.index = 1;
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(clearWebStorageDiv);
         map.controls[google.maps.ControlPosition.TOP_RIGHT].push(prepareWebStorageDiv);
-        
         // console.log("Map Count After Increment is  "+countmap);
-
         var map = Lockr.get('map');
         if (map == undefined) {
             $('.mapoverlay').css('display','block');
-
-            // redirect after 2 seconds
+            Lockr.set('map','loaded');
+            var token = Lockr.get('token');
             setTimeout(function(){ 
-
-                Lockr.set('map','loaded');
-                var token = Lockr.get('token');
                 if (token != undefined) {
                     mainView.router.load({
                         url: 'home.html',
@@ -335,8 +323,7 @@ myApp.onPageInit('findus_map', function(page) {
                         ignoreCache: false,
                     });
                 }
-
-            }, 2000);
+            }, 4000);
         }
 
     $('.backbutton').on('click', function() {
@@ -411,13 +398,10 @@ myApp.onPageInit('product_specification', function(page) {
     })
 
     $('.outzoom').click(function() {
-
         $('.listzoom').removeClass('pro_spec_hover');
-
     })
 
     $('.outzoombottom').click(function() {
-
         $('.listzoom').removeClass('pro_spec_hover');
     })
 
@@ -914,6 +898,14 @@ myApp.onPageInit('5k_punch', function(page) {
 });
 
 myApp.onPageInit('index', function(page) {
+
+    var token = Lockr.get('token');
+    if (token != undefined) {
+        mainView.router.load({
+            url: 'home.html',
+            ignoreCache: false,
+        });
+    }
 
 });
 

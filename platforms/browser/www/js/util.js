@@ -20,7 +20,13 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-
+var token = Lockr.get('token');
+if (token != undefined) {
+    mainView.router.load({
+        url: 'home.html',
+        ignoreCache: false,
+    });
+}
 
 
 
@@ -86,6 +92,7 @@ function logout() {
 
 //back buttons
 document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
 
     console.log('my device is now ready');
@@ -93,7 +100,8 @@ function onDeviceReady() {
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
 
-    // just download ones video 
+    // Lockr.rm('map');
+    // // just download ones video 
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/small.mp4");
@@ -116,7 +124,6 @@ function onDeviceReady() {
         }
     );
 
-
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
     // applicationStorageDirectory
@@ -137,9 +144,6 @@ function onDeviceReady() {
             }
         }
     );
-
-
-
 
     // just download ones agni ppsx
 
@@ -164,9 +168,6 @@ function onDeviceReady() {
         }
     );
 
-
-
-
     // just download ones pdf1
 
     var fileTransfer = new FileTransfer();
@@ -190,7 +191,6 @@ function onDeviceReady() {
         }
     );
 
-
     // just download ones pdf2
 
     var fileTransfer = new FileTransfer();
@@ -213,7 +213,6 @@ function onDeviceReady() {
             }
         }
     );
-
 
     // just download ones load calculator
 
@@ -263,7 +262,7 @@ function onDeviceReady() {
     }, false);
 
     var map = Lockr.get('map');
-    if (map == undefined) {
+    if(map == undefined){
         // alert('undefined going to load findus');
         mainView.router.load({
             url: 'findus_map.html',
