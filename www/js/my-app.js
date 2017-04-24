@@ -576,8 +576,9 @@ myApp.onPageInit('video', function(page) {
 
     $('.openVideo').click(function(){
 
+
         console.log("video open");
-        VideoPlayer.play("files/download/small.mp4");
+        VideoPlayer.play("file:///android_asset/www/small.mp4");
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
