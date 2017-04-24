@@ -656,7 +656,7 @@ div{
 }
 
 .enquiry_list_edit_button{
-    float: right;
+    /*float: right;*/
     margin-top: 1%;
 }
 /*.button.active-state{
@@ -675,6 +675,7 @@ div{
     position: absolute;
     top: 29%;
     padding: 0% 2%; 
+        z-index: 99999;
 }
 
 
@@ -1666,32 +1667,33 @@ html, body, #map {
 }
 
 .pie_sec4 {
-margin-top: 28% !important;
-    margin-left: -94% !important;
-    width: 55%;
+    margin-top: 20% !important;
+    margin-left: -75% !important;
+    width: 45%;
 }
 
 .pie_sec3 {
-    margin-top: 55% !important;
-    width: 60%;
+    margin-top: 40% !important;
+    width: 50%;
 }
 
 .pie_sec2 {
-    margin-top: 42% !important;
-    margin-left: 74%;
-    width: 60%;
+    margin-top: 25% !important;
+    margin-left: 69%;
+    width: 50%;
 }
 
 .pie_sec1 {
-    margin-top: -29% !important;
-    margin-left: 85% !important;
-    width: 99%;
+
+    margin-top: -27% !important;
+    margin-left: 77% !important;
+    width: 80%;
 }
 
 .pie_sec5 {
-    margin-top: -6% !important;
-    margin-left: -210% !important;
-    width: 65%;
+    margin-top: -11% !important;
+    margin-left: -170% !important;
+    width: 55%;
 }
 
 .hover_line_effect{
@@ -1732,6 +1734,7 @@ tspan{
     font-family: 'eurostileregular'!important;
     color: white!important;
     font-weight: bold!important;
+    font-size: 21px!important;
 }
 
 .material-icons{
@@ -1792,9 +1795,9 @@ tspan{
     font-size: 33px;
     margin-left: 20%;
     font-size: 20px!important;
-    background: #208fca;
+    background: #ffffff;
     color: black!important;
-    padding: 10px;
+    padding: 13px;
     
 }
 
@@ -1840,9 +1843,53 @@ tspan{
 }
 
 
+.item{
+    width: 95%;
+}
+
 
 .content-block{
 
     /*border-left: 1px solid red;*/
 }
+
+.out-story-container{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.blueborder{
+    border:1px solid rgb(1, 115, 188);
+}
+
+
+.item{
+
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+
+.home_hover{
+
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+
+
+
+
+
+
+
 

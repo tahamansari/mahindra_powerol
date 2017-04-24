@@ -145,13 +145,6 @@ myApp.onPageInit('cba', function(page) {
 
 myApp.onPageInit('findus_map', function(page) {
 
-
-        // <script>window.google && window.google.maps || document.write('<script src="gmapapi.js"><\/script>')</script>
-        // <script type="text/javascript" src="webStorage.js"></script>
-        // <script type="text/javascript" src="script.js"></script>
-        // <script type="text/javascript" src="map.js"></script>
-
-
         var element = document.getElementById("map");
 
         var mapTypeIds = [];
@@ -317,26 +310,7 @@ myApp.onPageInit('findus_map', function(page) {
         if (map == undefined) {
             
             $('.mapoverlay').css('display','block');
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/small.mp4");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/small.mp4',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
-                }
-            );
+
 
             var fileTransfer = new FileTransfer();
             var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
@@ -431,7 +405,7 @@ myApp.onPageInit('findus_map', function(page) {
             // just download ones load calculator
 
             var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/AXE-debug.apk");
+            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
             // applicationStorageDirectory
             fileTransfer.download(
                 uri,
@@ -466,6 +440,7 @@ myApp.onPageInit('findus_map', function(page) {
                     });
                 }
             }, 4000);
+
         }
 
     $('.backbutton').on('click', function() {
@@ -543,17 +518,17 @@ myApp.onPageInit('product_specification', function(page) {
         $('.listzoom').removeClass('pro_spec_hover');
     })
 
-    $('.outzoombottom').click(function() {
-        $('.listzoom').removeClass('pro_spec_hover');
-    })
+    // $('.outzoombottom').click(function() {
+    //     $('.listzoom').removeClass('pro_spec_hover');
+    // })
 
-    $('.listzoom').click(function() {
+    // $('.listzoom').click(function() {
 
-        $('.listzoom').removeClass('show');
-        $('.listzoom').addClass('blur');
-        $(this).removeClass('blur');
-        $(this).addClass('show');
-    })
+    //     $('.listzoom').removeClass('show');
+    //     $('.listzoom').addClass('blur');
+    //     $(this).removeClass('blur');
+    //     $(this).addClass('show');
+    // })
 
     $('.backbutton').on('click', function() {
         mainView.router.back();
@@ -653,7 +628,7 @@ myApp.onPageInit('enquiry_form', function(page) {
         }
         html =
             '<div class="enquiry_list" id="enquiry_list_' + count + '" style="margin-top: 3%;margin-left: 3%;border-left: 6px solid ' + border_color + ';">' +
-            '<a class="enquiry_list_edit_button" href="" onclick="edit_list_book(' + count + ')"><img  src="img/edit.png"></a>' +
+            '<a class="enquiry_list_edit_button" href="" onclick="edit_list_book(' + count + ')"><img  style="width: 4%;float: right;padding: 1%;position: relative;right: 0;" src="img/edit.png"></a>' +
             '<table>' +
             '<tr>' +
             '<td class="vz_inner_content_left">Name</td>' +
@@ -771,6 +746,15 @@ myApp.onPageInit('inside_outside', function(page) {
 });
 
 myApp.onPageInit('faq', function(page) {
+
+    console.log('page loaded');
+
+    $('.accordion').click(function(){
+        console.log('border clicked');
+        $(this).parent().toggleClass('blueborder');
+    })
+
+
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -836,6 +820,12 @@ myApp.onPageInit('faq', function(page) {
 });
 
 myApp.onPageInit('home', function(page) {
+
+    $('.item').click(function(){
+        $('.item').removeClass('home_hover');
+        $(this).addClass('home_hover');
+        // alert('clicked');
+    })
 
     getdate();
     days();

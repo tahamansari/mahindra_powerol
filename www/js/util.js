@@ -22,14 +22,12 @@ function validateEmail(email) {
 
 var token = Lockr.get('token');
 if (token != undefined) {
+    
     mainView.router.load({
         url: 'home.html',
         ignoreCache: false,
     });
 }
-
-
-
 
 
 //app login
