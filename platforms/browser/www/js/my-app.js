@@ -204,7 +204,8 @@ myApp.onPageInit('findus_map', function(page) {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 8,
       center: new google.maps.LatLng(28.394857, 84.124008),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel:  false
     });
 
     var infowindow = new google.maps.InfoWindow();
@@ -590,6 +591,8 @@ myApp.onPageInit('faq', function(page) {
     $('.accordion').click(function(){
         console.log('border clicked');
         $(this).parent().toggleClass('blueborder');
+        $(this).next().toggleClass('blueborder');
+
     })
 
 
@@ -895,6 +898,12 @@ myApp.onPageInit('tools', function(page) {
             alert(error);
         });
     })  
+
+    $('.backbutton').on('click', function() {
+        mainView.router.back();
+    });
+
+
 
 
 });

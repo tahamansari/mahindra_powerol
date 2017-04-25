@@ -527,7 +527,7 @@ div{
     color: #000;
     border: 1px solid #ddd;
     padding: 5px;
-    height: 130px;
+    height: 125px;
 }
 
 
@@ -1907,12 +1907,15 @@ tspan{
 
 
 .btn-tools{
-    background: red;
+
+    background: #e51836;
     color: white;
-    padding: 11%;
+    padding: 9%;
     border: none;
-    font-size: 40px;
-    width: 78%;
+    font-size: 33px;
+    width: 63%;
+    border-radius: 5%;
+
 }
 
 .left-tool{
@@ -1941,9 +1944,34 @@ tspan{
     z-index: 99999;
 }
 
+.blueborder{
+    color: #0173bc;
+}
 
 
+.push-btn{
+
+    background: #f80a28;
+    position: absolute;
+    bottom: 9%;
+    right: 6%;
+    padding: 1% 6%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+    letter-spacing: 3px;
+
+}
+
+.height{
+    height: 105px!important;
+}
 
 
+.fullzindex{
+    z-index: 9999999999;
+}
 
 

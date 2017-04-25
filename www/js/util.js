@@ -236,7 +236,6 @@ function onDeviceReady() {
 
             myApp.confirm('would you like to exit app.', function() {
                 navigator.app.clearHistory();
-                gaPlugin.exit(nativePluginResultHandler, nativePluginErrorHandler);
                 navigator.app.exitApp();
             });
 
@@ -250,7 +249,7 @@ function onDeviceReady() {
     // mainView.router.load({
 
     //     url: 'findus_map.html',
-        
+
     // });
 
     var token = Lockr.get('token');
