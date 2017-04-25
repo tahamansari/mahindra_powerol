@@ -15,6 +15,11 @@ body{
     font-family: 'eurostileregular';
 }
 
+h1,h2,h3,h4,h5,span,p,div,button{
+    font-family: 'eurostileregular';
+
+}
+
 .goto{
     position: absolute;
     bottom: 40%;
@@ -1664,6 +1669,8 @@ html, body, #map {
     text-align: center;
     padding-top: 25%;
     display: none;
+    /*display: block;*/
+
 }
 
 .pie_sec4 {
@@ -1884,6 +1891,34 @@ tspan{
   animation-iteration-count: 1;
 }
 
+.tools-container{
+    
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    margin: 0 7%;
+}
+
+
+.btn-tools{
+    background: red;
+    color: white;
+    padding: 11%;
+    border: none;
+    font-size: 40px;
+    width: 78%;
+}
+
+.left-tool{
+
+    width: 50%;
+    float: left;
+}
+
+.right-tool{
+    width: 50%;
+    float: right;
+}
 
 
 

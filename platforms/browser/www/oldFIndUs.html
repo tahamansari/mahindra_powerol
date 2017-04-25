@@ -157,26 +157,6 @@ clearWebStorageDiv.index = 1;
 prepareWebStorageDiv.index = 1;
 map.controls[google.maps.ControlPosition.TOP_RIGHT].push(clearWebStorageDiv);
 map.controls[google.maps.ControlPosition.TOP_RIGHT].push(prepareWebStorageDiv);
-// console.log("Map Count After Increment is  "+countmap);
-var map = Lockr.get('map');
-if (map == undefined) {
-    
-    $('.mapoverlay').css('display','block');
 
-    Lockr.set('map','loaded');
-    var token = Lockr.get('token');
-    setTimeout(function(){ 
-        if (token != undefined) {
-            mainView.router.load({
-                url: 'home.html',
-                ignoreCache: false,
-            });
-        }else{
-            mainView.router.load({
-                url: 'index.html',
-                ignoreCache: false,
-            });
-        }
-    }, 4000);
 
 }

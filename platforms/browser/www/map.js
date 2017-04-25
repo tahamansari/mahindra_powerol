@@ -1,7 +1,6 @@
 var element = document.getElementById("map");
-
 var mapTypeIds = [];
-for(var type in google.maps.MapTypeId) {
+for (var type in google.maps.MapTypeId) {
     mapTypeIds.push(google.maps.MapTypeId[type]);
 }
 
@@ -13,8 +12,9 @@ mapTypeIds.push("LocalMyGmap");
 mapTypeIds.push("WebStorageMyGmap");
 
 var map = new google.maps.Map(element, {
-    center: new google.maps.LatLng(53.902254, 27.561850),
-    zoom: 3,
+
+    center: new google.maps.LatLng(28.394857, 84.124008),
+    zoom: 8,
     mapTypeId: "MyGmap",
     mapTypeControlOptions: {
         mapTypeIds: mapTypeIds,
@@ -64,23 +64,55 @@ map.mapTypes.set("LocalMyGmap", new google.maps.ImageMapType({
 map.mapTypes.set("WebStorageMyGmap", new google.maps.ImageMapType({
     getTileUrl: function(coord, zoom) {
         var image = getWebStorageTileImgSrc(coord, zoom);
-        return image ? image :  getGmapTileImgSrc(coord, zoom);
+        return image ? image : getGmapTileImgSrc(coord, zoom);
     },
     tileSize: new google.maps.Size(256, 256),
     name: "WebStorageMyGmap",
     maxZoom: 15
 }));
 
+
+ var locations = [
+  ['Dhaulagiri',28.698465, 83.487350, 3],
+  ['Manaslu', 28.549711, 84.559677, 2],
+  ['Bharatpur', 27.216981,  77.489515, 1],
+  ['Kathmandu', 27.717245,  85.323960, 4],
+
+];
+
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 8,
+  center: new google.maps.LatLng(28.394857, 84.124008),
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+
+var infowindow = new google.maps.InfoWindow();
+
+var marker, i;
+
+for (i = 0; i < locations.length; i++) { 
+  marker = new google.maps.Marker({
+    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+    map: map
+  });
+
+  google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    return function() {
+      infowindow.setContent(locations[i][0]);
+      infowindow.open(map, marker);
+    }
+  })(marker, i));
+}
+
+
 google.maps.event.addListener(map, 'click', function(point) {
     var marker = new google.maps.Marker({
         position: point.latLng,
         map: map
     });
-
     google.maps.event.addListener(marker, 'dblclick', function() {
         marker.setMap(null);
     });
-
     google.maps.event.addListener(marker, 'click', function() {
         new google.maps.InfoWindow({
             content: 'lat: ' + point.latLng.lat() + '<br>lng:' + point.latLng.lng()
@@ -112,12 +144,14 @@ function CustomControl(controlDiv, map, title, handler) {
 }
 
 var clearWebStorageDiv = document.createElement('DIV');
+
 var clearWebStorageButton = new CustomControl(clearWebStorageDiv, map,
-    'Clear Web Storage',  clearWebStorage);
+    '', clearWebStorage);
 
 var prepareWebStorageDiv = document.createElement('DIV');
+
 var prepareWebStorageButton = new CustomControl(prepareWebStorageDiv, map,
-    'Prepare Web Storage', prepareWebStorage);
+    '', prepareWebStorage);
 
 clearWebStorageDiv.index = 1;
 prepareWebStorageDiv.index = 1;
