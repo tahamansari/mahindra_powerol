@@ -41,6 +41,12 @@
                   <div class="login_username">
                       <input class="login-textbox" type="text" name="username" placeholder="LOGIN" id="login-email">       
                   </div>
+
+                  
+                  <div style="width: 100%;height: 500px;padding: 1% 9%;" manifest="appcache.manifest">
+                 <div id="map"></div>
+              </div>
+
                   <br>
                   <div class="login_password">
                       <input class="login-textbox" type="password" name="username" placeholder="PASSWORD" id="login-password">
@@ -84,12 +90,12 @@
 
 
     <!-- offline google map -->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <script>window.google && window.google.maps || document.write('<script src="gmapapi.js"><\/script>')</script>
-    <script type="text/javascript" src="webStorage.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="map.js"></script>
-
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script>window.google && window.google.maps || document.write('<script src="./gmapapi.js"><\/script>')</script>
+    <script type="text/javascript" src="./webStorage.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./map.js"></script>
+    
   </body>
 </html> 

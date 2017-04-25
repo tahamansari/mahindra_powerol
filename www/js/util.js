@@ -22,7 +22,6 @@ function validateEmail(email) {
 
 var token = Lockr.get('token');
 if (token != undefined) {
-
     mainView.router.load({
         url: 'home.html',
         ignoreCache: false,
@@ -90,135 +89,131 @@ function logout() {
 
 //back buttons
 document.addEventListener("deviceready", onDeviceReady, false);
-
 function onDeviceReady() {
 
     console.log('device is now ready');
     console.log("file :" + cordova.file);
     console.log("file opener :" + cordova.FileOpener);
     console.log("file transfer :" + cordova.FileTransfer);
-    console.log("video Player :" + VideoPlayer);
+    // console.log("video Player :" + VideoPlayer);
 
-    // Lockr.rm('map');
+    // Lockr.rm('token');
     // // just download ones video 
     var downloaded = Lockr.get('downloaded');
 
     if(downloaded == undefined){
 
-            Lockr.set('downloaded','true');
+        Lockr.set('downloaded','true');
 
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraPowerol.ppsx',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
+        // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraPowerol.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
                 }
-            );
+            }
+        );
 
-            // just download ones agni ppsx
-
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/agni.ppsx");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/agni.ppsx',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
+        // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/agni.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/agni.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
                 }
-            );
+            }
+        );
 
-            // just download ones pdf1
-
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/NEPAL-BANGLADESH-BROCHURE.pdf");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/NEPAL-BANGLADESH-BROCHURE.pdf',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
+        // just download ones pdf1
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/NEPAL-BANGLADESH-BROCHURE.pdf");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/NEPAL-BANGLADESH-BROCHURE.pdf',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
                 }
-            );
+            }
+        );
 
-            // just download ones pdf2
-
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/REST-OF-THE-WORLD-BROCHURE.pdf");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/REST-OF-THE-WORLD-BROCHURE.pdf',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
+        // just download ones pdf2
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/REST-OF-THE-WORLD-BROCHURE.pdf");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/REST-OF-THE-WORLD-BROCHURE.pdf',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
                 }
-            );
+            }
+        );
 
-            // just download ones load calculator
-
-            var fileTransfer = new FileTransfer();
-            var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
-            // applicationStorageDirectory
-            fileTransfer.download(
-                uri,
-                cordova.file.externalApplicationStorageDirectory + 'files/download/AXE-debug.apk',
-                function(entry) {
-                    // alert("download complete: " + entry.toURL());
-                },
-                function(error) {
-                    alert("download error source " + error.source);
-                    alert("download error target " + error.target);
-                    alert("download error code" + error.code);
-                },
-                false, {
-                    headers: {
-                        "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                    }
+        // just download ones load calculator
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
                 }
-            );
+            }
+        );
 
     }
 
@@ -248,14 +243,13 @@ function onDeviceReady() {
 
     }, false);
 
-    var map = Lockr.get('map');
-    if(map == undefined){
+    // var map = Lockr.get('map');
+    // if(map == undefined){
         // alert('undefined going to load findus');
-        mainView.router.load({
-            url: 'findus_map.html',
-            ignoreCache: false,
-        });
-    }
+        // mainView.router.load({
+        //     url: 'findus_map.html'
+        // });
+    // }
 }
 
 
