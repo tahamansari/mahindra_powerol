@@ -247,18 +247,24 @@ function onDeviceReady() {
     }, false);
 
 
-    var token = Lockr.get('token');
-    if(token == undefined){
-        console.log('loading login page');
-        mainView.router.load({
-            url: 'index.html'
-        });
-    }else{
-        console.log('loading home page');
-        mainView.router.load({
-            url: 'home.html'
-        });
-    }
+    // mainView.router.load({
+
+    //     url: 'findus_map.html',
+        
+    // });
+
+    // var token = Lockr.get('token');
+    // if(token == undefined){
+    //     console.log('loading login page');
+    //     mainView.router.load({
+    //         url: 'index.html'
+    //     });
+    // }else{
+    //     console.log('loading home page');
+    //     mainView.router.load({
+    //         url: 'home.html'
+    //     });
+    // }
 
 
 
