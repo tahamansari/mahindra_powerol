@@ -1533,24 +1533,22 @@ width: 15%;
     top: 362%;
 }
 
-#map {
+/*#map {
 
     height: 300px!important;
     width: 300px!important;
-}
+}*/
 
 
 
-#map-container{
-
+/*#map-container{
     position: absolute;
     top: 33%;
     width: 200px;
     height: 200px;
     z-index: 9999;
     visibility: hidden;
-
-}
+}*/
 
 
 /*5ka punch */
