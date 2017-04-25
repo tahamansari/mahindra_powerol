@@ -523,7 +523,7 @@ myApp.onPageInit('our_story', function(page) {
         function onError(error) {
             alert('message: ' + error.message);
         }
-        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraPowerol.ppsx", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
         // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
     })
 

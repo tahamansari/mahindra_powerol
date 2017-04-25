@@ -109,6 +109,29 @@ function onDeviceReady() {
 
         Lockr.set('downloaded','true');
 
+
+        // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraRise.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
         // just download ones agni ppsx
         var fileTransfer = new FileTransfer();
         var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
@@ -229,7 +252,7 @@ function onDeviceReady() {
         myApp.hideIndicator();
         myApp.closePanel();
 
-        if (page.name == "home" || page.name == "login") {
+        if (page.name == "home" || page.name == "index") {
 
             // lockFile = dataDir.getFile("file:///lockfile.txt", {create: true, exclusive: true});
             // console.log("Created File"+lockFile);
