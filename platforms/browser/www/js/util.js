@@ -138,32 +138,12 @@ function onDeviceReady() {
     }, false);
 
     var token = Lockr.get('token');
-    if(token == undefined){
-        console.log('loading login page');
-        mainView.router.load({
-            url: 'index.html'
-        });
-    }else{
+    if(token != undefined){
         console.log('loading home page');
         mainView.router.load({
             url: 'home.html'
         });
     }
-
-    // setTimeout(function(){ 
-    //     var token = Lockr.get('token');
-    //     if(token == undefined){
-    //         console.log('loading login page');
-    //         mainView.router.load({
-    //             url: 'login.html'
-    //         });
-    //     }else{
-    //         console.log('loading home page');
-    //         mainView.router.load({
-    //             url: 'home.html'
-    //         });
-    //     }
-    // }, 3000);
 }
 
 
