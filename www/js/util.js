@@ -35,18 +35,8 @@ function validateEmail(email) {
 function login() {
 
     console.log('login clicked');
-
-    console.log($('#my-login-email').val());
-    console.log($('#my-login-password').val());
-
-    var email = $('#my-login-email').val();
-    var password = $('#my-login-password').val();
-
-
-    console.log('email is'+email);
-    console.log('password is'+password);
-
-
+    var email = $('#login-email').val();
+    var password = $('#login-password').val();
 
     if (!email) {
         myApp.alert('Email Id should be provided.');
@@ -111,7 +101,7 @@ function onDeviceReady() {
     console.log('device is now ready');
     var downloaded = Lockr.get('downloaded');
     if(downloaded == undefined){
-        
+
         console.log('downloading files ....');
         Lockr.set('downloaded','true');
 
