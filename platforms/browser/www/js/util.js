@@ -35,18 +35,8 @@ function validateEmail(email) {
 function login() {
 
     console.log('login clicked');
-
-    console.log($('#my-login-email').val());
-    console.log($('#my-login-password').val());
-
-    var email = $('#my-login-email').val();
-    var password = $('#my-login-password').val();
-
-
-    console.log('email is'+email);
-    console.log('password is'+password);
-
-
+    var email = $('#login-email').val();
+    var password = $('#login-password').val();
 
     if (!email) {
         myApp.alert('Email Id should be provided.');
@@ -111,8 +101,142 @@ function onDeviceReady() {
     console.log('device is now ready');
     var downloaded = Lockr.get('downloaded');
     if(downloaded == undefined){
+
         console.log('downloading files ....');
         Lockr.set('downloaded','true');
+
+                // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraRise.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
+        // just download ones agni ppsx
+
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraPowerol.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
+        // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/agni.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/agni.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
+        // just download ones pdf1
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/NEPAL-BANGLADESH-BROCHURE.pdf");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/NEPAL-BANGLADESH-BROCHURE.pdf',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
+        // just download ones pdf2
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/REST-OF-THE-WORLD-BROCHURE.pdf");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/REST-OF-THE-WORLD-BROCHURE.pdf',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
+
+        // just download ones load calculator
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
     }
 
     document.addEventListener("backbutton", function(e) {
@@ -160,7 +284,6 @@ function nativePluginErrorHandler(error) {
 function inside_outside_text() {
     $('.inside_outside_text').show();
 }
-
 
 function enquiry_form_submit() {
 
@@ -238,7 +361,7 @@ function enquiry_form_submit() {
     }
     html =
         '<div class="enquiry_list" id="enquiry_list_' + count + '" style="margin-top: 3%;margin-left: 3%;border-left: 6px solid ' + border_color + ';">' +
-        '<a class="enquiry_list_edit_button" href="" onclick="edit_list_book(' + count + ')"><img  src="img/edit.png"></a>' +
+        '<a class="enquiry_list_edit_button" href="" onclick="edit_list_book(' + count + ')"><img  style="width: 4%;float: right;padding: 1%;position: relative;right: 0;" src="img/edit.png"></a>' +
         '<table>' +
         '<tr>' +
         '<td class="vz_inner_content_left">Name</td>' +
@@ -283,7 +406,7 @@ function enquiry_form_submit() {
 
         console.log("html is "+html);
 
-    // $('#enquiry_data').append(html);
+    $('#enquiry_data').prepend(html);
 
 
 
@@ -427,7 +550,7 @@ function book_now_form_submit() {
         '</tr>' +
         '</table>' +
         '</div>';
-    $('#enquiry_data').append(html);
+    $('#enquiry_data').prepend(html);
     mainView.router.load({
         url: 'enquiry_form.html',
         ignoreCache: false,
@@ -689,8 +812,6 @@ function update_data(count) {
 
     myApp.alert('Updated');
 
-
-
 }
 
 function redirect_product_specification(inp) {
@@ -932,6 +1053,38 @@ function redirect_book_now() {
 }
 
 
+function enquiry_data_push() {
+    var data = Lockr.get('data');
+    var token = Lockr.get('token');
+    console.log(token);
+    $.ajax({
+            url: base_url + '/enquiry_data_push',
+            type: 'POST',
+            crossDomain: true,
+            data: {
+                "user": token,
+                "data": data,
+            },
+        })
+        .done(function(res) {
+            console.log('done: ' + j2s(res));
+            myApp.hideIndicator();
+            if (res.status == 'SUCCESS') {
+                myApp.alert('Data inserted Successfully');
+                Lockr.set('data', '');
+                mainView.router.load({
+                    url: 'home.html',
+                    ignoreCache: false,
+                });
+            }
+        })
+        .fail(function(err) {
+            myApp.hideIndicator();
+            myApp.alert('Some error occurred on connecting.');
+            console.log('fail: ' + j2s(err));
+        })
+        .always(function() {});
+}
 
 
 
