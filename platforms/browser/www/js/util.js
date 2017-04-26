@@ -35,7 +35,14 @@ function login() {
 
     var email = $('#login-email').val();
     var password = $('#login-password').val();
-    if (email == '') {
+
+
+    alert('email '+email);
+    alert('password '+password);
+
+
+
+    if (!email) {
         myApp.alert('Email Id should be provided.');
         return false;
     } else if (!email.match(email_regex)) {
@@ -43,7 +50,7 @@ function login() {
         return false;
     }
 
-    if (password == '') {
+    if (!password) {
         myApp.alert('Password should not be blank.');
         return false;
     }
