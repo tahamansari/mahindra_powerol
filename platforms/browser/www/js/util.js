@@ -31,6 +31,7 @@ function validateEmail(email) {
 
 
 //app login
+
 function login() {
 
     var email = $('#my-login-email').val();
@@ -39,7 +40,6 @@ function login() {
 
     alert('email '+email);
     alert('password '+password);
-
 
 
     if (!email) {
@@ -57,36 +57,38 @@ function login() {
 
     myApp.showIndicator();
     $.ajax({
-            url: base_url + '/login',
-            type: 'POST',
-            crossDomain: true,
-            data: {
-                "email": email,
-                "password": password,
-            },
-        })
-        .done(function(res) {
-            console.log('done: ' + j2s(res));
-            myApp.hideIndicator();
-            if (res.status == 'SUCCESS') {
+        url: base_url + '/login',
+        type: 'POST',
+        crossDomain: true,
+        data: {
+            "email": email,
+            "password": password,
+        },
+    })
+    .done(function(res) {
+        console.log('done: ' + j2s(res));
+        myApp.hideIndicator();
+        if (res.status == 'SUCCESS') {
 
-                Lockr.set('token', res.data);
-                token = Lockr.get('token');
-                mainView.router.load({
-                    url: 'home.html',
-                    ignoreCache: false,
-                });
-            } else {
-                myApp.alert('Email or Password Mismatch');
-            }
-        })
-        .fail(function(err) {
-            myApp.hideIndicator();
-            myApp.alert('Some error occurred on connecting.');
-            console.log('fail: ' + j2s(err));
-        })
-        .always(function() {});
+            Lockr.set('token', res.data);
+            token = Lockr.get('token');
+            mainView.router.load({
+                url: 'home.html',
+                ignoreCache: false,
+            });
+        } else {
+            myApp.alert('Email or Password Mismatch');
+        }
+    })
+    .fail(function(err) {
+        myApp.hideIndicator();
+        myApp.alert('Some error occurred on connecting.');
+        console.log('fail: ' + j2s(err));
+    })
+    .always(function() {});
+    
 }
+
 
 function logout() {
     Lockr.flush();
@@ -110,27 +112,27 @@ function onDeviceReady() {
 
         Lockr.set('downloaded','true');
 
-        // just download ones agni ppsx
-        var fileTransfer = new FileTransfer();
-        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
-        // applicationStorageDirectory
-        fileTransfer.download(
-            uri,
-            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraRise.ppsx',
-            function(entry) {
-                // alert("download complete: " + entry.toURL());
-            },
-            function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
-            },
-            false, {
-                headers: {
-                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                }
-            }
-        );
+        // // just download ones agni ppsx
+        // var fileTransfer = new FileTransfer();
+        // var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
+        // // applicationStorageDirectory
+        // fileTransfer.download(
+        //     uri,
+        //     cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraRise.ppsx',
+        //     function(entry) {
+        //         // alert("download complete: " + entry.toURL());
+        //     },
+        //     function(error) {
+        //         alert("download error source " + error.source);
+        //         alert("download error target " + error.target);
+        //         alert("download error code" + error.code);
+        //     },
+        //     false, {
+        //         headers: {
+        //             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+        //         }
+        //     }
+        // );
 
         // just download ones agni ppsx
         var fileTransfer = new FileTransfer();

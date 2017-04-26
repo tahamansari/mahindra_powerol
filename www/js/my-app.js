@@ -886,68 +886,13 @@ myApp.onPageInit('index', function(page) {
 
 
     // $('#check_login').click(function(){
+
     //     alert('login clicked');
+
     // })
 
         
     
-
-    // function login() {
-
-    //     var email = $('#login-email').val();
-    //     var password = $('#login-password').val();
-
-
-    //     alert('email '+email);
-    //     alert('password '+password);
-
-
-
-    //     if (!email) {
-    //         myApp.alert('Email Id should be provided.');
-    //         return false;
-    //     } else if (!email.match(email_regex)) {
-    //         myApp.alert('Valid Email Id should be provided.');
-    //         return false;
-    //     }
-
-    //     if (!password) {
-    //         myApp.alert('Password should not be blank.');
-    //         return false;
-    //     }
-
-    //     myApp.showIndicator();
-    //     $.ajax({
-    //             url: base_url + '/login',
-    //             type: 'POST',
-    //             crossDomain: true,
-    //             data: {
-    //                 "email": email,
-    //                 "password": password,
-    //             },
-    //         })
-    //         .done(function(res) {
-    //             console.log('done: ' + j2s(res));
-    //             myApp.hideIndicator();
-    //             if (res.status == 'SUCCESS') {
-
-    //                 Lockr.set('token', res.data);
-    //                 token = Lockr.get('token');
-    //                 mainView.router.load({
-    //                     url: 'home.html',
-    //                     ignoreCache: false,
-    //                 });
-    //             } else {
-    //                 myApp.alert('Email or Password Mismatch');
-    //             }
-    //         })
-    //         .fail(function(err) {
-    //             myApp.hideIndicator();
-    //             myApp.alert('Some error occurred on connecting.');
-    //             console.log('fail: ' + j2s(err));
-    //         })
-    //         .always(function() {});
-    // }
 
 
 
