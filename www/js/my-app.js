@@ -315,7 +315,8 @@ myApp.onPageInit('product_listing', function(page) {
         }
 
         // window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
-        window.cordova.plugins.FileOpener.openFile("file:///android_asset/www/assets/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+
+        window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
 
     })
 
@@ -334,7 +335,8 @@ myApp.onPageInit('product_listing', function(page) {
         }
 
         // window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
-        window.cordova.plugins.FileOpener.openFile("file:///android_asset/www/assets/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+
+        window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/assets/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
 
     })
 
