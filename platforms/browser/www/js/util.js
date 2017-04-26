@@ -33,8 +33,8 @@ function validateEmail(email) {
 //app login
 function login() {
 
-    var email = $('#login-email').val();
-    var password = $('#login-password').val();
+    var email = $('#my-login-email').val();
+    var password = $('#my-login-password').val();
 
 
     alert('email '+email);
