@@ -98,6 +98,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
+    // Lockr.flush();
+
     console.log('device is now ready');
     var downloaded = Lockr.get('downloaded');
     if(downloaded == undefined){
@@ -403,20 +405,21 @@ function enquiry_form_submit() {
         '</table>' +
         '</div>';
 
-
         console.log("html is "+html);
 
     $('#enquiry_data').prepend(html);
 
-
-
-
     myApp.showTab('#tab2');
 
-    $("#tab2_button").animate({"background-color": "#3c73c0"});
-    $("#tab2_button").animate({"color": "#fff"});
-    $("#tab1_button").animate({"background-color": ""});
-    $("#tab1_button").animate({"color": "#3c73c0"});
+    // $("#tab2_button").animate({"background-color": "#3c73c0"});
+    // $("#tab2_button").animate({"color": "#fff"});
+    // $("#tab1_button").animate({"background-color": ""});
+    // $("#tab1_button").animate({"color": "#3c73c0"});
+
+    $("#tab2_button").css("background-color","#3c73c0");
+    $("#tab2_button").css("color","#fff");
+    $("#tab1_button").css("background-color","");
+    $("#tab1_button").css("color","#3c73c0");
 
     $("#state,#product_range,#segment,#dg_user,#name,#company,#mobile,#email").val('');
     $("#dg_user_product_range").hide();
@@ -551,20 +554,19 @@ function book_now_form_submit() {
         '</table>' +
         '</div>';
     $('#enquiry_data').prepend(html);
+
+
+
+
     mainView.router.load({
+
         url: 'enquiry_form.html',
+        query:{
+            frombooknow:'yes' 
+        },
         ignoreCache: false,
+
     });
-    myApp.showTab('#tab2');
-
-    $("#tab2_button").animate({"background-color":"#3c73c0"});
-    $("#tab2_button").animate({"color":"#fff"});
-    $("#tab1_button").animate({"background-color":""});
-    $("#tab1_button").animate({"color":"#3c73c0"});
-
-    $("#book_now_state,#book_now_product_range,#book_now_segment,#book_now_dg_user,#book_now_name,#book_now_company,#book_now_mobile,#book_now_email").val('');
-    $("#book_now_dg_user_product_range").hide();
-    $("#book_now_dg_user").show();
     count += 1;
 }
 
@@ -575,10 +577,10 @@ function edit_list_book(count) {
         myApp.closeModal('.picker-modal.modal-in');
     }
     myApp.pickerModal(
-        '<div class="picker-modal" style="height: 418px;background: url(./img/red_top_bg.jpg);background-size: cover;font-family: eurostileregular !important;letter-spacing: 2px;">' +
+        '<div class="picker-modal" style="padding: 2%;height: 418px;background: url(./img/red_top_bg.jpg);background-size: cover;font-family: eurostileregular !important;letter-spacing: 2px;">' +
         '<div class="toolbar">' +
         '<div class="toolbar-inner">' +
-        '<div class="left" style="margin-top: 2%;">' +
+        '<div class="left">' +
         '<a href="#" class="update-btn" style="color: #fff;font-size: 33px;margin-left: 20%;" onclick="update_data(' + count + ');">UPDATE</a></div>' +
         '</div>' +
         '<div class="right" style="float: right;margin-right: 1%;margin-top: 1%;">' +
@@ -606,10 +608,18 @@ function edit_list_book(count) {
         '<div class="col-50">' +
         '<select name="product_range" value="' + $("#list_product_range_" + count).val() + '" style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;font-size: 20px;background-color: white;" id="update_product_range_' + count + '">' +
         '<option value="">Product Range</option>' +
-        '<option value="5KVA*">5KVA*</option>' +
-        '<option value="200KVA - 500KVA">200KVA - 500KVA</option>' +
-        '<option value="5KVA*">5KVA*</option>' +
-        '<option value="200KVA - 500KVA">200KVA - 500KVA</option>' +
+
+
+        '<option value="7.5 kVA">7.5 kVA</option>'+
+        '<option value="20 kVA - 25 kVA">20 kVA - 25 kVA</option>'+
+        '<option value="30 kVA - 40 kVA">30 kVA - 40 kVA</option>'+
+        '<option value="50 kVA - 62.5 kVA">50 kVA - 62.5 kVA</option>'+
+        '<option value="75 kVA - 125 kVA">75 kVA - 125 kVA</option>'+
+        '<option value="160 kVA - 200 kVA">160 kVA - 200 kVA</option>'+
+        '<option value="200 kVA - 500 kVA">200 kVA - 500 kVA</option>'+
+
+
+
         '</select>' +
         '</div>' +
 
@@ -653,10 +663,17 @@ function edit_list_book(count) {
         '<div class="col-50">' +
         '<select name="product_range" value="' + $("#list_dg_user_product_range_" + count).val() + '" style="display:none;width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;font-size: 20px;background-color: white;" id="update_dg_user_product_range_' + count + '">' +
         '<option value="">Product Range</option>' +
-        '<option value="5KVA*">5KVA*</option>' +
-        '<option value="200KVA - 500KVA">200KVA - 500KVA</option>' +
-        '<option value="5KVA*">5KVA*</option>' +
-        '<option value="200KVA - 500KVA">200KVA - 500KVA</option>' +
+
+
+        '<option value="7.5 kVA">7.5 kVA</option>'+
+        '<option value="20 kVA - 25 kVA">20 kVA - 25 kVA</option>'+
+        '<option value="30 kVA - 40 kVA">30 kVA - 40 kVA</option>'+
+        '<option value="50 kVA - 62.5 kVA">50 kVA - 62.5 kVA</option>'+
+        '<option value="75 kVA - 125 kVA">75 kVA - 125 kVA</option>'+
+        '<option value="160 kVA - 200 kVA">160 kVA - 200 kVA</option>'+
+        '<option value="200 kVA - 500 kVA">200 kVA - 500 kVA</option>'+
+
+
         '</select>' +
         '</div>' +
         '</div>' +
@@ -773,9 +790,6 @@ function update_data(count) {
     }
 
 
-
-
-
     console.log($("#update_company_" + count).val(), $("#update_dg_user_" + count).val());
     var border_color = '';
     if ($("#update_product_range_" + count).val() == '5KVA*') {
@@ -810,7 +824,12 @@ function update_data(count) {
     $("#list_state_" + count).val($("#update_state_" + count).val());
 
 
+    myApp.closeModal();
+
     myApp.alert('Updated');
+
+
+    
 
 }
 
@@ -1056,8 +1075,10 @@ function redirect_book_now() {
 function enquiry_data_push() {
     var data = Lockr.get('data');
     var token = Lockr.get('token');
-    console.log(token);
-    $.ajax({
+    console.log(data);
+    // return false;
+    if (data != undefined) {
+        $.ajax({
             url: base_url + '/enquiry_data_push',
             type: 'POST',
             crossDomain: true,
@@ -1070,12 +1091,14 @@ function enquiry_data_push() {
             console.log('done: ' + j2s(res));
             myApp.hideIndicator();
             if (res.status == 'SUCCESS') {
-                myApp.alert('Data inserted Successfully');
+                myApp.alert(res.message); 
                 Lockr.set('data', '');
                 mainView.router.load({
                     url: 'home.html',
                     ignoreCache: false,
                 });
+            }else{
+                myApp.alert(res.message); 
             }
         })
         .fail(function(err) {
@@ -1084,11 +1107,11 @@ function enquiry_data_push() {
             console.log('fail: ' + j2s(err));
         })
         .always(function() {});
+    } else {
+        myApp.alert('No data Available');
+    }
+
 }
-
-
-
-
 
 
 

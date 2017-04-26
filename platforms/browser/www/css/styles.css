@@ -1834,6 +1834,7 @@ tspan{
     transform: scale(1.2);
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31);
+        border: 1px solid rgb(12, 117, 194)!important;
 }
 
 .listzoom{
@@ -1871,9 +1872,6 @@ tspan{
     border: 1px solid black;
 }
 
-.blueborder{
-    border:1px solid rgb(1, 115, 188);
-}
 
 
 .item{
@@ -1900,9 +1898,9 @@ tspan{
 .tools-container{
     
     position: absolute;
-    top: 40%;
+    top: 50%;
     width: 100%;
-    margin: 0 7%;
+    margin: 0 10%;
 }
 
 
@@ -1910,10 +1908,10 @@ tspan{
 
     background: #e51836;
     color: white;
-    padding: 9%;
+    padding: 5%;
     border: none;
-    font-size: 33px;
-    width: 63%;
+    font-size: 31px;
+    width: 60%;
     border-radius: 5%;
 
 }
@@ -1944,7 +1942,12 @@ tspan{
     z-index: 99999;
 }
 
+
 .blueborder{
+    border:1px solid rgb(1, 115, 188);
+}
+
+.bluecolor{
     color: #0173bc;
 }
 

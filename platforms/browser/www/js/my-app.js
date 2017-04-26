@@ -406,11 +406,31 @@ myApp.onPageInit('book_now', function(page) {
 });
 
 myApp.onPageInit('enquiry_form', function(page) {
+
+
+    if(page.query.frombooknow == 'yes'){
+
+        myApp.showTab('#tab2');
+        $("#tab2_button").css("background-color","#3c73c0");
+        $("#tab2_button").css("color","#fff");
+        $("#tab1_button").css("background-color","");
+        $("#tab1_button").css("color","#3c73c0");
+
+    }else{
+
+        $("#tab1_button").css("background-color", "#3c73c0");
+        $("#tab1_button").css("color", "#fff");
+
+    }
+
+
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
-    $("#tab1_button").css("background-color", "#3c73c0");
-    $("#tab1_button").css("color", "#fff");
+
+
+
+
 
     $('#tab1_button').on('click', function() {
         $("#tab1_button").css("background-color", "#3c73c0");
@@ -574,9 +594,10 @@ myApp.onPageInit('faq', function(page) {
     console.log('page loaded');
 
     $('.accordion').click(function(){
-        console.log('border clicked');
+        console.log('border clicked')
+        ;
         $(this).parent().toggleClass('blueborder');
-        $(this).next().toggleClass('blueborder');
+        $(this).next().toggleClass('bluecolor');
 
     })
 
