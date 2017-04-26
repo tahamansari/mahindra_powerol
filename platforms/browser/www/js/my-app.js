@@ -311,12 +311,12 @@ myApp.onPageInit('product_listing', function(page) {
         };
         // onError Callback receives a json object
         function onError(error) {
-            alert('message: ' + error.message);
+            alert('message error: ' + error.message);
         }
 
-        // window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
 
-        window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
 
     })
 
@@ -331,16 +331,14 @@ myApp.onPageInit('product_listing', function(page) {
         };
         // onError Callback receives a json object
         function onError(error) {
-            alert('message: ' + error.message);
+            alert('message error: ' + error.message);
         }
 
-        // window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
 
-        window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/assets/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/REST-OF-THE-WORLD-BROCHURE.pdf"), onSuccess, onError);
 
     })
-
-
 
     $('.listing_input_red').css('background-color', 'transparent');
     $('.listing_input_blue').css('background-color', 'transparent');

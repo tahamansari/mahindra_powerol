@@ -340,8 +340,6 @@ myApp.onPageInit('product_listing', function(page) {
 
     })
 
-
-
     $('.listing_input_red').css('background-color', 'transparent');
     $('.listing_input_blue').css('background-color', 'transparent');
 
