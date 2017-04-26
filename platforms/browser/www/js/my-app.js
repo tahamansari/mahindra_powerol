@@ -42,12 +42,6 @@ var mainView = myApp.addView('.view-main', {
 
 mainView.hideNavbar();
 
-myApp.onPageInit('*', function (page) {
-
-  console.log(page.name + ' initialized'); 
-
-});
-
 
 myApp.onPageInit('cba', function(page) {
 
@@ -361,18 +355,6 @@ myApp.onPageInit('product_specification', function(page) {
         $('.listzoom').removeClass('pro_spec_hover');
     })
 
-    // $('.outzoombottom').click(function() {
-    //     $('.listzoom').removeClass('pro_spec_hover');
-    // })
-
-    // $('.listzoom').click(function() {
-
-    //     $('.listzoom').removeClass('show');
-    //     $('.listzoom').addClass('blur');
-    //     $(this).removeClass('blur');
-    //     $(this).addClass('show');
-    // })
-
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
@@ -393,7 +375,6 @@ myApp.onPageInit('video', function(page) {
 
 
     $('.openVideo').click(function(){
-
 
         console.log("video open");
         VideoPlayer.play("file:///android_asset/www/small.mp4");
@@ -881,29 +862,10 @@ myApp.onPageInit('5k_punch', function(page) {
 });
 
 myApp.onPageInit('index', function(page) {
-
     console.log('index page called');
-
-
-    // $('#check_login').click(function(){
-
-    //     alert('login clicked');
-
-    // })
-
-        
-    
-
-
-
-    // $('#index_map').html($('#map').html());
-
-    // $('.mapoverlay').css('display','none');
-
 });
 
 myApp.onPageInit('tools', function(page) {
-
 
     $('#open-application').click(function() {
         navigator.startApp.start("com.app.pc", function(message) { /* success */
@@ -917,19 +879,4 @@ myApp.onPageInit('tools', function(page) {
         mainView.router.back();
     });
 
-
-
-
 });
-
-
-
-myApp.onPageInit('login', function(page) {
-
-
-});
-
-
-$$(document).on('pageInit', '.page[data-page="about"]', function(e) {
-
-})
