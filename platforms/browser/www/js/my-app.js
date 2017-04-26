@@ -346,6 +346,1719 @@ myApp.onPageInit('product_listing', function(page) {
 
 myApp.onPageInit('product_specification', function(page) {
 
+    console.log(page.query);
+
+    $('.backbutton').on('click', function() {
+        mainView.router.back();
+    });
+
+    var title = page.query.title;
+    $('#product_specification_h1').text('PRODUCT LISTING /' + title);
+
+
+    // $('#product_specification_title').append(title);
+    // $('#product_specification_title').append('<hr class="cust-line hvr-underline-from-left">');
+
+    // $(".hvr-underline-from-left").animate({right: '0'}, 500);
+
+    if(title == '7.5 kVA'){
+
+                var html  = "<div class='book_content'>"+
+                "<h2 class='book_heading' class='product_specification_title'>7.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+                "<div class='outzoom'></div>"+
+                "<a href='#' onclick='redirect_book_now()'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                "</div>"+
+                "<div style='clear:both'></div>"+
+                "<div class='book_now_input'>"+
+                "<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+                "<div class='row no-gutter'>"+
+                "<div class='col-10 listzoom height'>"+
+                "<p class='table-conntent'>Rated</p>"+
+                "<p class='table-conntent-number'>4</p>"+
+                "</div>"+
+                "<div class='col-30 listzoom height'>"+
+                "<p class='table-conntent'>Engine Model</p>"+
+                "<p class='table-conntent-number' style='margin-top: -4% !important;'>15LD440-GS12</p>"+
+                "</div>"+
+                "<div class='col-20 listzoom height'>"+
+                "<p class='table-conntent'>No of cylinders</p>"+
+                "<p class='table-conntent-number'>1</p>"+
+                "</div>"+
+                "<div class='col-20 listzoom height'>"+
+                "<p class='table-conntent'>Rated Speed RPM</p>"+
+                "<p class='table-conntent-number'>3000</p>"+
+                "</div>"+
+                "<div class='col-20 listzoom height'>"+
+                "<p class='table-conntent'>Door Type</p>"+
+                "<p class='table-conntent-number'>SD</p>"+
+                "</div>"+
+                "</div>"+
+                "<div class='row no-gutter'>"+
+                "<div class='col-25 listzoom'>"+
+                "<p class='table-conntent'>Rated Current(AMP)</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+                "<p class='table-conntent-number text-left' style='margin-top: -22px;'>21.74</p>"+
+                "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+                "<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+                "<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+                "</div>"+
+                "<div class='col-20 listzoom'>"+
+                "<p class='table-conntent'>Cooling System</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+                "<p class='table-conntent-number' >Air</p>"+
+                "</div>"+
+                "<div class='col-30 listzoom'>"+
+                "<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                "<p class='table-conntent-number text-left' style='margin-top: -22px'>1080</p>"+
+                "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+                "<p class='table-conntent-number text-center' style='margin-top: -60px;'>700</p>"+
+                "<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+                "<p class='table-conntent-number text-right' style='margin-top: -60px;'>765</p>"+
+                "<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+                "</div>"+
+                "<div class='col-25 listzoom'>"+
+                "<p class='table-conntent'>Approximate Dry Weight</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>Of DG set (lits)</p>"+
+                "<p class='table-conntent-number' >225</p>"+
+                "</div>"+
+                "</div>"+
+                "<div class='row no-gutter'>"+
+                "<div class='col-30 listzoom'>"+
+                "<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>with top hood if any (mm) (lits)</p>"+
+                "<p class='table-conntent-number' >225</p>"+
+                "</div>"+
+                "<div class='col-30 listzoom'>"+
+                "<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm) (lits)</p>"+
+                "<p class='table-conntent-number' >225</p>"+
+                "</div>"+
+                "<div class='col-40 listzoom fullzindex'>"+
+                "<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+                "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                "<p class='table-conntent-number text-left' style='margin-top: -22px;'>1040</p>"+
+                "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+                "<p class='table-conntent-number text-center' style='margin-top: -60px;'>700</p>"+
+                "<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+                "<p class='table-conntent-number text-right' style='margin-top: -60px;'>745</p>"+
+                "<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+                "</div>"+
+                "</div>"+
+                "</div>"+
+                "</div>";
+
+    }else if(title == '20 kVA - 25 kVA'){
+
+
+        var html = "<div class='book_content'>"+
+"<h2 class='book_heading'>20 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"20 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>16</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>3285GM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>3</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>SD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>87</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>27.8</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2120</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>900</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1410</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >90</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >800</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2150</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+
+// <!-- .....2...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >22.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"22.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>18</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>3335TCGM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>3</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>SD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>97.8</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>31.3</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1365</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >90</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>800</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2150</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+// <!-- ...3... -->
+
+
+
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >25 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"25 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>20</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>3385TCIGM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>3</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>SD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>108.7</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>34.8</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2120</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>900</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1410</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >90</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>820</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1390</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+// <!-- ....4... -->
+
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >25 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"25 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>20</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>3385TCIGM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>3</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>108.7</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>34.8</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1376</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >130</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>940</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1390</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>";
+
+
+    }else if(title == "30 kVA - 40 kVA"){
+
+        var html = "<div class='book_content'>"+
+"<h2 class='book_heading'>30 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"30 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>24</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>3445TCIGM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>3</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>130.4</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>41.7</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1376</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >130</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >950</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1390</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+
+// <!-- .....2...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >40 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"40 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>32</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>4575TCIGM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>173.9</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>55.6</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1376</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >130</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>1000</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1390</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>";
+
+
+    }else if(title == '50 kVA - 62.5 kVA'){
+
+        var html = "<div class='book_content'>"+
+"<h2 class='book_heading'>50 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"50 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>40</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>4725GM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>69.6</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2770</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1800</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >150</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >1250</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2800</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1540</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+
+// <!-- .....2...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >62.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"62.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>50</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>4905GM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>87</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>2770</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1800</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >150</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-50 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>1250</p>"+
+"</div>"+
+
+"<div class='col-50 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2800</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1540</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>";
+
+    }else if(title == '75 kVA - 125 kVA'){
+
+        var html = "<div class='book_content'>"+
+"<h2 class='book_heading'>75 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"75 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>60</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>41035GM-C2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>104.3</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>3000</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>2135</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >230</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >1350</p>"+
+"</div>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power at 100% load KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >68.9 (93.6)</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>2800</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1640</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+
+// <!-- .....2...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >82.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"82.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>60</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>41035GM-C2 Standby</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>NA</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >NA</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>NA</p>"+
+"</div>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power at 100% load KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >NA</p>"+
+"</div>"+
+
+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+// <!-- ...3.... -->
+
+
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >82.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"82.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>66</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>82.5 kVA Mech CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>115</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>3200</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>2290</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >200</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>1700</p>"+
+"</div>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power at 100% load KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >74.5 (101.2)</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>3200</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1700</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+// <!-- .....4...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >100 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"100 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>80</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>100 kVA Mech CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>4</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>139</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>3200</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>2290</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >200</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>1720</p>"+
+"</div>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power at 100% load KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >93 (126.4)</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>3200</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1700</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+// <!-- .....5...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >125 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"125 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>100</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>125 kVA Mech CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>6</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>173.9</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >219</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>1866</p>"+
+"</div>"+
+
+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power at 100% load KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >114.8 (156)</p>"+
+"</div>"+
+
+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>3750</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1533</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>";
+
+    }else if(title == '160 kVA - 200 kVA'){
+
+        var html = "<div class='book_content'>"+
+"<h2 class='book_heading'>160 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"160 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>128</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>160 kVA Mech CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>6</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>222.6</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>3790</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1877</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >250</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >2350</p>"+
+"</div>"+
+
+
+"<div class='col-40 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >146.5/199</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>3750</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1700</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+
+// <!-- .....2...... -->
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >180 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"180 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>144</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>180 kVA Elec CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>6</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>250.4</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>4500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1500</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1878</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >390</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>2750</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >163/221.5</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>"+
+
+
+// <!-- ...3.... -->
+
+
+
+
+"<div class='book_content'>"+
+"<h2 class='book_heading' >200 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
+"<div class='outzoom'></div>"+
+"<a href='#' onclick='redirect_book_now(\"200 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+"</div>"+
+
+"<div style='clear:both'></div>"+
+"<div class='book_now_input'>"+
+"<div class='content-block cust_table' style='padding: 0 45px;margin-top: 1%;'>"+
+
+"<div class='row no-gutter'>"+
+"<div class='col-10 listzoom height'>"+
+"<p class='table-conntent'>Rated</p>"+
+"<p class='table-conntent-number'>160</p>"+
+"</div>"+
+"<div class='col-30 listzoom height'>"+
+"<p class='table-conntent'>Engine Model</p>"+
+"<p class='table-conntent-number' style='margin-top: -4% !important;'>200 kVA Elec CPCB 2</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>No of cylinders</p>"+
+"<p class='table-conntent-number'>6</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Rated Speed RPM</p>"+
+"<p class='table-conntent-number'>1500</p>"+
+"</div>"+
+"<div class='col-20 listzoom height'>"+
+"<p class='table-conntent'>Door Type</p>"+
+"<p class='table-conntent-number'>DD</p>"+
+"</div>"+
+"</div>"+
+
+
+"<div class='row no-gutter'>"+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Rated Current(AMP)</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Capacity 0.8PF</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>1 Phase</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>278.2</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>3 Phase</p>"+
+"</div>"+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Cooling System</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>(Air Cooled/Water Cooled)</p>"+
+"<p class='table-conntent-number' >Water Cooled</p>"+
+"</div>"+
+"<div class='col-30 listzoom'>"+
+"<p class='table-conntent'>Side lifting DG set dimensions with</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px'>4500</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>1500</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>1878</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"<div class='col-25 listzoom'>"+
+"<p class='table-conntent'>Intergrated Fuel Tank Capacity(lits)</p>"+
+"<p class='table-conntent-number' >390</p>"+
+"</div>"+
+
+"</div>"+
+
+"<div class='row no-gutter'>"+
+
+"<div class='col-20 listzoom'>"+
+"<p class='table-conntent'>Approximate Dry Weight</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>Of DG set (kg)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;'>2800</p>"+
+"</div>"+
+
+"<div class='col-40 listzoom'>"+
+"<p class='table-conntent'>Rated Engine Power KW (HP)</p>"+
+"<p class='table-conntent-number' style='margin-top: 0;' >180/244.6</p>"+
+"</div>"+
+
+
+"<div class='col-40 listzoom fullzindex'>"+
+"<p class='table-conntent'>Centre Lifting DG Set Dimensions</p>"+
+"<p style='font-size: 15px;margin-top: -18px;'>with top hood, if any (mm)</p>"+
+"<p class='table-conntent-number text-left' style='margin-top: -22px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
+"<p class='table-conntent-number text-center' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-center' style='font-size: 15px;margin-top: -32px;'>Width</p>"+
+"<p class='table-conntent-number text-right' style='margin-top: -60px;'>NA</p>"+
+"<p class='table-conntent-number-2 text-right' style='font-size: 15px;margin-top: -32px;'>Height</p>"+
+"</div>"+
+
+"</div>"+
+
+
+
+"</div>"+
+"</div>";
+
+    }else if(title == '200 kVA - 500 kVA'){
+
+        var html = "";
+
+    }
+
+
+    
+
+    $('.specificationContainer').html(html);
+
+    $(".hvr-underline-from-left").animate({right: '0'}, 500);
+
+
+
+
     $('.listzoom').click(function(){
         $('.listzoom').removeClass('pro_spec_hover');
         $(this).addClass('pro_spec_hover');
@@ -355,19 +2068,8 @@ myApp.onPageInit('product_specification', function(page) {
         $('.listzoom').removeClass('pro_spec_hover');
     })
 
-    $('.backbutton').on('click', function() {
-        mainView.router.back();
-    });
 
-    var title = page.query.title;
-    $('#product_specification_h1').text('PRODUCT LISTING /' + title);
 
- 
-    $('#product_specification_title').append(title);
-    $('#product_specification_title').append('<hr class="cust-line hvr-underline-from-left">');
-    $(".hvr-underline-from-left").animate({right: '0'}, 500);
-
-    // console.log(title)
 
 });
 

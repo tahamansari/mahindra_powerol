@@ -834,10 +834,8 @@ function update_data(count) {
 }
 
 function redirect_product_specification(inp) {
-    // console.log($('#'+inp+'').val());
 
     $('#' + inp).addClass("hvr-wobble-horizontal");
-    // return false;
     $('#' + inp).animate({'background-color':'rgba(197, 195, 195, 0.25)'});
 
     // return false;
@@ -1060,13 +1058,13 @@ function cba_clear() {
 
 
 
-function redirect_book_now() {
+function redirect_book_now(para) {
     // console.log($('#product_specification_title').text());
     mainView.router.load({
         url: 'book_now.html',
         ignoreCache: false,
         query: {
-            title: $('#product_specification_title').text()
+            title: para
         },
     });
 }

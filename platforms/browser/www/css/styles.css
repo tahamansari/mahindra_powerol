@@ -393,7 +393,7 @@ div{
 
 /*.....................book now.html start...........................*/
 
-.book_content{
+.my-book_content{
 
     width: 100%;
     position: absolute;
@@ -403,6 +403,38 @@ div{
         line-height: 30px;
 
             top: 31%;
+}
+
+
+.my-book_now_input{
+
+    width: 100%;
+    position: absolute;
+    top: 43%;
+    text-align: center;
+}
+
+.my-book_now_input input[type="text"]{
+
+    border: 1px solid rgba(0,0,0,.5);
+    width: 75%;
+    padding: 2% 4%;
+    background: transparent;
+    margin: 2% 1%;
+    font-family: inherit;
+    font-size: 20px;
+    color: grey;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+
+
+.book_content{
+
+    width: 100%;
+    padding: 0% 2%;
+    line-height: 30px;
 }
 
 .book_heading{
@@ -431,8 +463,8 @@ div{
 .book_now_input{
 
     width: 100%;
-    position: absolute;
-    top: 43%;
+/*    position: absolute;
+    top: 43%;*/
     text-align: center;
 }
 
@@ -1516,10 +1548,10 @@ width: 15%;
 
 
 .outzoom{
-    width: 54%;
+width: 54%;
     height: 100px;
     position: absolute;
-    top: -6%;
+    /* top: -6%; */
     left: 17%;
 }
 
@@ -1977,4 +2009,17 @@ tspan{
     z-index: 9999999999;
 }
 
+ .specificationContainer h1{
+
+    color: black
+ }
+.specificationContainer{
+
+    position: relative;
+    top: 30%;
+    height: 70%;
+    overflow: scroll;
+    color: black;
+
+}
 
