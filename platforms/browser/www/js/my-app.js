@@ -314,7 +314,9 @@ myApp.onPageInit('product_listing', function(page) {
             alert('message: ' + error.message);
         }
 
-        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("file:///android_asset/www/assets/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+
     })
 
     $('.showpdf2').on('click', function() {
@@ -331,7 +333,9 @@ myApp.onPageInit('product_listing', function(page) {
             alert('message: ' + error.message);
         }
 
-        window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("file:///android_asset/www/assets/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+
     })
 
 
@@ -523,7 +527,7 @@ myApp.onPageInit('our_story', function(page) {
         function onError(error) {
             alert('message: ' + error.message);
         }
-        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraPowerol.ppsx", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
         // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
     })
 

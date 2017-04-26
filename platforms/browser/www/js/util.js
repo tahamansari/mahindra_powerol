@@ -94,20 +94,36 @@ function onDeviceReady() {
 
     console.log('device is now ready');
 
-    // console.log("video Player :" + VideoPlayer);
-
     // Lockr.rm('token');
+
     // // just download ones video 
-
-    // alert('device ready');
-    // $('.mapoverlay').css('display','block');
-    // return false;
-
     var downloaded = Lockr.get('downloaded');
 
     if(downloaded == undefined){
 
         Lockr.set('downloaded','true');
+
+        // just download ones agni ppsx
+        var fileTransfer = new FileTransfer();
+        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
+        // applicationStorageDirectory
+        fileTransfer.download(
+            uri,
+            cordova.file.externalApplicationStorageDirectory + 'files/download/mahindraRise.ppsx',
+            function(entry) {
+                // alert("download complete: " + entry.toURL());
+            },
+            function(error) {
+                alert("download error source " + error.source);
+                alert("download error target " + error.target);
+                alert("download error code" + error.code);
+            },
+            false, {
+                headers: {
+                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                }
+            }
+        );
 
         // just download ones agni ppsx
         var fileTransfer = new FileTransfer();
@@ -229,7 +245,7 @@ function onDeviceReady() {
         myApp.hideIndicator();
         myApp.closePanel();
 
-        if (page.name == "home" || page.name == "login") {
+        if (page.name == "home" || page.name == "index") {
 
             // lockFile = dataDir.getFile("file:///lockfile.txt", {create: true, exclusive: true});
             // console.log("Created File"+lockFile);
@@ -245,13 +261,6 @@ function onDeviceReady() {
 
     }, false);
 
-
-    // mainView.router.load({
-
-    //     url: 'findus_map.html',
-
-    // });
-
     var token = Lockr.get('token');
     if(token == undefined){
         console.log('loading login page');
@@ -264,8 +273,6 @@ function onDeviceReady() {
             url: 'home.html'
         });
     }
-
-
 
     // setTimeout(function(){ 
     //     var token = Lockr.get('token');
@@ -748,11 +755,12 @@ function forgot_password() {
 
 
 
-function showppt() {
+// function showppt() {
 
-    alert('called');
-    window.cordova.plugins.FileOpener.canOpenFile("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx", onSuccess, onError);
-}
+//     alert('called');
+//     window.cordova.plugins.FileOpener.canOpenFile("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx", onSuccess, onError);
+// }
+
 
 function update_data(count) {
 

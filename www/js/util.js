@@ -94,21 +94,14 @@ function onDeviceReady() {
 
     console.log('device is now ready');
 
-    // console.log("video Player :" + VideoPlayer);
-
     // Lockr.rm('token');
+
     // // just download ones video 
-
-    // alert('device ready');
-    // $('.mapoverlay').css('display','block');
-    // return false;
-
     var downloaded = Lockr.get('downloaded');
 
     if(downloaded == undefined){
 
         Lockr.set('downloaded','true');
-
 
         // just download ones agni ppsx
         var fileTransfer = new FileTransfer();
@@ -268,13 +261,6 @@ function onDeviceReady() {
 
     }, false);
 
-
-    // mainView.router.load({
-
-    //     url: 'findus_map.html',
-
-    // });
-
     var token = Lockr.get('token');
     if(token == undefined){
         console.log('loading login page');
@@ -287,8 +273,6 @@ function onDeviceReady() {
             url: 'home.html'
         });
     }
-
-
 
     // setTimeout(function(){ 
     //     var token = Lockr.get('token');
@@ -771,11 +755,12 @@ function forgot_password() {
 
 
 
-function showppt() {
+// function showppt() {
 
-    alert('called');
-    window.cordova.plugins.FileOpener.canOpenFile("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx", onSuccess, onError);
-}
+//     alert('called');
+//     window.cordova.plugins.FileOpener.canOpenFile("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx", onSuccess, onError);
+// }
+
 
 function update_data(count) {
 
