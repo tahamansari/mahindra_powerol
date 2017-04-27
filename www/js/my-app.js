@@ -2143,7 +2143,7 @@ myApp.onPageInit('enquiry_form', function(page) {
     $('.backbutton').on('click', function() {
 
         // alert('clicked');
-        mainView.router.back();
+        // mainView.router.back();
         mainView.router.loadPage('home.html');
     });
 
@@ -2561,7 +2561,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Fuel Intelligent',
                 id: 'Fuel Intelligent',
                 data: [{
-                    name: '<img src="img/5k_punch_mid.png" style="width: 30%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;"><br><br>Best in class <br> Fuel Efficiency.</p>',
+                    name: '<img src="img/5k_punch_mid.png" style="width: 30%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;"><br><br>    Best in class <br> Fuel Efficiency.</p>',
                     y: 100,
                     color: '#eb113b',
                 }],
