@@ -2143,7 +2143,7 @@ myApp.onPageInit('enquiry_form', function(page) {
     $('.backbutton').on('click', function() {
 
         // alert('clicked');
-        // mainView.router.back();
+        mainView.router.back();
         mainView.router.loadPage('home.html');
     });
 
@@ -2549,7 +2549,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Peace of Mind',
                 id: 'Peace of Mind',
                 data: [{
-                    name: '<img src="img/5k_punch_yoga.png" style="width: 30%;"><h1 style="margin: 4%;">Peace of Mind</h1><p style="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_yoga.png" style="width: 30%;"><h1 style="margin: 4%;">Peace of Mind</h1><p style="margin: 5px; line-height: 25px;"><br>Door step Service <br> with  <br> 2 years warranty</p>',
                     y: 100,
                     color: '#0075b6',
                 }],
@@ -2561,7 +2561,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Fuel Intelligent',
                 id: 'Fuel Intelligent',
                 data: [{
-                    name: '<img src="img/5k_punch_mid.png" style="width: 30%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_mid.png" style="width: 30%;"><h1 style="margin: 4%;">Fuel Intelligent</h1><p style ="margin: 5px; line-height: 25px;"><br><br>Best in class <br> Fuel Efficiency.</p>',
                     y: 100,
                     color: '#eb113b',
                 }],
@@ -2573,7 +2573,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Fastest Delivery',
                 id: 'Fastest Delivery',
                 data: [{
-                    name: '<img src="img/5k_punch_clock.png" style="width: 30%;"><h1 style="margin: 4%;">Fastest Delivery</h1><p style ="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_clock.png" style="width: 30%;"><h1 style="margin: 4%;">Fastest Delivery</h1><p style ="margin: 5px; line-height: 25px;"><br><br>Order Today, <br> Deliver Today</p>',
                     y: 100,
                     color: '#0075b6',
                 }],
@@ -2585,7 +2585,7 @@ myApp.onPageInit('5k_punch', function(page) {
                 name: 'Power Brand',
                 id: 'Power Brand',
                 data: [{
-                    name: '<img src="img/5k_punch_charg.png" style="width: 30%;"><h1 style="margin: 4%;">Power Brand</h1><p sty="margin: 5px; line-height: 25px;">Compliance to Stringent Noise <br>& <br> Emission norms.</p>',
+                    name: '<img src="img/5k_punch_charg.png" style="width: 30%;"><h1 style="margin: 4%;">Power Brand</h1><p sty="margin: 5px; line-height: 25px;"><br>Powered by rugged <br> Mahindra <br>  Tractor engines</p>',
                     y: 100,
                     color: '#eb113b',
                 }],
