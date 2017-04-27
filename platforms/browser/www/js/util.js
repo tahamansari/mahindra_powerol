@@ -9,7 +9,7 @@ function goto_page(page) {
     mainView.router.load({
 
         url: page,
-        ignoreCache: false,
+        // ignoreCache: false,
         
     });
 }
@@ -246,6 +246,14 @@ function onDeviceReady() {
         var page = myApp.getCurrentView().activePage;
         myApp.hideIndicator();
         myApp.closePanel();
+
+
+
+        if(page.name=="enquiry_form"){
+
+            mainView.router.loadPage('home.html');
+
+        }   
 
         if (page.name == "home" || page.name == "index") {
 
@@ -1071,11 +1079,13 @@ function redirect_book_now(para) {
 
 
 function enquiry_data_push() {
+
     var data = Lockr.get('data');
     var token = Lockr.get('token');
     console.log(data);
     // return false;
     if (data != undefined) {
+
         $.ajax({
             url: base_url + '/enquiry_data_push',
             type: 'POST',
@@ -1086,15 +1096,18 @@ function enquiry_data_push() {
             },
         })
         .done(function(res) {
+
             console.log('done: ' + j2s(res));
             myApp.hideIndicator();
             if (res.status == 'SUCCESS') {
+
                 myApp.alert(res.message); 
                 Lockr.set('data', '');
-                mainView.router.load({
-                    url: 'home.html',
-                    ignoreCache: false,
-                });
+                
+                // mainView.router.load({
+                //     url: 'home.html',
+                // });
+
             }else{
                 myApp.alert(res.message); 
             }
@@ -1105,6 +1118,7 @@ function enquiry_data_push() {
             console.log('fail: ' + j2s(err));
         })
         .always(function() {});
+
     } else {
         myApp.alert('No data Available');
     }

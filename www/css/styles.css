@@ -554,12 +554,12 @@ div{
 /*cust_table*/
 
 .cust_table [class*="col-"] {
-    background:rgba(255, 255, 255, 0.43);
+    background: rgba(255, 255, 255, 0.43);
     text-align: center;
     color: #000;
     border: 1px solid #ddd;
     padding: 5px;
-    height: 125px;
+    height: 140px;
 }
 
 
@@ -1046,7 +1046,8 @@ div.accordion_content {
 }
 
 .slide-container img{
-    margin-top: 15%;
+        margin-top: 16%;
+    margin-left: 8%;
 }
 
 .slide-image{

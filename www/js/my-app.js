@@ -11,8 +11,8 @@ var myApp = new Framework7({
     // swipePanel: 'right',
     swipeBackPage: false,
     preloadPreviousPage: true,
-    uniqueHistory: false,
-    uniqueHistoryIgnoreGetParameters: true,
+    uniqueHistory: true,
+    // uniqueHistoryIgnoreGetParameters: true,
     modalTitle: 'Powerol',
     imagesLazyLoadPlaceholder: 'img/lazyload.jpg',
     imagesLazyLoadThreshold: 50,
@@ -41,6 +41,13 @@ var mainView = myApp.addView('.view-main', {
 });
 
 mainView.hideNavbar();
+
+//We can also add callback for all pages:
+myApp.onPageInit('*', function (page) {
+  console.log(page.name + ' initialized'); 
+});
+
+
 
 
 myApp.onPageInit('cba', function(page) {
@@ -293,6 +300,10 @@ myApp.onPageInit('product_listing', function(page) {
 
     console.log('product listing called');
 
+
+    mainView.router.refreshPage();
+
+
     $('.showpdf1').on('click', function() {
 
         // alert('showpdf clicked');
@@ -346,10 +357,13 @@ myApp.onPageInit('product_listing', function(page) {
 
 myApp.onPageInit('product_specification', function(page) {
 
-    console.log(page.query);
+
+    if(!page.query){
+        alert('no object found');
+    }
 
     $('.backbutton').on('click', function() {
-        mainView.router.back();
+        mainView.router.loadPage('home.html');
     });
 
     var title = page.query.title;
@@ -366,7 +380,7 @@ myApp.onPageInit('product_specification', function(page) {
                 var html  = "<div class='book_content'>"+
                 "<h2 class='book_heading' class='product_specification_title'>7.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                 "<div class='outzoom'></div>"+
-                "<a href='#' onclick='redirect_book_now()'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                "<a href='#' onclick='redirect_book_now(\"7.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -2127,7 +2141,10 @@ myApp.onPageInit('enquiry_form', function(page) {
 
 
     $('.backbutton').on('click', function() {
-        mainView.router.back();
+
+        // alert('clicked');
+        // mainView.router.back();
+        mainView.router.loadPage('home.html');
     });
 
 
