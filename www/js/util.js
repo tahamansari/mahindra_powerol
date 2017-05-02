@@ -100,14 +100,11 @@ function onDeviceReady() {
 
     // Lockr.flush();
 
-    console.log('device is now ready');
-    var downloaded = Lockr.get('downloaded');
-    if(downloaded == undefined){
+        console.log('device is now ready');
 
         console.log('downloading files ....');
-        Lockr.set('downloaded','true');
 
-                // just download ones agni ppsx
+        // just download ones mahindraRise ppsx
         var fileTransfer = new FileTransfer();
         var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraRise.ppsx");
         // applicationStorageDirectory
@@ -118,9 +115,9 @@ function onDeviceReady() {
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -129,7 +126,7 @@ function onDeviceReady() {
             }
         );
 
-        // just download ones agni ppsx
+        // just download ones mahindraPowerol ppsx
 
         var fileTransfer = new FileTransfer();
         var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindraPowerol.ppsx");
@@ -141,9 +138,9 @@ function onDeviceReady() {
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -163,9 +160,9 @@ function onDeviceReady() {
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -185,9 +182,9 @@ function onDeviceReady() {
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -207,9 +204,9 @@ function onDeviceReady() {
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -226,12 +223,13 @@ function onDeviceReady() {
             uri,
             cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
             function(entry) {
+
                 // alert("download complete: " + entry.toURL());
             },
             function(error) {
-                alert("download error source " + error.source);
-                alert("download error target " + error.target);
-                alert("download error code" + error.code);
+                // alert("download error source " + error.source);
+                // alert("download error target " + error.target);
+                // alert("download error code" + error.code);
             },
             false, {
                 headers: {
@@ -239,7 +237,6 @@ function onDeviceReady() {
                 }
             }
         );
-    }
 
     document.addEventListener("backbutton", function(e) {
         e.preventDefault();
@@ -634,21 +631,20 @@ function edit_list_book(count) {
         '<div class="col-50">' +
         '<select name="state" style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;font-size: 20px;background-color: white;" id="update_state_' + count + '">' +
         '<option value="">State</option>' +
-        '<option value="Kathmandu">Kathmandu</option>' +
-        '<option value="Bagmati">Bagmati</option>' +
-        '<option value="Bheri">Bheri</option>' +
-        '<option value="Dhawalagiri">Dhawalagiri</option>' +
-        '<option value="Gandaki">Gandaki</option>' +
-        '<option value="Janakpur">Janakpur</option>' +
-        '<option value="Karnali">Karnali</option>' +
-        '<option value="Kosi">Kosi</option>' +
-        '<option value="Lumbini">Lumbini</option>' +
-        '<option value="Mahakali">Mahakali</option>' +
-        '<option value="Mechi">Mechi</option>' +
-        '<option value="Narayani">Narayani</option>' +
-        '<option value="Rapti">Rapti</option>' +
-        '<option value="Sagarmatha">Sagarmatha</option>' +
-        '<option value="Seti">Seti</option>' +
+        '<option value="Mahakali">Mahakali</option>'+
+        '<option value="Seti">Seti</option>'+
+        '<option value="Bagmati">Bagmati</option>'+
+        '<option value="Janakpur">Janakpur</option>'+
+        '<option value="Narayani">Narayani</option>'+
+        '<option value="Sagarmatha">Sagarmatha</option>'+
+        '<option value="Bhojpur">Bhojpur</option>'+
+        '<option value="Mechi">Mechi</option>'+
+        '<option value="Rapti">Rapti</option>'+
+        '<option value="Gandaki">Gandaki</option>'+
+        '<option value="Bheri">Bheri</option>'+
+        '<option value="Dhawalagiri">Dhawalagiri</option>'+
+        '<option value="Karnali">Karnali</option>'+
+        '<option value="Lumbini">Lumbini</option>'+
         '</select>' +
         '</div>' +
 
@@ -762,7 +758,9 @@ function forgot_password() {
 // function showppt() {
 
 //     alert('called');
+
 //     window.cordova.plugins.FileOpener.canOpenFile("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx", onSuccess, onError);
+
 // }
 
 

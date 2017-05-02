@@ -2608,11 +2608,32 @@ myApp.onPageInit('index', function(page) {
 myApp.onPageInit('tools', function(page) {
 
     $('#open-application').click(function() {
-        navigator.startApp.start("com.app.pc", function(message) { /* success */
-        },
-        function(error) { /* error */
-            alert(error);
-        });
+
+        if(Lockr.get('installed') != undefined){
+
+            navigator.startApp.start("com.app.pc", function(message) { /* success */
+            },
+            function(error) { /* error */
+                alert(error);
+            });
+
+        }else{
+            //
+            var onSuccess = function(data) {
+                // alert('message: ' + data.message);
+
+                Lockr.set('installed','true');
+            };
+
+            function onError(error) {
+                // alert('message: ' + error.message);
+            }
+            window.cordova.plugins.FileOpener.openFile("files/download/loadcalculator.apk", onSuccess, onError);
+        }
+
+        
+
+
     })  
 
     $('.backbutton').on('click', function() {
