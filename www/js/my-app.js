@@ -319,7 +319,10 @@ myApp.onPageInit('product_listing', function(page) {
             alert('message error: ' + error.message);
         }
 
-        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+
+        window.cordova.plugins.FileOpener.openFile("file:///android_asset/www/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+
 
         // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
 
