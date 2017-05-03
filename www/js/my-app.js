@@ -2603,26 +2603,28 @@ myApp.onPageInit('tools', function(page) {
 
     $('#open-application').click(function() {
 
-        if(Lockr.get('installed') != undefined){
+        if(Lockr.get('installedapp') == undefined){
 
-            navigator.startApp.start("com.app.pc", function(message) { /* success */
-            },
-            function(error) { /* error */
-                alert(error);
-            });
-
-        }else{
-            //
             var onSuccess = function(data) {
                 // alert('message: ' + data.message);
-
-                Lockr.set('installed','true');
+                Lockr.set('installedapp','true');
             };
 
             function onError(error) {
                 // alert('message: ' + error.message);
             }
             window.cordova.plugins.FileOpener.openFile("files/download/loadcalculator.apk", onSuccess, onError);
+
+
+        }else{
+            
+            navigator.startApp.start("com.app.pc", function(message) { /* success */
+            },
+            function(error) { /* error */
+                alert(error);
+            });
+
+
         }
 
         
