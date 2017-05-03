@@ -52,6 +52,10 @@
     <plugin spec="https://github.com/apache/cordova-plugin-file.git#rel/4.3.2" source="git"/>
     
     <plugin spec="https://github.com/vzagde/cordova-plugin-fileopener.git" source="git"/>
+
+    <plugin spec="https://github.com/pwlin/cordova-plugin-file-opener2.git" source="git"/>
+
+    
     <!-- file work on phonegap serve -->
     <!-- <plugin spec="https://github.com/Smile-SA/cordova-plugin-fileopener.git#1.0.5" source="git"/> -->
     <plugin spec="https://github.com/apache/cordova-plugin-file-transfer.git#rel/1.6.2" source="git"/>
