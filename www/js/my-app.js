@@ -306,31 +306,16 @@ myApp.onPageInit('product_listing', function(page) {
 
     $('.showpdf1').on('click', function() {
 
-
-        var filePDF = 'NEPAL-BANGLADESH-BROCHURE.pdf';
-        cordova.plugins.fileOpener2.open(
-            cordova.file.applicationDirectory+'www/'+filePDF, // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf
-            'application/pdf', 
-            { 
-                error : function(e) { 
-                    console.log('Error status: ' + e.status + ' - Error message: ' + e.message);
-                },
-                success : function () {
-                    console.log('file opened successfully');                
-                }
-            }
-        );
-
-        // var onSuccess = function(data) {
-        //     // alert('message: ' + data.message);
-        // };
-        // // onError Callback receives a json object
-        // function onError(error) {
-        //     alert('message error: ' + error.message);
-        // }
-        // // window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
         // window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
-        // // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
 
     })
 
