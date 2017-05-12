@@ -20,6 +20,28 @@ h1,h2,h3,h4,h5,span,p,div,button{
 
 }
 
+.downarrow{
+    position: absolute;
+    bottom: 5%;
+    z-index: 9;
+    width: 3%;
+    left: 1%;
+    -webkit-animation: updown 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: updown 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes updown {
+    50%   {bottom: 10%;}
+    100% {bottom: 5%;}
+}
+
+/* Standard syntax */
+@keyframes updown {
+    50%   {bottom: 10%;}
+    100% {bottom: 5%;}
+}
+
 .goto{
     position: absolute;
     bottom: 40%;

@@ -300,9 +300,7 @@ myApp.onPageInit('product_listing', function(page) {
 
     console.log('product listing called');
 
-
     mainView.router.refreshPage();
-
 
     $('.showpdf1').on('click', function() {
 
@@ -313,7 +311,7 @@ myApp.onPageInit('product_listing', function(page) {
         function onError(error) {
             alert('message error: ' + error.message);
         }
-        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/Brochure1.pdf", onSuccess, onError);
         // window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
         // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
 
@@ -333,7 +331,7 @@ myApp.onPageInit('product_listing', function(page) {
             alert('message error: ' + error.message);
         }
 
-        window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/Brochure2.pdf", onSuccess, onError);
 
         // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/REST-OF-THE-WORLD-BROCHURE.pdf"), onSuccess, onError);
 

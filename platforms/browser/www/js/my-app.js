@@ -300,16 +300,9 @@ myApp.onPageInit('product_listing', function(page) {
 
     console.log('product listing called');
 
-
     mainView.router.refreshPage();
 
-
     $('.showpdf1').on('click', function() {
-
-        // alert('showpdf clicked');
-        // onSuccess Callback
-        // This method accepts a JSON object, which contains the
-        // message response
 
         var onSuccess = function(data) {
             // alert('message: ' + data.message);
@@ -318,9 +311,8 @@ myApp.onPageInit('product_listing', function(page) {
         function onError(error) {
             alert('message error: ' + error.message);
         }
-
-        window.cordova.plugins.FileOpener.openFile("files/Download/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
-
+        window.cordova.plugins.FileOpener.openFile("files/Download/Brochure1.pdf", onSuccess, onError);
+        // window.cordova.plugins.FileOpener.openFile(cordova.file.applicationDirectory+"www/NEPAL-BANGLADESH-BROCHURE.pdf", onSuccess, onError);
         // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/NEPAL-BANGLADESH-BROCHURE.pdf"), onSuccess, onError);
 
     })
@@ -339,7 +331,7 @@ myApp.onPageInit('product_listing', function(page) {
             alert('message error: ' + error.message);
         }
 
-        window.cordova.plugins.FileOpener.openFile("files/Download/REST-OF-THE-WORLD-BROCHURE.pdf", onSuccess, onError);
+        window.cordova.plugins.FileOpener.openFile("files/Download/Brochure2.pdf", onSuccess, onError);
 
         // window.cordova.plugins.FileOpener.openFile(window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+"www/assets/REST-OF-THE-WORLD-BROCHURE.pdf"), onSuccess, onError);
 
@@ -2609,26 +2601,28 @@ myApp.onPageInit('tools', function(page) {
 
     $('#open-application').click(function() {
 
-        if(Lockr.get('installed') != undefined){
+        if(Lockr.get('installedapp') == undefined){
 
-            navigator.startApp.start("com.app.pc", function(message) { /* success */
-            },
-            function(error) { /* error */
-                alert(error);
-            });
-
-        }else{
-            //
             var onSuccess = function(data) {
                 // alert('message: ' + data.message);
-
-                Lockr.set('installed','true');
+                Lockr.set('installedapp','true');
             };
 
             function onError(error) {
                 // alert('message: ' + error.message);
             }
             window.cordova.plugins.FileOpener.openFile("files/download/loadcalculator.apk", onSuccess, onError);
+
+
+        }else{
+            
+            navigator.startApp.start("com.app.pc", function(message) { /* success */
+            },
+            function(error) { /* error */
+                alert(error);
+            });
+
+
         }
 
         
