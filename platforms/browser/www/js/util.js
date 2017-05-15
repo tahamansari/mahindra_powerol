@@ -99,6 +99,8 @@ function onDeviceReady() {
     console.log('device is now ready');
 
     if(Lockr.get('downloadall') == undefined){
+
+        $('.overlay-downloading').fadeIn();
         
          var fileTransfer = new FileTransfer();
          var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure1.pdf");
@@ -124,8 +126,9 @@ function onDeviceReady() {
                                  cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
                                  function(entry) {
 
-                                    alert('download completed');
+                                    // alert('download completed');
                                     Lockr.set('downloadall','true');
+                                    $('.overlay-downloading').fadeOut();
 
                                  },
                                  function(error) {
