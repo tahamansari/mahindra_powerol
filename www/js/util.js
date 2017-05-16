@@ -94,82 +94,86 @@ function logout() {
 //back buttons
 document.addEventListener("deviceready", onDeviceReady, false);
 
+
+
+
+
 function onDeviceReady() {
 
     console.log('device is now ready');
 
-    if(Lockr.get('downloadall') == undefined){
+    // if(Lockr.get('downloadall') == undefined){
 
-        $('.overlay-downloading').fadeIn();
+    //     $('.overlay-downloading').fadeIn();
         
-         var fileTransfer = new FileTransfer();
-         var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure1.pdf");
+    //      var fileTransfer = new FileTransfer();
+    //      var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure1.pdf");
 
-         fileTransfer.download(
-             uri,
-             cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure1.pdf',
-             function(entry) {
+    //      fileTransfer.download(
+    //          uri,
+    //          cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure1.pdf',
+    //          function(entry) {
 
-                var fileTransfer = new FileTransfer();
-                 var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure2.pdf");
+    //             var fileTransfer = new FileTransfer();
+    //              var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure2.pdf");
 
-                 fileTransfer.download(
-                     uri,
-                     cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure2.pdf',
-                     function(entry) {
+    //              fileTransfer.download(
+    //                  uri,
+    //                  cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure2.pdf',
+    //                  function(entry) {
 
-                             var fileTransfer = new FileTransfer();
-                             var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
+    //                          var fileTransfer = new FileTransfer();
+    //                          var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
 
-                             fileTransfer.download(
-                                 uri,
-                                 cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
-                                 function(entry) {
+    //                          fileTransfer.download(
+    //                              uri,
+    //                              cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
+    //                              function(entry) {
 
-                                    // alert('download completed');
-                                    Lockr.set('downloadall','true');
-                                    $('.overlay-downloading').fadeOut();
+    //                                 // alert('download completed');
+    //                                 Lockr.set('downloadall','true');
+    //                                 $('.overlay-downloading').fadeOut();
 
-                                 },
-                                 function(error) {
+    //                              },
+    //                              function(error) {
 
-                                        alert('third download failed');
+    //                                     alert('third download failed');
 
-                                 },
-                                 false, {
-                                     headers: {
-                                         "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                     }
-                                 }
-                             );
+    //                              },
+    //                              false, {
+    //                                  headers: {
+    //                                      "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                                  }
+    //                              }
+    //                          );
 
-                     },
-                     function(error) {
+    //                  },
+    //                  function(error) {
 
-                            alert('second download failed');
+    //                         alert('second download failed');
 
 
-                     },
-                     false, {
-                         headers: {
-                             "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                         }
-                     }
-                 );
+    //                  },
+    //                  false, {
+    //                      headers: {
+    //                          "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                      }
+    //                  }
+    //              );
 
-             },
-             function(error) {
+    //          },
+    //          function(error) {
 
-                alert('first download failed');
+    //             alert('first download failed');
              
-             },
-             false, {
-                 headers: {
-                     "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                 }
-             }
-         );
-    }
+    //          },
+    //          false, {
+    //              headers: {
+    //                  "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //              }
+    //          }
+    //      );
+    // }
 
     document.addEventListener("backbutton", function(e) {
 
