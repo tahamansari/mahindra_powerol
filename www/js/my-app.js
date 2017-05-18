@@ -2101,7 +2101,8 @@ myApp.onPageInit('video', function(page) {
     $('.openBank').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/videos/bank.mp4");
+        // VideoPlayer.play("file:///android_asset/www/videos/bank.mp4");
+        VideoPlayer.play("files/Download/bank.mp4");
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
@@ -2109,7 +2110,9 @@ myApp.onPageInit('video', function(page) {
     $('.openHotel').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/videos/hotel.mp4");
+        // VideoPlayer.play("file:///android_asset/www/videos/hotel.mp4");
+        VideoPlayer.play("files/Download/hotel.mp4");
+
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
@@ -2117,7 +2120,9 @@ myApp.onPageInit('video', function(page) {
     $('.openCollege').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/videos/college.mp4");
+        // VideoPlayer.play("file:///android_asset/www/videos/college.mp4");
+        VideoPlayer.play("files/Download/college.mp4");
+
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
@@ -2125,7 +2130,8 @@ myApp.onPageInit('video', function(page) {
     $('.openHospital').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/videos/hospital.mp4");
+        // VideoPlayer.play("file:///android_asset/www/videos/hospital.mp4");
+        VideoPlayer.play("files/Download/hospital.mp4");
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
