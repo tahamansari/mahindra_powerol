@@ -47,7 +47,7 @@
     </plugin>
 
     <!-- file work on phonegap serve -->
-    <plugin spec="https://github.com/moust/cordova-plugin-videoplayer.git" source="git"/>
+    <!-- <plugin spec="https://github.com/moust/cordova-plugin-videoplayer.git" source="git"/> -->
 
     <plugin spec="https://github.com/dawsonloudon/VideoPlayer.git" source="git"/>
 
