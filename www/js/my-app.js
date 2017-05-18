@@ -2102,9 +2102,11 @@ myApp.onPageInit('video', function(page) {
 
         console.log("video open");
         // VideoPlayer.play("file:///android_asset/www/videos/bank.mp4");
-        VideoPlayer.play(cordova.file.dataDirectory+"download/bank.mp4");
-        console.log('file path is '+cordova.file.dataDirectory);
+        // VideoPlayer.play(cordova.file.dataDirectory+"download/bank.mp4");
+        // console.log('file path is '+cordova.file.dataDirectory);
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
+
+        VideoPlayer.play(cordova.file.dataDirectory+"download/bank.mp4");
 
     })
 
