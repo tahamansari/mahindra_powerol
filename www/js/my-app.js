@@ -2098,10 +2098,34 @@ myApp.onPageInit('product_specification', function(page) {
 myApp.onPageInit('video', function(page) {
 
 
-    $('.openVideo').click(function(){
+    $('.openBank').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/small.mp4");
+        VideoPlayer.play("file:///android_asset/www/videos/bank.mp4");
+        // http://kreaserv-tech.com/mahindra_admin/small.mp4
+
+    })
+
+    $('.openHotel').click(function(){
+
+        console.log("video open");
+        VideoPlayer.play("file:///android_asset/www/videos/hotel.mp4");
+        // http://kreaserv-tech.com/mahindra_admin/small.mp4
+
+    })
+
+    $('.openCollege').click(function(){
+
+        console.log("video open");
+        VideoPlayer.play("file:///android_asset/www/videos/college.mp4");
+        // http://kreaserv-tech.com/mahindra_admin/small.mp4
+
+    })
+
+    $('.openHospital').click(function(){
+
+        console.log("video open");
+        VideoPlayer.play("file:///android_asset/www/videos/hospital.mp4");
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
     })
