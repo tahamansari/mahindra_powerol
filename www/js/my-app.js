@@ -2102,7 +2102,7 @@ myApp.onPageInit('video', function(page) {
 
         console.log("video open");
         // VideoPlayer.play("file:///android_asset/www/videos/bank.mp4");
-        VideoPlayer.play(cordova.file.dataDirectory+"/download/bank.mp4");
+        VideoPlayer.play(cordova.file.dataDirectory+"download/bank.mp4");
         console.log('file path is '+cordova.file.dataDirectory);
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
@@ -2112,7 +2112,7 @@ myApp.onPageInit('video', function(page) {
 
         console.log("video open");
         // VideoPlayer.play("file:///android_asset/www/videos/hotel.mp4");
-        VideoPlayer.play(cordova.file.dataDirectory+"/download/hotel.mp4");
+        VideoPlayer.play(cordova.file.dataDirectory+"download/hotel.mp4");
         console.log('file path is '+cordova.file.dataDirectory);
 
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
@@ -2123,7 +2123,7 @@ myApp.onPageInit('video', function(page) {
 
         console.log("video open");
         // VideoPlayer.play("file:///android_asset/www/videos/college.mp4");
-        VideoPlayer.play(cordova.file.dataDirectory+"/download/college.mp4");
+        VideoPlayer.play(cordova.file.dataDirectory+"download/college.mp4");
         console.log('file path is '+cordova.file.dataDirectory);
 
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
@@ -2134,7 +2134,7 @@ myApp.onPageInit('video', function(page) {
 
         console.log("video open");
         // VideoPlayer.play("file:///android_asset/www/videos/hospital.mp4");
-        VideoPlayer.play(cordova.file.dataDirectory+"/download/hospital.mp4");
+        VideoPlayer.play(cordova.file.dataDirectory+"download/hospital.mp4");
         console.log('file path is '+cordova.file.dataDirectory);
         // http://kreaserv-tech.com/mahindra_admin/small.mp4
 
