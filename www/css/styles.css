@@ -20,6 +20,13 @@ h1,h2,h3,h4,h5,span,p,div,button{
 
 }
 
+
+.findus_content{
+
+    padding-bottom: 10%;
+}
+
+
 .downarrow{
     position: fixed;
     bottom: 3%;
@@ -2162,36 +2169,78 @@ tspan{
 }
 
 
-.marker1{
-    position: absolute;
-    top: 10%;
-    left: 8%;
+
+
+
+.map-container p{
+
+    margin: 0;
+    font-weight: bold;
+    font-size: 23px;
 }
 
-.marker2{
+.Katmandu-marker{
     position: absolute;
-    top: 30%;
-    left: 18%;
+    top: 44%;
+    left: 57%;
 }
 
-.marker3{
-    position: absolute;
-    top: 45%;
-    left: 48%;
-}
+.Kaski-marker{
 
-.marker4{
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 43%;
 }
 
-.marker5{
+.Chitwan-marker{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+}
+
+
+.Rupendehi-marker{
+        position: absolute;
+    top: 59%;
+    left: 33%;
+}
+
+.Dang-marker{
+    position: absolute;
+    top: 55%;
+    left: 27%;
+}
+
+
+.Morang-marker{
+    position: absolute;
+    top: 70%;
+    left: 80%;
+}
+
+.Dhanusa-marker{
+    
     position: absolute;
     top: 75%;
-    left: 70%;
+    left: 65%;
 }
 
+.Kailali-marker{
+    
+    position: absolute;
+    top: 34%;
+    left: 10%;
+}
+
+
+.bigmarker{
+
+    width: 40%;
+}
+
+.bluecolor{
+    color: #3085bb;
+}
 
 
 @media (min-height: 630px) and (min-width: 630px){

@@ -125,8 +125,418 @@ myApp.onPageInit('cba', function(page) {
 myApp.onPageInit('findus_map', function(page) {
 
 
-    $('.map-container img').click(function(){
-        alert('clicked');
+    $('.Katmandu-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+
+        $('.Katmandu-marker p').addClass('bluecolor');
+
+
+        var html = "<div class='col-30 text_left'>"+
+        "<p>District</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Kathmandu</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Showroom Name</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Agni Energy Pvt Ltd</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Detailed Address</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Gairidhara, Kathmandu</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Contact No</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>+977-9841819997</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>E-Mails Id</p>"+
+        "</div>"+
+        "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+        "<p>umeshraj.wasti@agniinc.com.np</p>"+
+        "</div>"+
+        "<div style='clear:both'></div>"+
+        "<hr>"+
+        "<div class='col-30 text_left'>"+
+        "<p>District</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Katmandu</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Showroom Name</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>BS Trade</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Detailed Address</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Teku, Kathmandu</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Contact No</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>01-4258884</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>E-Mails Id</p>"+
+        "</div>"+
+        "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+        "<p>tradeteku@gmail.com</p>"+
+        "</div>"+
+        "<div style='clear:both'></div>"+
+        "<hr>"+
+        "<div class='col-30 text_left'>"+
+        "<p>District</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Kathmandu</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Showroom Name</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Power Solutiong Twenty four Service P. Ltd.</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Detailed Address</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>Ramsahapath, Putalisadak</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>Contact No</p>"+
+        "</div>"+
+        "<div class='col-70 text_left'>"+
+        "<p>014226047/9851105031</p>"+
+        "</div>"+
+        "<div class='col-30 text_left'>"+
+        "<p>E-Mails Id</p>"+
+        "</div>"+
+        "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+        "<p>powersolutiontwentyfourseven@gmail.com</p>"+
+        "</div>"+
+        "<div style='clear:both'></div>"+
+        "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+
+
+
+    $('.Kaski-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+
+        $('.Kaski-marker p').addClass('bluecolor');
+
+
+        var html = "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Kaski</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Deep Traders Pvt. Ltd.</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Pokhara</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>061-528589/9856020198</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>animakarna@gmail.com/batajoor@yahoo.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    
+    
+    
+
+    $('.Chitwan-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+        $('.Chitwan-marker p').addClass('bluecolor');
+
+
+        var html =  "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Chitwan</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Deep Traders Pvt. Ltd.</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Chitwan</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>056-527471/056-522168</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>animakarna@gmail.com/batajoor@yahoo.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    $('.Rupendehi-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+        $('.Rupendehi-marker p').addClass('bluecolor');
+
+        var html = "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Rupendehi</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Saurav Enterprises</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Bhirahawa</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>071-522959/071-526419</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>vikash.Saurav369@gmail.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    $('.Dang-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+
+        $('.Dang-marker p').addClass('bluecolor');
+
+
+        var html =  "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Dang</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Digital Power Solution</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Dang</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>N.A</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>digitalpowersolution@gmail.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    $('.Morang-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+        $('.Morang-marker p').addClass('bluecolor');
+
+        var html =  "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Morang</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Eastern Star Earthmovers</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Biratnagar</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>9852030707</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>easternstarbrt@gmail.com,easternstardg@gmail.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    $('.Dhanusa-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+        $('.Dhanusa-marker p').addClass('bluecolor');
+
+        var html = "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Dhanusa</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Shree Krishna Distributors</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Janakapur</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>9854028324</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>krishanadistributers@gmail.com</p>"+
+                    "</div>"+
+                    "<div style='clear:both'></div>"+
+                    "<hr>";
+
+        $('.findus_dealer_address').html(html);
+
+    });
+
+    $('.Kailali-marker').click(function(){
+
+        $('.map-container p').removeClass('bluecolor');
+
+        $('.Kailali-marker p').addClass('bluecolor');
+
+
+        var html = "<div class='col-30 text_left'>"+
+                    "<p>District</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Kailali</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Showroom Name</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>RKD Suppliers</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Detailed Address</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>Dhangadi</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>Contact No</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left'>"+
+                    "<p>9801317912/9848405116</p>"+
+                    "</div>"+
+                    "<div class='col-30 text_left'>"+
+                    "<p>E-Mails Id</p>"+
+                    "</div>"+
+                    "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
+                    "<p>spsolarcompany@gmail.com</p>"+
+                    "</div> ";
+
+        $('.findus_dealer_address').html(html);
+
     });
 
     // var element = document.getElementById("map");
@@ -2098,11 +2508,62 @@ myApp.onPageInit('product_specification', function(page) {
 myApp.onPageInit('video', function(page) {
 
 
-    $('.openVideo').click(function(){
+    $('.openBank').click(function(){
 
         console.log("video open");
-        VideoPlayer.play("file:///android_asset/www/small.mp4");
-        // http://kreaserv-tech.com/mahindra_admin/small.mp4
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/bank.mp4", onSuccess, onError);
+
+    })
+
+    $('.openHotel').click(function(){
+
+        console.log("video open");
+        
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/hotel.mp4", onSuccess, onError);
+
+    })
+
+    $('.openCollege').click(function(){
+
+        console.log("video open");
+
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/college.mp4", onSuccess, onError);
+
+    })
+
+    $('.openHospital').click(function(){
+
+        console.log("video open");
+        
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/hospital.mp4", onSuccess, onError);
 
     })
 
