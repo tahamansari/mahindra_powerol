@@ -20,12 +20,10 @@ var myApp = new Framework7({
     // Hide and show indicator during ajax requests
     onAjaxStart: function(xhr) {
 
-        console.log("show indicator");
         myApp.showIndicator();
     },
     onAjaxComplete: function(xhr) {
 
-        console.log("hide indicator");
         myApp.hideIndicator();
     }
 
@@ -47,9 +45,11 @@ var mainView = myApp.addView('.view-main', {
 mainView.hideNavbar();
 
 //We can also add callback for all pages:
-myApp.onPageInit('*', function (page) {
-  console.log(page.name + ' initialized'); 
-});
+// myApp.onPageInit('*', function (page) {
+
+//   console.log(page.name + ' initialized'); 
+  
+// });
 
 
 
@@ -2471,7 +2471,6 @@ myApp.onPageInit('faq', function(page) {
 
 myApp.onPageInit('home', function(page) {
 
-    console.log('home page called');
 
     $('.item').click(function(){
         $('.item').removeClass('home_hover');
