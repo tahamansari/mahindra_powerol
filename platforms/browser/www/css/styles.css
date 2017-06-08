@@ -1013,6 +1013,7 @@ div.accordion_content {
 }
 
 .five_k_punch_bg{
+    margin-top: 2%;
     height: 90%;
     position: relative;
     background: url(../img/5k_punch_bg.png);
