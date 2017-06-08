@@ -15,7 +15,7 @@ body{
     font-family: 'eurostileregular';
 }
 
-h1,h2,h3,h4,h5,span,p,div,button{
+h1,h2,h3,h4,h5,span,p,div,button,input{
     font-family: 'eurostileregular';
 
 }
@@ -85,8 +85,9 @@ h1,h2,h3,h4,h5,h6{
     position: absolute;
     left: 10%;
     letter-spacing: 4px;
-    top: 8%;
+    top: 30%;
     font-size: 44px;
+    margin: 0;
 }
 
 .text_center{
@@ -132,11 +133,8 @@ h1,h2,h3,h4,h5,h6{
 .left_arrow{
 
     position: absolute;
-    top: 11%;
-    left: 0%;
-    width: 2%;
-    padding: 4%;
-
+    top: 34%;
+    left: 3%;
 }
 
 
@@ -162,7 +160,7 @@ h1,h2,h3,h4,h5,h6{
 .top_bg{
 
     /*position: fixed;*/
-    position: absolute;
+    position: relative;
     top: 10%;
     height: 20%;
     width: 100%;
@@ -207,19 +205,16 @@ h1,h2,h3,h4,h5,h6{
 
 .left_logo_login{
 
-	position: absolute;
-    top: 0%;
-
-    /*left: 3%;*/
-    /*width: 15%;*/
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .right_logo_login{
 
-	position: absolute;
-    /*bottom: 0;*/
+    position: absolute;
     right: 2%;
-    /*width: 35%;*/
+    top: 2%;
 }
 
 .left_logo{
@@ -243,7 +238,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .login_page_machine_image{
-    width: 35%;
+    width: 30%;
     position: absolute;
     bottom: 0;
 }
@@ -318,7 +313,7 @@ div{
 .listing_content{
 
     position: absolute;
-    top: 35%;
+    top: 33%;
     width: 100%;    
 }
 
@@ -327,7 +322,7 @@ div{
 
     width: 90%;
     margin: auto;
-    text-align: left;
+    text-align: center;
     letter-spacing: 1.1pxl
 
 }
@@ -336,8 +331,8 @@ div{
 
     background: transparent;
     border: 2px solid #e51837;
-    padding: 3%;
-    width: 31%;
+    padding: 2.5%;
+    width: 30%;
     border-radius: 15px;
     margin: 1%;
     font-size: 25px;
@@ -348,7 +343,7 @@ div{
 
     background: transparent;
     border: 2px solid #4498ce;
-    padding: 3%;
+    padding: 2.5%;
     width: 31%;
     border-radius: 15px;
     margin: 1%;
@@ -409,6 +404,9 @@ div{
     height: 100%;
     margin: 2% 0%;
     width: 100%;
+    background: #2986c9;
+    color: white;
+    padding: 0 3%;
 }
 
 .findus_dealer_address p{
@@ -511,8 +509,13 @@ div{
     color: white;
     font-family: inherit;
     letter-spacing: 2px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 5px;
+    width: 40%;
+    margin: 0 2%;
+    padding: 2%;
+    font-size: 18px;
+
 }
 
 .book_now_input input[type="text"]{
@@ -531,8 +534,6 @@ div{
 
 .login_username{
     text-align: center;
-    margin-top: 24%;
-    /*margin-left: 6%;*/
 }
 
 .login_password{
@@ -541,24 +542,26 @@ div{
 }
 
 .login-textbox{
-    width: 30%;
+    width: 100%;
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: bold;
     font-family: 'eurostileregular';
-    padding: 1.5%;
+    padding: 5%;
     background: black;
     color: white;
+    margin-bottom: 5%;
+    border: 1px solid white;
 }
 
 .anchor-container{
-    width: 33%;
     font-size: 14px;
     letter-spacing: 2px;
     font-family: 'eurostileregular';
     padding: 1.5% 0;
     color: #fff;
     text-align: left;
+    margin: auto;
 }
 
 .anchor-container a{
@@ -566,24 +569,23 @@ div{
     color: #fff;
 }
 
-.btn_login_conainer{
-    text-align: center;
-}
 
-.btn_login_conainer a{
+.btn_login_conainer button {
     background: #e31837;
     font-family: 'eurostileregular';
     padding: 1.5%;
     color: #fff;
     font-size: 18px;
-    padding-left: 13%;
-    padding-right: 12%;
     letter-spacing: 2px;
+    width: 111%;
+    border: none;
+    padding: 4% 5%;
+    margin-top: 2%;
 }
 
-.btn_login_conainer span{
+/*.btn_login_conainer button{
     width: 30%;
-}
+}*/
 
 /*cust_table*/
 
@@ -630,14 +632,16 @@ div{
 
 .our_story_content{
     position: absolute;
-    top: 41%;
+    top: 48%;
     width: 100%;
+    text-align: center;
 }
 
 .our_story_child{
     font-size: 20px;
-    letter-spacing: 2px; 
-    width: 100%;
+    letter-spacing: 2px;
+    width: 33%;
+    float: left;
 }
 
 .our_story_p_tag{
@@ -653,6 +657,7 @@ div{
 }
 
 .our_story_button_view_profile{
+
     background: red;
     border: none;
     padding: 1.2%;
@@ -660,7 +665,7 @@ div{
     color: white;
     margin-left: 5%;
     margin-top: 0%;
-    width: 13%;
+    padding: 3% 12%;
     font-size: 14px;
     letter-spacing: 2px;
     text-align: center;
@@ -741,10 +746,10 @@ div{
     z-index: 999;
 }
 
-.faq_content{
+.myfaq_content{
     width: 100%;
     position: absolute;
-    top: 29%;
+    top: 10%;
     padding: 0% 2%; 
         z-index: 99999;
 }
@@ -1020,17 +1025,18 @@ div.accordion_content {
     position: absolute;
     top: 7%;
     left: 2%;
-    width: 2%;
-    padding: 3%;
     z-index: 9999999;
 }
 
 .top_headers_5k_punch{
+    
     position: absolute;
     left: 10%;
     letter-spacing: 4px;
-    top: 5%;
+    top: 6%;
     font-size: 44px;
+    margin: 0;
+
 }
 
 
@@ -1062,7 +1068,9 @@ div.accordion_content {
     margin: 3%;
     margin-left: 10%;
     letter-spacing: 7px;
-    font-size: 32px;
+    font-size: 28px;
+    /*font-size: 32px;*/
+
     line-height: 40px;
     text-transform: uppercase;
 }
@@ -1080,8 +1088,8 @@ div.accordion_content {
 }
 
 .slide-container img{
-        margin-top: 16%;
-    margin-left: 8%;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 .slide-image{
@@ -1117,7 +1125,7 @@ div.accordion_content {
 
 .soon{
     font-size: 30px;
-    margin-top: 9%;
+    text-align: left;
 }
 
 
@@ -1268,7 +1276,7 @@ width: 15%;
 .submit_enq{
     background: #e51636;
     border: none;
-    padding: 2%;
+    padding: 1.5%;
     border-radius: 7px;
     color: white;
     margin-top: 3%; 
@@ -1322,7 +1330,7 @@ width: 15%;
 .downloadpdf{
 
     position: absolute;
-    bottom: 19%;
+    top: 87%;
     left: 6%;
     width: 70%;
 
@@ -1642,12 +1650,13 @@ width: 54%;
 }
 
 #pachkacontainer{
+    
     width: 900px;
     height: 900px;
     margin: 0 auto;
     position: absolute;
     top: 0%;
-    left: 5%;
+    left: 10%;
 }
 
 .highcharts-label{
@@ -2024,12 +2033,12 @@ tspan{
 
     background: #f80a28;
     position: absolute;
-    bottom: 9%;
-    right: 6%;
+    bottom: 5%;
+    right: 5%;
     padding: 1% 6%;
     outline: none;
     border: none;
-    border-radius: 10px;
+    border-radius: 0;
     color: white;
     font-size: 26px;
     letter-spacing: 3px;
@@ -2049,10 +2058,11 @@ tspan{
 
     color: black
  }
-.specificationContainer{
+
+.myspecificationContainer{
 
     position: relative;
-    top: 30%;
+    top: 10%;
     height: 70%;
     overflow: scroll;
     color: black;
@@ -2144,20 +2154,26 @@ tspan{
 
 
 .rise-overlay,.powerol-overlay,.agni-overlay img{
+    
     width:100%;
 }
 
 
 
 .close-ppt{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
     float: right;
-    background: white;
+    background: black;
+    color: white;
     margin: 3%;
     border: none;
     font-size: 25px;
     font-family: inherit;
     border-radius: 25px;
     padding: 1% 2%;
+    z-index: 1;
 }
 
 .map-container{
@@ -2257,5 +2273,7 @@ tspan{
         -webkit-transform: translate3d(0,1024px,0);
         transform: translate3d(0,1024px,0);
     }
+
+
 }
 

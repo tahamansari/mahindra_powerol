@@ -3,8 +3,6 @@ var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var token = {};
 var list_data = {};
 
-
-
 var myApp = new Framework7({
 
     // pushState: true,
@@ -30,9 +28,6 @@ var myApp = new Framework7({
 });
 
 
-
-
-
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 
@@ -50,8 +45,6 @@ mainView.hideNavbar();
 //   console.log(page.name + ' initialized'); 
   
 // });
-
-
 
 
 myApp.onPageInit('cba', function(page) {
@@ -216,7 +209,7 @@ myApp.onPageInit('findus_map', function(page) {
         "<p>+977-9841819997</p>"+
         "</div>"+
         "<div class='col-30 text_left'>"+
-        "<p>E-Mails Id</p>"+
+        "<p>E-Mail Id</p>"+
         "</div>"+
         "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
         "<p>umeshraj.wasti@agniinc.com.np</p>"+
@@ -248,7 +241,7 @@ myApp.onPageInit('findus_map', function(page) {
         "<p>01-4258884</p>"+
         "</div>"+
         "<div class='col-30 text_left'>"+
-        "<p>E-Mails Id</p>"+
+        "<p>E-Mail Id</p>"+
         "</div>"+
         "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
         "<p>tradeteku@gmail.com</p>"+
@@ -280,7 +273,7 @@ myApp.onPageInit('findus_map', function(page) {
         "<p>014226047/9851105031</p>"+
         "</div>"+
         "<div class='col-30 text_left'>"+
-        "<p>E-Mails Id</p>"+
+        "<p>E-Mail Id</p>"+
         "</div>"+
         "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
         "<p>powersolutiontwentyfourseven@gmail.com</p>"+
@@ -327,7 +320,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>061-528589/9856020198</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>animakarna@gmail.com/batajoor@yahoo.com</p>"+
@@ -374,7 +367,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>056-527471/056-522168</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>animakarna@gmail.com/batajoor@yahoo.com</p>"+
@@ -416,7 +409,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>071-522959/071-526419</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>vikash.Saurav369@gmail.com</p>"+
@@ -460,7 +453,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>N.A</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>digitalpowersolution@gmail.com</p>"+
@@ -502,7 +495,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>9852030707</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>easternstarbrt@gmail.com,easternstardg@gmail.com</p>"+
@@ -544,7 +537,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>9854028324</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>krishanadistributers@gmail.com</p>"+
@@ -588,7 +581,7 @@ myApp.onPageInit('findus_map', function(page) {
                     "<p>9801317912/9848405116</p>"+
                     "</div>"+
                     "<div class='col-30 text_left'>"+
-                    "<p>E-Mails Id</p>"+
+                    "<p>E-Mail Id</p>"+
                     "</div>"+
                     "<div class='col-70 text_left' style='margin-bottom: 1%'>"+
                     "<p>spsolarcompany@gmail.com</p>"+
@@ -899,7 +892,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -965,7 +958,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1031,7 +1024,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1097,7 +1090,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1163,7 +1156,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2150</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1231,7 +1224,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1297,7 +1290,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1363,7 +1356,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>2500</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1030</p>"+
@@ -1434,7 +1427,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3495</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
@@ -1500,7 +1493,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3495</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
@@ -1569,7 +1562,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-40 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3000</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1150</p>"+
@@ -1638,7 +1631,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3200</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
@@ -1704,7 +1697,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3200</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
@@ -1772,7 +1765,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3750</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
@@ -1833,7 +1826,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3750</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
@@ -1896,7 +1889,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>3790</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1300</p>"+
@@ -1959,7 +1952,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>4500</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1500</p>"+
@@ -2020,7 +2013,7 @@ myApp.onPageInit('product_specification', function(page) {
                     "<div class='row no-gutter'>"+
                          "<div class='col-50 listzoom'>"+
                     "<p class='table-conntent'>Dimensions</p>"+
-                    "<p style='font-size: 15px;margin-top: -18px;'>top hood. if any (mm)</p>"+
+                    "<br>"+
                     "<p class='table-conntent-number text-left' style='margin-top: -22px'>4500</p>"+
                     "<p class='table-conntent-number-2 text-left' style='font-size: 15px;margin-top: -30px;'>Length</p>"+
                     "<p class='table-conntent-number text-center' style='margin-top: -60px;'>1500</p>"+
@@ -2042,7 +2035,7 @@ myApp.onPageInit('product_specification', function(page) {
 
     
 
-    $('.specificationContainer').html(html);
+    $('.myspecificationContainer').html(html);
 
     $(".hvr-underline-from-left").animate({right: '0'}, 500);
 

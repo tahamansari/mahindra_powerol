@@ -1,0 +1,154 @@
+.tma-login-container{
+
+    width: 35%;
+    margin-top: 22%;
+    margin: auto;
+    margin-top: 20%;
+
+}
+
+.whiteph::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff;
+}
+.whiteph:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+
+   opacity:  1;
+}
+.whiteph::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ffffff;
+   opacity:  1;
+}
+.whiteph:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ffffff;
+}
+.whiteph::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #ffffff;
+}
+
+
+.homeSlider .owl-item{
+    width: 6%!important;
+    max-width: 265px!important;
+}
+
+
+
+@media screen and ( max-height: 600px ){
+
+  .homeSlider .owl-item {
+      width: 205px!important;
+      max-width: 265px!important;
+  }
+
+  .vz-time h2, .vz-time h3, .vz-time h4 {
+      font-size: 14px;
+  }
+
+  .top_headers {
+    top: 27%;
+    font-size: 26px;
+  }
+
+  .top_bg {
+      position: relative;
+      top: 11%;
+      height: 13%;
+  }
+
+  .left_arrow {
+      top: 18%;
+  }
+
+  .listing_content {
+      top: 30%;
+  }
+  .soon {
+    margin: 15px;
+    font-size: 22px;
+  }
+
+  .listing_input_red {
+      font-size: 18px;
+  }
+
+  .listing_input_blue {
+      font-size: 18px;
+  }
+
+  .book_submit {
+      font-size: 14px;
+  }
+
+  .book_now {
+      width: 18%;
+      font-size: 18px;
+  }
+
+  .top_headers_5k_punch {
+      font-size: 28px;
+  }
+
+  .table-conntent-number {
+      font-size: 18px;
+  }
+
+  .left_arrow_5k_punch {
+      top: 5%;
+  }
+
+  #pachkacontainer {
+      top: -20%;
+      left: 2%;
+  }
+
+  .enquiry_form_content > p > a {
+      font-size: 16px;
+  }
+
+  .btn-tools {
+      font-size: 25px;
+  }
+
+  .map-container p {
+      font-size: 18px;
+  }
+
+  .my-book_content {
+      top: 24%;
+  }
+
+  button.accordion {
+      font-size: 18px;
+  }
+
+  .findus_dealer_address p {
+      font-size: 20px;
+  }
+
+  .enquiry_form_content {
+      top: 25%;
+  }
+
+  .my-book_now_input {
+      top: 40%;
+  }
+  .book_heading {
+      font-size: 26px;
+  }
+
+  .push-btn {
+      padding: 1% 3%;
+      font-size: 14px;
+  }
+
+  .slide-container ul {
+      font-size: 16px;
+  }
+
+  .slide-container h2, .slide-container hr {
+      line-height: 25px;
+      font-size: 18px;
+  }
+
+}

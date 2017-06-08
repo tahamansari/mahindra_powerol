@@ -1,119 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags-->
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="theme-color" content="#2196f3">
+      <title>My App</title>
+      <link rel="stylesheet" type="text/css" href="./lib/framework7/css/framework7.material.min.css">
+      <link rel="stylesheet" type="text/css" href="css/hover.css" >
+      <link rel="stylesheet" type="text/css" href="css/icon.css">
+      <link rel="stylesheet" href="font/stylesheet.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+      <link type="text/css" rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.min.css">
+      <link type="text/css" rel="stylesheet" href="css/tma-style.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#2196f3">
-    <title>My App</title>
-    <link rel="stylesheet" type="text/css" href="./lib/framework7/css/framework7.material.min.css">
-    <link rel="stylesheet" type="text/css" href="css/hover.css" >
-    <!-- Path to Framework7 color related styles, Material Theme -->
-    <!-- Path to your custom app styles-->
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/icon.css">
-    <link rel="stylesheet" href="font/stylesheet.css">
-    <!-- <link rel="stylesheet" href="./lib/framework7/css/framework7.material.colors.min.css"> -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css"> -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
-    <link type="text/css" rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="fontawesome/css/font-awesome.min.css">
+   </head>
+   <body>
 
-  </head>
-  <body>
-
-  <div class="overlay-downloading">
-      <div class="preloader-content">
-        <img src="img/logo.png">
-        <h3 class="downloading-files">Downloading Files...</h3>
+      <div class="overlay-downloading">
+         <div class="preloader-content">
+            <img src="img/logo.png">
+            <h3 class="downloading-files">Downloading Files...</h3>
+         </div>
       </div>
-  </div>
 
+      <div class="views">
+         <div class="view view-main">
+            <div class="pages navbar-fixed toolbar-fixed">
+               <div data-page="index" class="page">
+                  <div class="page-content">
+                     <div class="menu_bg">
+                        <img class="img-responsive left_logo_login mahindra_logo" src="img/mahindra_logo.png">
+                        <img class="img-responsive right_logo_login" src="img/logo1.png">
+                        <img class="img-responsive login_page_machine_image" src="img/login_page_machine.png">
 
+                        <div class="tma-login-container">
+                              <div>
+                               <input class="login-textbox whiteph" type="text" name="username" placeholder="LOGIN" id="login-email">
+                              </div>
+                              <div>
+                               <input class="login-textbox whiteph" type="password" name="username" placeholder="PASSWORD" id="login-password">
+                              </div>
+                              <div class="anchor-container">
+                                 <a class="anchor-forgot-pass" href="forgot.html">FORGOT PASSWORD ? </a>
+                              </div>
+                              <div class="btn_login_conainer">
+                                <a href="#" onclick="login()">
+                                  <button>LOGIN IN</button>
+                               </a>
+                              </div>
+                        </div>
 
-
-
-    <div class="views">
-
-
-
-      <div class="view view-main">
-        <div class="pages navbar-fixed toolbar-fixed">
-
-            <!-- show nepal map -->
-
-            <div data-page="index" class="page">
-                <div class="page-content">
-
-
-
-
-                  <div class="menu_bg">
-                      <img class="left_logo_login mahindra_logo" src="img/mahindra_logo.png">
-                      <img class="right_logo_login" src="img/logo1.png">
-                      <img class="login_page_machine_image" src="img/login_page_machine.png">
-                      <div class="login_username">
-                          <input class="login-textbox" type="text" name="username" placeholder="LOGIN" id="login-email">       
-                      </div>
-                      <br>
-                      <div class="login_password">
-                          <input class="login-textbox" type="password" name="username" placeholder="PASSWORD" id="login-password">
-                      </div>
-                      <div class="login_password">
-                        <center>
-                          <div class="anchor-container">
-                            <a class="anchor-forgot-pass" href="forgot.html">FORGOT PASSWORD ? </a>
-                          </div>
-                        </center>
-                      </div>
-                      <br>
-                      <div class="btn_login_conainer">
-                          <a href="#" onclick="login()">
-                            <span>LOGIN IN</span>
-                          </a>
-                      </div>
-
-
-
-
+                     </div>
                   </div>
-                </div>
-              </div>
-
-        </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="./js/framework7.min.js"></script>
-    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="./js/lockr.min.js"></script>
-    <script type="text/javascript" src="./plugins/cordova-plugin-fileopener/www/FileOpener.js"></script>
-    <script type="text/javascript" src="./js/my-app.js"></script>
-    <script type="text/javascript" src="./js/util.js"></script>
-    <script type="text/javascript" src="./js/owl.carousel.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="./js/framework7.min.js"></script>
+      <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+      <script type="text/javascript" src="./js/lockr.min.js"></script>
+      <script type="text/javascript" src="./plugins/cordova-plugin-fileopener/www/FileOpener.js"></script>
+      <script type="text/javascript" src="./js/my-app.js"></script>
+      <script type="text/javascript" src="./js/util.js"></script>
+      <script type="text/javascript" src="./js/owl.carousel.js"></script>
+      <!-- 5kapunch js -->
+      <script src="./js/highcharts.js"></script>
+      <script src="./js/data.js"></script>
+      <script src="./js/drilldown.js"></script>
 
-
-    <!-- 5kapunch js -->
-    <script src="./js/highcharts.js"></script>
-    <script src="./js/data.js"></script>
-    <script src="./js/drilldown.js"></script>
-
-
-    <!-- offline google map -->
-    <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
-
-<!--     <script>window.google && window.google.maps || document.write('<script src="./gmapapi.js"><\/script>')</script>
-    <script type="text/javascript" src="./webStorage.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
-    <script type="text/javascript" src="./map.js"></script> -->
-    
-  </body>
-</html> 
+   </body>
+</html>
