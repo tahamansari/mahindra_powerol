@@ -52,8 +52,8 @@
 }
 
   .homeSlider .owl-item {
-      width: 4.5%!important;
-      /*max-width: 265px!important;*/
+    width: 4.3%!important;
+    max-width: 200px!important;
   }
 
   .vz-time h2, .vz-time h3, .vz-time h4 {
