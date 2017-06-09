@@ -275,7 +275,7 @@ function onDeviceReady() {
             // lockFile = dataDir.getFile("file:///lockfile.txt", {create: true, exclusive: true});
             // console.log("Created File"+lockFile);
 
-            myApp.confirm('would you like to exit app.', function() {
+            myApp.confirm('Would you like to exit app.', function() {
                 navigator.app.clearHistory();
                 navigator.app.exitApp();
             });
@@ -1080,11 +1080,14 @@ function cba_submit() {
 }
 
 function cba_clear() {
+
     $("#p_no_of_year,#k_no_of_year,#p_rating,#k_rating,#p_price_of_brand,#k_price_of_brand,#p_running_fuel,#k_running_fuel,#p_service_cost,#k_service_cost").val('');
     $("#powerol_value_img").attr('src', '');
     $("#kirloskar_value_img").attr('src', '');
-    $("#powerol_value").hide();
-    $("#kirloskar_value").hide();
+
+    $("#powerol_value").css('visibility','hidden');
+    $("#kirloskar_value").css('visibility','hidden');
+    
     $("#powerol_sub").show();
     $("#clear_sub").hide();
 }
