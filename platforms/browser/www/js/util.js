@@ -98,166 +98,166 @@ function onDeviceReady() {
 
     console.log('device is now ready');
 
-    if (Lockr.get('downloadall') == undefined) {
+    // if (Lockr.get('downloadall') == undefined) {
 
-        $('.overlay-downloading').fadeIn();
+    //     $('.overlay-downloading').fadeIn();
 
-        var fileTransfer = new FileTransfer();
-        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure1.pdf");
+    //     var fileTransfer = new FileTransfer();
+    //     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure1.pdf");
 
-        fileTransfer.download(
-            uri,
-            cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure1.pdf',
-            function(entry) {
+    //     fileTransfer.download(
+    //         uri,
+    //         cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure1.pdf',
+    //         function(entry) {
 
-                myApp.alert('Brochure1 Downloaded');
-                var fileTransfer = new FileTransfer();
-                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure2.pdf");
+    //             myApp.alert('Brochure1 Downloaded');
+    //             var fileTransfer = new FileTransfer();
+    //             var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/Brochure2.pdf");
 
-                fileTransfer.download(
-                    uri,
-                    cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure2.pdf',
-                    function(entry) {
+    //             fileTransfer.download(
+    //                 uri,
+    //                 cordova.file.externalApplicationStorageDirectory + 'files/download/Brochure2.pdf',
+    //                 function(entry) {
 
-                        myApp.alert('Brochure2 Downloaded');
-                        var fileTransfer = new FileTransfer();
-                        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
+    //                     myApp.alert('Brochure2 Downloaded');
+    //                     var fileTransfer = new FileTransfer();
+    //                     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/loadcalculator.apk");
 
-                        fileTransfer.download(
-                            uri,
-                            cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
-                            function(entry) {
+    //                     fileTransfer.download(
+    //                         uri,
+    //                         cordova.file.externalApplicationStorageDirectory + 'files/download/loadcalculator.apk',
+    //                         function(entry) {
 
-                                myApp.alert('Loadcalculator Apk Downloaded');
-                                var fileTransfer = new FileTransfer();
-                                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/bank.mp4");
+    //                             myApp.alert('Loadcalculator Apk Downloaded');
+    //                             var fileTransfer = new FileTransfer();
+    //                             var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/bank.mp4");
 
-                                fileTransfer.download(
-                                    uri,
-                                    cordova.file.externalApplicationStorageDirectory + 'files/download/bank.mp4',
-                                    function(entry) {
+    //                             fileTransfer.download(
+    //                                 uri,
+    //                                 cordova.file.externalApplicationStorageDirectory + 'files/download/bank.mp4',
+    //                                 function(entry) {
 
-                                        myApp.alert('Bank Video Downloaded');
-                                        var fileTransfer = new FileTransfer();
-                                        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/college.mp4");
+    //                                     myApp.alert('Bank Video Downloaded');
+    //                                     var fileTransfer = new FileTransfer();
+    //                                     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/college.mp4");
 
-                                        fileTransfer.download(
-                                            uri,
-                                            cordova.file.externalApplicationStorageDirectory + 'files/download/college.mp4',
-                                            function(entry) {
+    //                                     fileTransfer.download(
+    //                                         uri,
+    //                                         cordova.file.externalApplicationStorageDirectory + 'files/download/college.mp4',
+    //                                         function(entry) {
 
-                                                myApp.alert('College Video Downloaded');
-                                                var fileTransfer = new FileTransfer();
-                                                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/hospital.mp4");
+    //                                             myApp.alert('College Video Downloaded');
+    //                                             var fileTransfer = new FileTransfer();
+    //                                             var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/hospital.mp4");
 
-                                                fileTransfer.download(
-                                                    uri,
-                                                    cordova.file.externalApplicationStorageDirectory + 'files/download/hospital.mp4',
-                                                    function(entry) {
+    //                                             fileTransfer.download(
+    //                                                 uri,
+    //                                                 cordova.file.externalApplicationStorageDirectory + 'files/download/hospital.mp4',
+    //                                                 function(entry) {
 
-                                                        myApp.alert('Hospital Video Apk Downloaded');
-                                                        var fileTransfer = new FileTransfer();
-                                                        var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/hotel.mp4");
+    //                                                     myApp.alert('Hospital Video Apk Downloaded');
+    //                                                     var fileTransfer = new FileTransfer();
+    //                                                     var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/videos/hotel.mp4");
 
-                                                        fileTransfer.download(
-                                                            uri,
-                                                            cordova.file.externalApplicationStorageDirectory + 'files/download/hotel.mp4',
-                                                            function(entry) {
+    //                                                     fileTransfer.download(
+    //                                                         uri,
+    //                                                         cordova.file.externalApplicationStorageDirectory + 'files/download/hotel.mp4',
+    //                                                         function(entry) {
 
-                                                                myApp.alert('Hotel Video Downloaded');
-                                                                Lockr.set('downloadall', 'true');
-                                                                $('.overlay-downloading').fadeOut();
+    //                                                             myApp.alert('Hotel Video Downloaded');
+    //                                                             Lockr.set('downloadall', 'true');
+    //                                                             $('.overlay-downloading').fadeOut();
 
-                                                            },
-                                                            function(error) {
+    //                                                         },
+    //                                                         function(error) {
 
-                                                                alert('Hotel download failed');
+    //                                                             alert('Hotel download failed');
 
-                                                            },
-                                                            false, {
-                                                                headers: {
-                                                                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                                                }
-                                                            }
-                                                        );
+    //                                                         },
+    //                                                         false, {
+    //                                                             headers: {
+    //                                                                 "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                                                             }
+    //                                                         }
+    //                                                     );
 
-                                                    },
-                                                    function(error) {
+    //                                                 },
+    //                                                 function(error) {
 
-                                                        alert('Hospital download failed');
+    //                                                     alert('Hospital download failed');
 
-                                                    },
-                                                    false, {
-                                                        headers: {
-                                                            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                                        }
-                                                    }
-                                                );
+    //                                                 },
+    //                                                 false, {
+    //                                                     headers: {
+    //                                                         "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                                                     }
+    //                                                 }
+    //                                             );
 
-                                            },
-                                            function(error) {
+    //                                         },
+    //                                         function(error) {
 
-                                                alert('College download failed');
+    //                                             alert('College download failed');
 
-                                            },
-                                            false, {
-                                                headers: {
-                                                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                                }
-                                            }
-                                        );
+    //                                         },
+    //                                         false, {
+    //                                             headers: {
+    //                                                 "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                                             }
+    //                                         }
+    //                                     );
 
-                                    },
-                                    function(error) {
+    //                                 },
+    //                                 function(error) {
 
-                                        alert('Bank download failed');
+    //                                     alert('Bank download failed');
 
-                                    },
-                                    false, {
-                                        headers: {
-                                            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                        }
-                                    }
-                                );
-                            },
-                            function(error) {
+    //                                 },
+    //                                 false, {
+    //                                     headers: {
+    //                                         "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                                     }
+    //                                 }
+    //                             );
+    //                         },
+    //                         function(error) {
 
-                                alert('Loadcalculator download failed');
+    //                             alert('Loadcalculator download failed');
 
-                            },
-                            false, {
-                                headers: {
-                                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                                }
-                            }
-                        );
+    //                         },
+    //                         false, {
+    //                             headers: {
+    //                                 "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                             }
+    //                         }
+    //                     );
 
-                    },
-                    function(error) {
+    //                 },
+    //                 function(error) {
 
-                        alert('Brochure2 download failed');
+    //                     alert('Brochure2 download failed');
 
-                    },
-                    false, {
-                        headers: {
-                            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                        }
-                    }
-                );
+    //                 },
+    //                 false, {
+    //                     headers: {
+    //                         "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //                     }
+    //                 }
+    //             );
 
-            },
-            function(error) {
+    //         },
+    //         function(error) {
 
-                alert('Brochure1 download failed');
+    //             alert('Brochure1 download failed');
 
-            },
-            false, {
-                headers: {
-                    "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
-                }
-            }
-        );
-    }
+    //         },
+    //         false, {
+    //             headers: {
+    //                 "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+    //             }
+    //         }
+    //     );
+    // }
 
     document.addEventListener("backbutton", function(e) {
 
@@ -322,19 +322,28 @@ function enquiry_form_submit() {
     } else if ($('#mobile').val() == '') {
         myApp.alert("Enter Mobile No.");
         return false;
-    }else if ($('#mobile').val() != 10) {
+    }else if ($('#mobile').val().length != 10) {
         myApp.alert("Mobile No. Should Be 10 Digit");
         $('#mobile').val('');
         return false;
-    } else if ($('#email').val() == '') {    
-         myApp.alert("Enter Email Id");
-         return false;
-    }else if(!validateEmail($('#email').val().trim())){
+
+    } 
+
+    // else if ($('#email').val() == '') {  
+         // myApp.alert("Enter Email Id");
+         // return false;
+    // }
+
+    else if($('#email').val().length >0 && !validateEmail($('#email').val().trim()) ){
+
          myApp.alert("Invalid Email Id");
          return false;
+
     } else if ($('#product_range').val() == '' ){
+
         myApp.alert("Select Product Range");
         return false;
+
     } else if ($('#state').val() == '' ){
         myApp.alert("Select State");
         return false;
@@ -483,10 +492,7 @@ function book_now_form_submit() {
         myApp.alert("Mobile No. Should Be 10 Digit");
         $('#book_now_mobile').val('');
         return false;
-    } else if ($('#book_now_email').val() == '') {    
-        myApp.alert("Enter Email id");
-         return false;
-    }else if (!validateEmail($('#book_now_email').val().trim())){    
+    }else if ($('#book_now_email').val().length > 0 && !validateEmail($('#book_now_email').val().trim())){    
         myApp.alert("Invalid Email id");
          return false;
     } else if ($('#book_now_product_range').val() == '' ){
@@ -641,13 +647,14 @@ function edit_list_book(count) {
         '<option value="">Product Range</option>' +
 
 
-        '<option value="7.5 kVA">7.5 kVA</option>'+
-        '<option value="20 kVA - 25 kVA">20 kVA - 25 kVA</option>'+
-        '<option value="30 kVA - 40 kVA">30 kVA - 40 kVA</option>'+
-        '<option value="50 kVA - 62.5 kVA">50 kVA - 62.5 kVA</option>'+
-        '<option value="75 kVA - 125 kVA">75 kVA - 125 kVA</option>'+
-        '<option value="160 kVA - 200 kVA">160 kVA - 200 kVA</option>'+
-        '<option value="200 kVA - 500 kVA">200 kVA - 500 kVA</option>'+
+            '<option value="7.5 kVA">7.5 kVA - 20 kVA</option>'+
+            '<option value="20 kVA - 25 kVA">25 kVA - 40 kVA</option>'+
+            '<option value="30 kVA - 40 kVA">50 kVA - 62.5 kVA</option>'+
+            '<option value="50 kVA - 62.5 kVA">75 kVA</option>'+
+            '<option value="75 kVA - 125 kVA">82.5 kVA - 100 kVA</option>'+
+            '<option value="160 kVA - 200 kVA">125 kVA - 140 kVA</option>'+
+            '<option value="200 kVA - 500 kVA">160 kVA</option>'+
+            '<option value="200 kVA - 500 kVA">180 kVA - 200 kVA</option>'+
 
 
 
@@ -695,13 +702,14 @@ function edit_list_book(count) {
         '<option value="">Product Range</option>' +
 
 
-        '<option value="7.5 kVA">7.5 kVA</option>'+
-        '<option value="20 kVA - 25 kVA">20 kVA - 25 kVA</option>'+
-        '<option value="30 kVA - 40 kVA">30 kVA - 40 kVA</option>'+
-        '<option value="50 kVA - 62.5 kVA">50 kVA - 62.5 kVA</option>'+
-        '<option value="75 kVA - 125 kVA">75 kVA - 125 kVA</option>'+
-        '<option value="160 kVA - 200 kVA">160 kVA - 200 kVA</option>'+
-        '<option value="200 kVA - 500 kVA">200 kVA - 500 kVA</option>'+
+            '<option value="7.5 kVA">7.5 kVA - 20 kVA</option>'+
+            '<option value="20 kVA - 25 kVA">25 kVA - 40 kVA</option>'+
+            '<option value="30 kVA - 40 kVA">50 kVA - 62.5 kVA</option>'+
+            '<option value="50 kVA - 62.5 kVA">75 kVA</option>'+
+            '<option value="75 kVA - 125 kVA">82.5 kVA - 100 kVA</option>'+
+            '<option value="160 kVA - 200 kVA">125 kVA - 140 kVA</option>'+
+            '<option value="200 kVA - 500 kVA">160 kVA</option>'+
+            '<option value="200 kVA - 500 kVA">180 kVA - 200 kVA</option>'+
 
 
         '</select>' +
@@ -801,10 +809,7 @@ function update_data(count) {
     } else if ($('#update_mobile_0').val() == '') {
         myApp.alert("Enter Mobile");
         return false;
-    } else if ($('#update_email_0').val() == '') {    
-         myApp.alert("Enter Email id");
-         return false;
-    }else if(!validateEmail($('#update_email_0').val().trim())){
+    }else if($('#update_email_0').val().length > 0 && !validateEmail($('#update_email_0').val().trim())){
          myApp.alert("Invalid Email id");
          return false;
     } else if ($('#update_product_range_0').val() == '' ){

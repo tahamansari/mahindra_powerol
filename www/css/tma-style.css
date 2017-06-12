@@ -37,6 +37,22 @@
     margin-top: 25%;
 }
 
+.owl-buttons{
+
+    position: absolute;
+    margin-top: 24%;
+    width: 100%;
+}
+
+.owl-prev{
+
+  float: left;
+}
+
+.owl-next{
+
+  float: right;
+}
 
 @media screen and ( max-height: 600px ){
 
@@ -52,7 +68,7 @@
 }
 
   .homeSlider .owl-item {
-    width: 4.1%!important;
+    width: 4.2%!important;
     max-width: 200px!important;
   }
 

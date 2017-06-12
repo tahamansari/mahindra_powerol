@@ -55,6 +55,7 @@ myApp.onPageInit('cba', function(page) {
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
+    
     $("#p_rating").change(function() {
         console.log(this.value);
         if (this.value == '7.5kVA') {
@@ -2104,19 +2105,25 @@ myApp.onPageInit('our_story', function(page) {
       $(".owl-carousel-rise").owlCarousel({
         items : 1,
         singleItem:true,
+        navigation:true,
       });
 
 
       $(".owl-carousel-powerol").owlCarousel({
         items : 1,
         singleItem:true,
+        navigation:true,
       });
 
       $(".owl-carousel-agni").owlCarousel({
         items : 1,
         singleItem:true,
+        navigation:true,
       });
 
+
+      $( ".owl-prev").html('<i class="fa fa-chevron-left fa-3x" style="color:black"></i>');
+      $( ".owl-next").html('<i class="fa fa-chevron-right fa-3x" style="color:black"></i>');
 
       
       // $(".owl-carousel-powerol").owlCarousel();
@@ -2126,6 +2133,9 @@ myApp.onPageInit('our_story', function(page) {
   
 
       $('.close-ppt').click(function(){
+
+
+        $('.navbar').css('z-index','9');
 
         $('.rise-overlay').animate({
             top:'100%',
@@ -2145,8 +2155,11 @@ myApp.onPageInit('our_story', function(page) {
 
         console.log('clicked');
         $('.rise-overlay').animate({
-            top:'10%',
+            top:'0%',
         },'slow');
+
+        $('.navbar').css('z-index','1');
+
 
         // var onSuccess = function(data) {
         // };
@@ -2162,8 +2175,11 @@ myApp.onPageInit('our_story', function(page) {
 
         console.log('clicked');
         $('.powerol-overlay').animate({
-            top:'10%',
+            top:'0%',
         },'slow');
+
+        $('.navbar').css('z-index','1');
+
 
         // var onSuccess = function(data) {
         // };
@@ -2177,9 +2193,12 @@ myApp.onPageInit('our_story', function(page) {
     $('.showpptAgni').on('click', function() {
 
         console.log('clicked');
+
         $('.agni-overlay').animate({
-            top:'10%',
+            top:'0%',
         },'slow');
+
+        $('.navbar').css('z-index','1');
 
 
         // var onSuccess = function(data) {
