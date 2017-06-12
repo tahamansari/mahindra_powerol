@@ -181,8 +181,12 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Katmandu-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
 
         $('.Katmandu-marker p').addClass('bluecolor');
+        $('.Katmandu-marker i').addClass('bluecolor');
+
 
 
         var html = "<div class='col-30 text_left'>"+
@@ -292,8 +296,12 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Kaski-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
 
         $('.Kaski-marker p').addClass('bluecolor');
+        $('.Kaski-marker i').addClass('bluecolor');
+
 
 
         var html = "<div class='col-30 text_left'>"+
@@ -340,7 +348,12 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Chitwan-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
+
         $('.Chitwan-marker p').addClass('bluecolor');
+        $('.Chitwan-marker i').addClass('bluecolor');
+
 
 
         var html =  "<div class='col-30 text_left'>"+
@@ -383,7 +396,11 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Rupendehi-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
         $('.Rupendehi-marker p').addClass('bluecolor');
+        $('.Rupendehi-marker i').addClass('bluecolor');
+
 
         var html = "<div class='col-30 text_left'>"+
                     "<p>District</p>"+
@@ -425,8 +442,12 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Dang-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
 
         $('.Dang-marker p').addClass('bluecolor');
+        $('.Dang-marker i').addClass('bluecolor');
+
 
 
         var html =  "<div class='col-30 text_left'>"+
@@ -469,7 +490,11 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Morang-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
         $('.Morang-marker p').addClass('bluecolor');
+        $('.Morang-marker i').addClass('bluecolor');
+
 
         var html =  "<div class='col-30 text_left'>"+
                     "<p>District</p>"+
@@ -511,7 +536,11 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Dhanusa-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
         $('.Dhanusa-marker p').addClass('bluecolor');
+        $('.Dhanusa-marker i').addClass('bluecolor');
+
 
         var html = "<div class='col-30 text_left'>"+
                     "<p>District</p>"+
@@ -553,7 +582,11 @@ myApp.onPageInit('findus_map', function(page) {
     $('.Kailali-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
+        $('.map-container i').removeClass('bluecolor');
+
         $('.Kailali-marker p').addClass('bluecolor');
+        $('.Kailali-marker i').addClass('bluecolor');
+
 
 
         var html = "<div class='col-30 text_left'>"+

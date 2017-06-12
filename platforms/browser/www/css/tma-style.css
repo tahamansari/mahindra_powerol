@@ -44,6 +44,11 @@
     width: 100%;
 }
 
+.map-container div{
+
+  cursor: pointer;
+}
+
 .owl-prev{
 
   float: left;
