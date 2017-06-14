@@ -2220,6 +2220,22 @@ myApp.onPageInit('enquiry_form', function(page) {
 
 myApp.onPageInit('our_story', function(page) {
 
+
+    $('.openMahindraVideo').click(function(){
+
+        console.log("video open");
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/aboutMahindra.mp4", onSuccess, onError);
+
+    })
+
+
       $(".owl-carousel-rise").owlCarousel({
         items : 1,
         singleItem:true,

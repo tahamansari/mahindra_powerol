@@ -165,9 +165,30 @@ function onDeviceReady() {
                                                             function(entry) {
 
                                                                 myApp.alert('Hotel Video Downloaded');
-                                                                Lockr.set('downloadall', 'true');
-                                                                $('.overlay-downloading').fadeOut();
 
+                                                                var fileTransfer = new FileTransfer();
+                                                                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/aboutMahindra.mp4");
+
+                                                                fileTransfer.download(
+                                                                    uri,
+                                                                    cordova.file.externalApplicationStorageDirectory + 'files/download/aboutMahindra.mp4',
+                                                                    function(entry) {
+
+                                                                        myApp.alert('About Mahindra Downloaded');
+                                                                        
+                                                                        Lockr.set('downloadall', 'true');
+                                                                        $('.overlay-downloading').fadeOut();
+
+                                                                    },
+                                                                    function(error) {
+                                                                        alert('About Mahindra download failed');
+                                                                    },
+                                                                    false, {
+                                                                        headers: {
+                                                                            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+                                                                        }
+                                                                    }
+                                                                );
                                                             },
                                                             function(error) {
 
