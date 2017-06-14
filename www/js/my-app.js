@@ -194,7 +194,7 @@ myApp.onPageInit('cba', function(page) {
         var p_no_of_year = parseFloat($("#p_no_of_year").val());
         var p_avg_usage_hrs = parseFloat(this.value);
         var p_fuel_consumption = parseFloat($("#p_fuel_consumption").val());
-        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 50;
+        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 365;
          $('#p_running_fuel').val(cal_p_running_fuel);
     });
 
@@ -203,7 +203,7 @@ myApp.onPageInit('cba', function(page) {
         var p_no_of_year = parseFloat($("#p_no_of_year").val());
         var p_avg_usage_hrs = parseFloat(this.value);
         var p_fuel_consumption = parseFloat($("#p_fuel_consumption").val());
-        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 50;
+        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 365;
          $('#p_running_fuel').val(cal_p_running_fuel);
     });
 
@@ -211,7 +211,7 @@ myApp.onPageInit('cba', function(page) {
         var k_no_of_year = parseFloat($("#k_no_of_year").val());
         var k_avg_usage_hrs = parseFloat($("#k_avg_usage_hrs").val());
         var k_fuel_consumption = parseFloat(this.value);
-        var cal_k_running_fuel = k_no_of_year * k_avg_usage_hrs * k_fuel_consumption * 50;
+        var cal_k_running_fuel = k_no_of_year * k_avg_usage_hrs * k_fuel_consumption * 365;
         $('#k_running_fuel').val(cal_k_running_fuel);
 
     });
