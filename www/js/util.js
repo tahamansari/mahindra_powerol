@@ -167,21 +167,21 @@ function onDeviceReady() {
                                                                 myApp.alert('Hotel Video Downloaded');
 
                                                                 var fileTransfer = new FileTransfer();
-                                                                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/aboutMahindra.mp4");
+                                                                var uri = encodeURI("http://kreaserv-tech.com/mahindra_admin/mahindra.pptx");
 
                                                                 fileTransfer.download(
                                                                     uri,
-                                                                    cordova.file.externalApplicationStorageDirectory + 'files/download/aboutMahindra.mp4',
+                                                                    cordova.file.externalApplicationStorageDirectory + 'files/download/mahindra.pptx',
                                                                     function(entry) {
 
-                                                                        myApp.alert('About Mahindra Downloaded');
+                                                                        myApp.alert('mahindra pptx Downloaded');
                                                                         
                                                                         Lockr.set('downloadall', 'true');
                                                                         $('.overlay-downloading').fadeOut();
 
                                                                     },
                                                                     function(error) {
-                                                                        alert('About Mahindra download failed');
+                                                                        alert('mahindra pptx download failed');
                                                                     },
                                                                     false, {
                                                                         headers: {
