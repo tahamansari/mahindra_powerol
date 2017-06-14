@@ -2236,11 +2236,11 @@ myApp.onPageInit('our_story', function(page) {
     })
 
 
-      $(".owl-carousel-rise").owlCarousel({
-        items : 1,
-        singleItem:true,
-        navigation:true,
-      });
+      // $(".owl-carousel-rise").owlCarousel({
+      //   items : 1,
+      //   singleItem:true,
+      //   navigation:true,
+      // });
 
 
       $(".owl-carousel-powerol").owlCarousel({
@@ -2285,24 +2285,24 @@ myApp.onPageInit('our_story', function(page) {
       })
 
 
-    $('.showpptRise').on('click', function() {
+    // $('.showpptRise').on('click', function() {
 
-        console.log('clicked');
-        $('.rise-overlay').animate({
-            top:'0%',
-        },'slow');
+    //     console.log('clicked');
+    //     $('.rise-overlay').animate({
+    //         top:'0%',
+    //     },'slow');
 
-        $('.navbar').css('z-index','1');
+    //     $('.navbar').css('z-index','1');
 
 
-        // var onSuccess = function(data) {
-        // };
-        // function onError(error) {
-        //     alert('message: ' + error.message);
-        // }
-        // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
-        // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
-    })
+    //     // var onSuccess = function(data) {
+    //     // };
+    //     // function onError(error) {
+    //     //     alert('message: ' + error.message);
+    //     // }
+    //     // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
+    //     // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    // })
 
     $('.showpptPowerol').on('click', function() {
 
