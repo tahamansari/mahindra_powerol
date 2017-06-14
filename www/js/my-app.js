@@ -263,14 +263,14 @@ myApp.onPageInit('cba', function(page) {
 myApp.onPageInit('findus_map', function(page) {
 
 
-    $('.Katmandu-marker').click(function(){
+    $('.Kathmandu-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
         $('.map-container i').removeClass('bluecolor');
 
 
-        $('.Katmandu-marker p').addClass('bluecolor');
-        $('.Katmandu-marker i').addClass('bluecolor');
+        $('.Kathmandu-marker p').addClass('bluecolor');
+        $('.Kathmandu-marker i').addClass('bluecolor');
 
 
 
@@ -310,7 +310,7 @@ myApp.onPageInit('findus_map', function(page) {
         "<p>District</p>"+
         "</div>"+
         "<div class='col-70 text_left'>"+
-        "<p>Katmandu</p>"+
+        "<p>Kathmandu</p>"+
         "</div>"+
         "<div class='col-30 text_left'>"+
         "<p>Showroom Name</p>"+
