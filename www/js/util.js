@@ -909,28 +909,28 @@ function cba_submit() {
 
 
     if(!$("#p_no_of_year").val()){
-        myApp.alert('No Of Years Required');
+        // myApp.alert('No Of Years Required');
         return false;
     }
     if(!$("#k_no_of_year").val()){
-        myApp.alert('No Of Years Required');
+        // myApp.alert('No Of Years Required');
         return false;
     }
     if(!$("#p_rating").val()){
-        myApp.alert('Rating Required');
+        // myApp.alert('Rating Required');
         return false;
     }
     if(!$("#k_rating").val()){
-        myApp.alert('Rating Required');
+        // myApp.alert('Rating Required');
         return false;
     }
 
     if(!$("#p_avg_usage_hrs").val()){
-        myApp.alert('Usage Required');
+        // myApp.alert('Usage Required');
         return false;
     }
     if(!$("#k_avg_usage_hrs").val()){
-        myApp.alert('Usage Required');
+        // myApp.alert('Usage Required');
         return false;
     }
 
@@ -940,7 +940,7 @@ function cba_submit() {
     // }
 
     if(!$("#k_price_of_brand").val()){
-        myApp.alert('Price Required');
+        // myApp.alert('Price Required');
         return false;
     }
 
@@ -950,7 +950,7 @@ function cba_submit() {
     // }
 
     if(!$("#k_fuel_consumption").val()){
-        myApp.alert('Fuel Consumption Required');
+        // myApp.alert('Fuel Consumption Required');
         return false;
     }
     // if($("p_running_fuel").empty()){
@@ -963,11 +963,11 @@ function cba_submit() {
     // }
 
     if(!$("#p_service_period").val()){
-        myApp.alert('Service Period Required');
+        // myApp.alert('Service Period Required');
         return false;
     }
     if(!$("#k_service_period").val()){
-        myApp.alert('Service Period Required');
+        // myApp.alert('Service Period Required');
         return false;
     }
 
@@ -981,11 +981,11 @@ function cba_submit() {
     // }
 
     if(!$("#p_service_cost").val()){
-        myApp.alert('Service Cost Required');
+        // myApp.alert('Service Cost Required');
         return false;
     }
     if(!$("#k_service_cost").val()){
-        myApp.alert('Service Cost Required');
+        // myApp.alert('Service Cost Required');
         return false;
     }
 
@@ -1076,27 +1076,68 @@ function cba_submit() {
     // var k_total = cal_k_service_cost5 + cal_k_running_fuel + k_price_of_brand;
     var p_total = p_service_cost5 + p_running_fuel + p_price_of_brand;
     var k_total = k_service_cost5 + k_running_fuel + k_price_of_brand;
-    $("#p_val").text(p_total);
-    $("#k_val").text(k_total);
+    // $("#p_val").text(p_total);
+    // $("#k_val").text(k_total);
+    $("#p_val").val(p_total);
+    $("#k_val").val(k_total);
 
-    // console.log("p_no_of_year :"+p_no_of_year+"k_no_of_year :"+k_no_of_year+"p_rating :"+p_rating+"k_rating :"+k_rating+"p_price_of_brand :"+p_price_of_brand+"k_price_of_brand :"+k_price_of_brand+"p_running_fuel :"+p_running_fuel+"k_running_fuel :"+k_running_fuel+"p_service_cost :"+p_service_cost+"k_service_cost :"+k_service_cost);
-    // console.log(cal_p_service_cost5+cal_p_running_fuel+p_price_of_brand+'k_total = '+k_total);
-    // console.log(cal_k_service_cost5+cal_k_running_fuel+k_price_of_brand+'p_total = '+p_total);
-    if (Number(p_total) > Number(k_total)) {
-        // console.log(p_total);
-        $("#powerol_value_img").attr('src', 'img/ico/green.png');
-        $("#kirloskar_value_img").attr('src', 'img/ico/red.png');
-    } else {
-        // console.log(k_total);
-        $("#kirloskar_value_img").attr('src', 'img/ico/green.png');
-        $("#powerol_value_img").attr('src', 'img/ico/red.png');
-    }
+    // // console.log("p_no_of_year :"+p_no_of_year+"k_no_of_year :"+k_no_of_year+"p_rating :"+p_rating+"k_rating :"+k_rating+"p_price_of_brand :"+p_price_of_brand+"k_price_of_brand :"+k_price_of_brand+"p_running_fuel :"+p_running_fuel+"k_running_fuel :"+k_running_fuel+"p_service_cost :"+p_service_cost+"k_service_cost :"+k_service_cost);
+    // // console.log(cal_p_service_cost5+cal_p_running_fuel+p_price_of_brand+'k_total = '+k_total);
+    // // console.log(cal_k_service_cost5+cal_k_running_fuel+k_price_of_brand+'p_total = '+p_total);
+    // if (Number(p_total) > Number(k_total)) {
+    //     // console.log(p_total);
+    //     $("#powerol_value_img").attr('src', 'img/ico/green.png');
+    //     $("#kirloskar_value_img").attr('src', 'img/ico/red.png');
+    // } else {
+    //     // console.log(k_total);
+    //     $("#kirloskar_value_img").attr('src', 'img/ico/green.png');
+    //     $("#powerol_value_img").attr('src', 'img/ico/red.png');
+    // }
 
-    $("#powerol_value").show();
-    $("#kirloskar_value").show();
-    $("#clear_sub").show();
-    // $("#clear_sub").css('margin-left','0%');
-    $("#powerol_sub").hide();
+    // $("#powerol_value").show();
+    // $("#kirloskar_value").show();
+    // $("#clear_sub").show();
+    // // $("#clear_sub").css('margin-left','0%');
+    // $("#powerol_sub").hide();
+    Highcharts.setOptions({
+    colors: ['green', 'red']
+    });
+    Highcharts.chart('chart1', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Cost Benefit Analysis'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
+            }
+        },
+        series: [{
+            name: 'Total',
+            colorByPoint: true,
+            data: [{
+                name: 'Powerol',
+                y: p_total
+            }, {
+                name: 'Kirloskar',
+                y: k_total
+            }]
+        }]
+    });
+        
 }
 
 function cba_clear() {
