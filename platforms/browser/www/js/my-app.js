@@ -55,9 +55,83 @@ myApp.onPageInit('cba', function(page) {
     $('.backbutton').on('click', function() {
         mainView.router.back();
     });
+
+    $("#p_no_of_year").change(function() {
+        $("#k_no_of_year").val(this.value);
+        var cal_p_no_of_service = 3 * parseFloat(this.value);
+        $("#p_no_of_service").val(cal_p_no_of_service);
+        $("#k_no_of_service").val(cal_p_no_of_service);
+    });
     
+    $("#k_no_of_year").change(function() {
+        $("#p_no_of_year").val(this.value);
+        var cal_k_no_of_service = 3 * parseFloat(this.value);
+        $("#k_no_of_service").val(cal_k_no_of_service);
+        $("#p_no_of_service").val(cal_k_no_of_service);
+    });
+
     $("#p_rating").change(function() {
-        console.log(this.value);
+        // console.log(this.value);
+        $("#k_rating").val(this.value);
+        if (this.value == '7.5kVA') {
+            $('#p_price_of_brand').val('527500');
+            $("#p_fuel_consumption").val('2.0');
+        } else if (this.value == '10kVA') {
+            $("#p_fuel_consumption").val('2.4');
+            //dummy
+            $('#p_price_of_brand').val('510000');
+        } else if (this.value == '12.5kVA') {
+            $("#p_fuel_consumption").val('2.7');
+            $('#p_price_of_brand').val('510000');
+        } else if (this.value == '15kVA') {
+            $("#p_fuel_consumption").val('3.0');
+            $('#p_price_of_brand').val('520000');
+        } else if (this.value == '20kVA') {
+            $("#p_fuel_consumption").val('3.9');
+            $('#p_price_of_brand').val('540000');
+        } else if (this.value == '25kVA') {
+            $("#p_fuel_consumption").val('4.7');
+            $('#p_price_of_brand').val('630000');
+        } else if (this.value == '30kVA') {
+            $("#p_fuel_consumption").val('6.0');
+            $('#p_price_of_brand').val('650000');
+        } else if (this.value == '40kVA') {
+            $("#p_fuel_consumption").val('8.0');
+            $('#p_price_of_brand').val('725000');
+        } else if (this.value == '50kVA') {
+            $("#p_fuel_consumption").val('10.0');
+            $('#p_price_of_brand').val('880000');
+        } else if (this.value == '62.5kVA') {
+            $("#p_fuel_consumption").val('11.4');
+            $('#p_price_of_brand').val('930000');
+        } else if (this.value == '75kVA') {
+            $("#p_fuel_consumption").val('14.5');
+            $('#p_price_of_brand').val('1020000');
+        } else if (this.value == '82.5kVA') {
+            $("#p_fuel_consumption").val('13.9');
+            $('#p_price_of_brand').val('1225000');
+        } else if (this.value == '100kVA') {
+            $("#p_fuel_consumption").val('17.3');
+            $('#p_price_of_brand').val('1300000');
+        } else if (this.value == '125kVA') {
+            $("#p_fuel_consumption").val('21.4');
+            $('#p_price_of_brand').val('1390000');
+        } else if (this.value == '160kVA') {
+            $("#p_fuel_consumption").val('27.8');
+            $('#p_price_of_brand').val('2035500');
+        } else if (this.value == '180kVA') {
+            $("#p_fuel_consumption").val('28.7');
+            //dummy
+            $('#p_price_of_brand').val('2035500');
+        } else if (this.value == '200kVA') {
+            $("#p_fuel_consumption").val('33.3');
+            $('#p_price_of_brand').val('2l50000');
+        }
+    });
+
+    $("#k_rating").change(function() {
+        // console.log(this.value);
+        $("#p_rating").val(this.value);
         if (this.value == '7.5kVA') {
             $('#p_price_of_brand').val('527500');
             $("#p_fuel_consumption").val('2.0');
@@ -116,10 +190,20 @@ myApp.onPageInit('cba', function(page) {
 
     
     $("#p_avg_usage_hrs").change(function() {
+        $("#k_avg_usage_hrs").val(this.value);
         var p_no_of_year = parseFloat($("#p_no_of_year").val());
         var p_avg_usage_hrs = parseFloat(this.value);
         var p_fuel_consumption = parseFloat($("#p_fuel_consumption").val());
-        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 50;
+        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 365;
+         $('#p_running_fuel').val(cal_p_running_fuel);
+    });
+
+    $("#k_avg_usage_hrs").change(function() {
+        $("#p_avg_usage_hrs").val(this.value);
+        var p_no_of_year = parseFloat($("#p_no_of_year").val());
+        var p_avg_usage_hrs = parseFloat(this.value);
+        var p_fuel_consumption = parseFloat($("#p_fuel_consumption").val());
+        var cal_p_running_fuel = p_no_of_year * p_avg_usage_hrs * p_fuel_consumption * 365;
          $('#p_running_fuel').val(cal_p_running_fuel);
     });
 
@@ -127,38 +211,39 @@ myApp.onPageInit('cba', function(page) {
         var k_no_of_year = parseFloat($("#k_no_of_year").val());
         var k_avg_usage_hrs = parseFloat($("#k_avg_usage_hrs").val());
         var k_fuel_consumption = parseFloat(this.value);
-        var cal_k_running_fuel = k_no_of_year * k_avg_usage_hrs * k_fuel_consumption * 50;
+        var cal_k_running_fuel = k_no_of_year * k_avg_usage_hrs * k_fuel_consumption * 365;
         $('#k_running_fuel').val(cal_k_running_fuel);
 
     });
 
-    $("#p_service_period").change(function() {
-        $('#k_service_period').val(this.value);
-        if (this.value == 300) {
-            var cal_p_no_of_service = 4 * 5;
-            $("#p_no_of_service").val(cal_p_no_of_service);
-            $("#k_no_of_service").val(cal_p_no_of_service);
-        }else{
-             var cal_k_no_of_service = 2 * 5;
-            // console.log(cal_k_no_of_service);
-            $("#p_no_of_service").val(cal_k_no_of_service);
-            $("#k_no_of_service").val(cal_k_no_of_service);
-        }
-    });
 
-    $("#k_service_period").change(function() {
-        $('#p_service_period').val(this.value);
-        if (this.value == 300) {
-            var cal_p_no_of_service = 4 * 5;
-            $("#p_no_of_service").val(cal_p_no_of_service);
-            $("#k_no_of_service").val(cal_p_no_of_service);
-        }else{
-             var cal_k_no_of_service = 2 * 5;
-            // console.log(cal_k_no_of_service);
-            $("#p_no_of_service").val(cal_k_no_of_service);
-            $("#k_no_of_service").val(cal_k_no_of_service);
-        }
-    });
+    // $("#p_service_period").change(function() {
+    //     $('#k_service_period').val(this.value);
+    //     if (this.value == 300) {
+    //         var cal_p_no_of_service = 3 * p_no_of_year;
+    //         $("#p_no_of_service").val(cal_p_no_of_service);
+    //         $("#k_no_of_service").val(cal_p_no_of_service);
+    //     }else{
+    //          var cal_k_no_of_service = 3 * p_no_of_year;
+    //         // console.log(cal_k_no_of_service);
+    //         $("#p_no_of_service").val(cal_k_no_of_service);
+    //         $("#k_no_of_service").val(cal_k_no_of_service);
+    //     }
+    // });
+
+    // $("#k_service_period").change(function() {
+    //     $('#p_service_period').val(this.value);
+    //     if (this.value == 300) {
+    //         var cal_p_no_of_service = 4 * 5;
+    //         $("#p_no_of_service").val(cal_p_no_of_service);
+    //         $("#k_no_of_service").val(cal_p_no_of_service);
+    //     }else{
+    //          var cal_k_no_of_service = 2 * 5;
+    //         // console.log(cal_k_no_of_service);
+    //         $("#p_no_of_service").val(cal_k_no_of_service);
+    //         $("#k_no_of_service").val(cal_k_no_of_service);
+    //     }
+    // });
 
     $("#p_service_cost").change(function() {
         var p_service_cost = parseFloat(this.value);
@@ -178,14 +263,14 @@ myApp.onPageInit('cba', function(page) {
 myApp.onPageInit('findus_map', function(page) {
 
 
-    $('.Katmandu-marker').click(function(){
+    $('.Kathmandu-marker').click(function(){
 
         $('.map-container p').removeClass('bluecolor');
         $('.map-container i').removeClass('bluecolor');
 
 
-        $('.Katmandu-marker p').addClass('bluecolor');
-        $('.Katmandu-marker i').addClass('bluecolor');
+        $('.Kathmandu-marker p').addClass('bluecolor');
+        $('.Kathmandu-marker i').addClass('bluecolor');
 
 
 
@@ -225,7 +310,7 @@ myApp.onPageInit('findus_map', function(page) {
         "<p>District</p>"+
         "</div>"+
         "<div class='col-70 text_left'>"+
-        "<p>Katmandu</p>"+
+        "<p>Kathmandu</p>"+
         "</div>"+
         "<div class='col-30 text_left'>"+
         "<p>Showroom Name</p>"+
@@ -2135,11 +2220,27 @@ myApp.onPageInit('enquiry_form', function(page) {
 
 myApp.onPageInit('our_story', function(page) {
 
-      $(".owl-carousel-rise").owlCarousel({
-        items : 1,
-        singleItem:true,
-        navigation:true,
-      });
+
+    $('.openMahindraVideo').click(function(){
+
+        console.log("video open");
+        var onSuccess = function(data) {
+            // alert('message: ' + data.message);
+        };
+        // onError Callback receives a json object
+        function onError(error) {
+            alert('message error: ' + error.message);
+        }
+        window.cordova.plugins.FileOpener.openFile("files/Download/aboutMahindra.mp4", onSuccess, onError);
+
+    })
+
+
+      // $(".owl-carousel-rise").owlCarousel({
+      //   items : 1,
+      //   singleItem:true,
+      //   navigation:true,
+      // });
 
 
       $(".owl-carousel-powerol").owlCarousel({
@@ -2184,24 +2285,24 @@ myApp.onPageInit('our_story', function(page) {
       })
 
 
-    $('.showpptRise').on('click', function() {
+    // $('.showpptRise').on('click', function() {
 
-        console.log('clicked');
-        $('.rise-overlay').animate({
-            top:'0%',
-        },'slow');
+    //     console.log('clicked');
+    //     $('.rise-overlay').animate({
+    //         top:'0%',
+    //     },'slow');
 
-        $('.navbar').css('z-index','1');
+    //     $('.navbar').css('z-index','1');
 
 
-        // var onSuccess = function(data) {
-        // };
-        // function onError(error) {
-        //     alert('message: ' + error.message);
-        // }
-        // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
-        // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
-    })
+    //     // var onSuccess = function(data) {
+    //     // };
+    //     // function onError(error) {
+    //     //     alert('message: ' + error.message);
+    //     // }
+    //     // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
+    //     // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    // })
 
     $('.showpptPowerol').on('click', function() {
 
