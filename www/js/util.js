@@ -182,6 +182,8 @@ function onDeviceReady() {
                                                                     },
                                                                     function(error) {
                                                                         alert('About Mahindra download failed');
+                                                                        navigator.app.exitApp();
+
                                                                     },
                                                                     false, {
                                                                         headers: {
@@ -193,6 +195,8 @@ function onDeviceReady() {
                                                             function(error) {
 
                                                                 alert('Hotel download failed');
+                                                                navigator.app.exitApp();
+
 
                                                             },
                                                             false, {
@@ -206,6 +210,8 @@ function onDeviceReady() {
                                                     function(error) {
 
                                                         alert('Hospital download failed');
+                                                        navigator.app.exitApp();
+
 
                                                     },
                                                     false, {
@@ -219,6 +225,7 @@ function onDeviceReady() {
                                             function(error) {
 
                                                 alert('College download failed');
+                                                navigator.app.exitApp();
 
                                             },
                                             false, {
@@ -232,6 +239,7 @@ function onDeviceReady() {
                                     function(error) {
 
                                         alert('Bank download failed');
+                                        navigator.app.exitApp();
 
                                     },
                                     false, {
@@ -244,6 +252,7 @@ function onDeviceReady() {
                             function(error) {
 
                                 alert('Loadcalculator download failed');
+                                navigator.app.exitApp();
 
                             },
                             false, {
@@ -257,6 +266,7 @@ function onDeviceReady() {
                     function(error) {
 
                         alert('Brochure2 download failed');
+                        navigator.app.exitApp();
 
                     },
                     false, {
@@ -270,6 +280,7 @@ function onDeviceReady() {
             function(error) {
 
                 alert('Brochure1 download failed');
+                navigator.app.exitApp();
 
             },
             false, {
