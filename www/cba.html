@@ -130,15 +130,28 @@
    <div class="page-content">
 
          <div class="cba_content">
-            <div class="col-100 cba">
+
+
+         <select style="width: 100px;border: 1px solid black;margin: 0 45%;padding:5px">
+          <option>Select Currency</option>
+           <option>INR</option>
+           <option>USD</option>
+           <option>NPR</option>
+           <option>BDT</option>
+           <option>SLR</option>
+         </select>
+
+
+            <form id="form_data"  method="post" onchange="cba_submit()">
+              <div class="col-100 cba">
                <div class="col-50 center">
                   <img src="img/logo-small.png" style="margin-left:-32%;">
                </div>
-               <div class="col-50 center">
-                  <img src="img/kir.png" style="margin-right: -30%;margin-top: -2%;">
+               <div class="col-40 center">
+                  <!-- <img src="img/kir.png" style="margin-right: -30%;margin-top: -2%;"> -->
+                   <input  class="redinput" type="text" name="" id="brand_name" style=" width:32%;margin-left: 82%;" placeholder="Brand Name">
                </div>
             </div>
-            <form id="form_data"  method="post" onchange="cba_submit()">
               <div class="col-100 cba">
                  <div class="col-40">
                     <input  class="greeninput" type="number" name="" id="p_no_of_year">
@@ -246,19 +259,43 @@
               </div>
               <div class="col-100 cba">
                  <div class="col-40">
-                    <input class="greeninput" type="number" name="" step="0.01" value="" id="p_running_fuel" readonly>
+                    <input class="greeninput" type="number" name="" id="p_price_of_diesel" >
+                 </div>
+                 <div class="col-40">
+                 <i class="fa fa-inr font30" aria-hidden="true"></i>
+                    <p class="cbap">Cost of Diesel (per litre)</p>
+                 </div>
+                 <div class="col-40">
+                    <input class="redinput" type="number" name="" id="k_price_of_diesel">
+                 </div>
+              </div>
+              <div class="col-100 cba">
+                 <div class="col-40">
+                    <input class="greeninput" type="number" name="" step="0.01" value="" id="p_running_cost_per_day" readonly>
+                 </div>
+                 <div class="col-40">
+                    <i class="fa fa-file-o font30" aria-hidden="true"></i>
+                    <p class="cbap">Running cost per day</p>
+                 </div>
+                 <div class="col-40">
+                    <input class="redinput" type="number" name="" step="0.01" value="" id="k_running_cost_per_day" readonly>
+                 </div>
+              </div>
+              <div class="col-100 cba">
+                 <div class="col-40">
+                    <input class="greeninput" type="number" name="" step="0.01" value="" id="p_running_fuel" readonly style="width:32%">
                  </div>
                  <div class="col-40">
                     <i class="fa fa-file-o font30" aria-hidden="true"></i>
                     <p class="cbap">Running fuel cost in 5 years</p>
                  </div>
                  <div class="col-40">
-                    <input class="redinput" type="number" name="" step="0.01" value="" id="k_running_fuel" readonly>
+                    <input class="redinput" type="number" name="" step="0.01" value="" id="k_running_fuel" readonly style="width:32%">
                  </div>
               </div>
                <div class="col-100 cba">
                  <div class="col-40">
-                    <input class="greeninput" type="number" name=""  value="300" id="p_service_period" >
+                    <input class="greeninput" type="number" name=""  value="" id="p_service_period" >
                    <!--  <select class="greeninput" name="" id="p_service_period" style="background: url(img/down_arrow.png) no-repeat 98%;border: 1px solid #b3adad;padding: 3%;width: 33%;">
                       <option value="300">300 hr</option>
                       <option value="500">500 hr</option>
@@ -266,10 +303,10 @@
                  </div>
                  <div class="col-40">
                  <i class="fa fa-cogs font30" aria-hidden="true"></i>
-                    <p class="cbap">Service period</p>
+                    <p class="cbap">Service period (No of hours)</p>
                  </div>
                  <div class="col-40">
-                    <input class="redinput" type="number" name="" value="300"  id="k_service_period" >
+                    <input class="redinput" type="number" name="" value=""  id="k_service_period" >
                     <!-- <select class="redinput" name="" id="k_service_period" style="background: url(img/down_arrow.png) no-repeat 98%;border: 1px solid #b3adad;padding: 3%;width: 33%;">
                       <option value="300">300 hr</option>
                       <option value="500">500 hr</option>
@@ -316,16 +353,28 @@
             </form>
             <div class="col-100 cba">
                  <div class="col-40">
-                    <input class="greeninput" type="number" name="" value="" id="p_val" readonly>
+                    <input class="greeninput" type="number" name="" value="" id="p_val" readonly style="width:32%">
                  </div>
                  <div class="col-40">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <p class="cbap">Total</p>
                  </div>
                  <div class="col-40">
-                    <input class="redinput" type="number" name="" value="" id="k_val" readonly>
+                    <input class="redinput" type="number" name="" value="" id="k_val" readonly style="width:32%">
                  </div>
               </div>
+            <div class="col-100 cba">
+                <div class="col-40">
+                    <input class="greeninput" type="number" name="" value="" id="p_savings" readonly>
+                 </div>
+                 <div class="col-40">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    <p class="cbap">Total Savings</p>
+                 </div>
+                 <div class="col-40">
+                    <input class="redinput" type="number" name="" value="" id="k_savings" readonly>
+                 </div>
+            </div>
             <div class="col-100 cba">
               <style type="text/css">
                 text{
@@ -335,7 +384,15 @@
                 display: none;
               }
               </style>
-              <div id="chart1" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            <div class="col-100" >
+                <div id="chart1" style=" height: 400px;"></div>
+            </div>
+            <div class="col-100" >
+                <div id="chart2" style="height: 400px;"></div>
+            </div>
+            <div class="col-100">
+              <div id="chart3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
                <!-- <div class="col-40" id="powerol_value">
                   <img src="" id="powerol_value_img"> 
                   <h1 style="float:right;margin-right: 22%;" class="textgreen" id="p_val"></h1>

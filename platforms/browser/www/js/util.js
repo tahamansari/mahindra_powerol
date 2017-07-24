@@ -96,7 +96,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-    console.log('device is now ready');
+    // console.log('device is now ready');
 
     // if (Lockr.get('downloadall') == undefined) {
 
@@ -182,6 +182,8 @@ function onDeviceReady() {
     //                                                                 },
     //                                                                 function(error) {
     //                                                                     alert('About Mahindra download failed');
+    //                                                                     navigator.app.exitApp();
+
     //                                                                 },
     //                                                                 false, {
     //                                                                     headers: {
@@ -193,6 +195,8 @@ function onDeviceReady() {
     //                                                         function(error) {
 
     //                                                             alert('Hotel download failed');
+    //                                                             navigator.app.exitApp();
+
 
     //                                                         },
     //                                                         false, {
@@ -206,6 +210,8 @@ function onDeviceReady() {
     //                                                 function(error) {
 
     //                                                     alert('Hospital download failed');
+    //                                                     navigator.app.exitApp();
+
 
     //                                                 },
     //                                                 false, {
@@ -219,6 +225,7 @@ function onDeviceReady() {
     //                                         function(error) {
 
     //                                             alert('College download failed');
+    //                                             navigator.app.exitApp();
 
     //                                         },
     //                                         false, {
@@ -232,6 +239,7 @@ function onDeviceReady() {
     //                                 function(error) {
 
     //                                     alert('Bank download failed');
+    //                                     navigator.app.exitApp();
 
     //                                 },
     //                                 false, {
@@ -244,6 +252,7 @@ function onDeviceReady() {
     //                         function(error) {
 
     //                             alert('Loadcalculator download failed');
+    //                             navigator.app.exitApp();
 
     //                         },
     //                         false, {
@@ -257,6 +266,7 @@ function onDeviceReady() {
     //                 function(error) {
 
     //                     alert('Brochure2 download failed');
+    //                     navigator.app.exitApp();
 
     //                 },
     //                 false, {
@@ -270,6 +280,7 @@ function onDeviceReady() {
     //         function(error) {
 
     //             alert('Brochure1 download failed');
+    //             navigator.app.exitApp();
 
     //         },
     //         false, {
@@ -434,7 +445,7 @@ function enquiry_form_submit() {
         '<td class="vz_inner_content_left">Compnay</td>' +
         '<td class="vz_inner_content_dot">:</td>' +
         '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + $("#company").val() + '" readonly="false" id="list_company_' + count + '" style="background-color: rgba(255, 255, 255, 0);border: none;"></td>' +
-        '<td class="vz_inner_content_left">State</td>' +
+        '<td class="vz_inner_content_left">District</td>' +
         '<td class="vz_inner_content_dot">:</td>' +
         '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + $("#state").val() + '" readonly="false" id="list_state_' + count + '" style="background-color: rgba(255, 255, 255, 0);border: none;"></td>' +
         '</tr>' +
@@ -520,7 +531,7 @@ function book_now_form_submit() {
         myApp.alert("Select Product_range");
         return false;
     } else if ($('#book_now_state').val() == '' ){
-        myApp.alert("Select State");
+        myApp.alert("Select District");
         return false;
     } else if ($('#book_now_segment').val() == '' ){
         myApp.alert("Select Segment");
@@ -584,7 +595,7 @@ function book_now_form_submit() {
         '<td class="vz_inner_content_left">Compnay</td>' +
         '<td class="vz_inner_content_dot">:</td>' +
         '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + $("#book_now_company").val() + '" readonly="false" id="list_company_' + count + '" style="background-color: rgba(255, 255, 255, 0);border: none;"></td>' +
-        '<td class="vz_inner_content_left">State</td>' +
+        '<td class="vz_inner_content_left">District</td>' +
         '<td class="vz_inner_content_dot">:</td>' +
         '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + $("#book_now_state").val() + '" readonly="false" id="list_state_' + count + '" style="background-color: rgba(255, 255, 255, 0);border: none;"></td>' +
         '</tr>' +
@@ -685,21 +696,84 @@ function edit_list_book(count) {
 
         '<div class="col-50">' +
         '<select name="state" style="width: 84%;margin: 1% 3%;padding: 2%;background: url(img/down_arrow.png) no-repeat 98%;color: #808080;font-size: 20px;background-color: white;" id="update_state_' + count + '">' +
-        '<option value="">State</option>' +
-        '<option value="Mahakali">Mahakali</option>'+
-        '<option value="Seti">Seti</option>'+
-        '<option value="Bagmati">Bagmati</option>'+
-        '<option value="Janakpur">Janakpur</option>'+
-        '<option value="Narayani">Narayani</option>'+
-        '<option value="Sagarmatha">Sagarmatha</option>'+
+        
+        '<option value="">District</option>'+
+        '<option value="Achham">Achham</option>'+
+        '<option value="Arghakhanchi">Arghakhanchi</option>'+
+        '<option value="Baglung">Baglung</option>'+
+        '<option value="Baitadi">Baitadi</option>'+
+        '<option value="Bajhang">Bajhang</option>'+
+        '<option value="Bajura">Bajura</option>'+
+        '<option value="Banke">Banke</option>'+
+        '<option value="Bara">Bara</option>'+
+        '<option value="Bardiya">Bardiya</option>'+
+        '<option value="Bhaktapur">Bhaktapur</option>'+
         '<option value="Bhojpur">Bhojpur</option>'+
-        '<option value="Mechi">Mechi</option>'+
-        '<option value="Rapti">Rapti</option>'+
-        '<option value="Gandaki">Gandaki</option>'+
-        '<option value="Bheri">Bheri</option>'+
-        '<option value="Dhawalagiri">Dhawalagiri</option>'+
-        '<option value="Karnali">Karnali</option>'+
-        '<option value="Lumbini">Lumbini</option>'+
+        '<option value="Chitwan">Chitwan</option>'+
+        '<option value="Dadeldhura">Dadeldhura</option>'+
+        '<option value="Dailekh">Dailekh</option>'+
+        '<option value="Dang Deukhuri">Dang Deukhuri</option>'+
+        '<option value="Darchula">Darchula</option>'+
+        '<option value="Dhading">Dhading</option>'+
+        '<option value="Dhankuta">Dhankuta</option>'+
+        '<option value="Dhanusha">Dhanusha</option>'+
+        '<option value="Dolakha">Dolakha</option>'+
+        '<option value="Dolpa">Dolpa</option>'+
+        '<option value="Doti">Doti</option>'+
+        '<option value="Gorkha">Gorkha</option>'+
+        '<option value="Gulmi">Gulmi</option>'+
+        '<option value="Humla">Humla</option>'+
+        '<option value="Ilam">Ilam</option>'+
+        '<option value="Jajarkot">Jajarkot</option>'+
+        '<option value="Jhapa">Jhapa</option>'+
+        '<option value="Jumla">Jumla</option>'+
+        '<option value="Kailali">Kailali</option>'+
+        '<option value="Kalikot">Kalikot</option>'+
+        '<option value="Kanchanpur">Kanchanpur</option>'+
+        '<option value="Kapilvastu">Kapilvastu</option>'+
+        '<option value="Kaski">Kaski</option>'+
+        '<option value="Kathmandu">Kathmandu</option>'+
+        '<option value="Kavrepalanchok">Kavrepalanchok</option>'+
+        '<option value="Khotang">Khotang</option>'+
+        '<option value="Lalitpur">Lalitpur</option>'+
+        '<option value="Lamjung">Lamjung</option>'+
+        '<option value="Mahottari">Mahottari</option>'+
+        '<option value="Makwanpur">Makwanpur</option>'+
+        '<option value="Manang">Manang</option>'+
+        '<option value="Morang">Morang</option>'+
+        '<option value="Mugu">Mugu</option>'+
+        '<option value="Mustang">Mustang</option>'+
+        '<option value="Myagdi">Myagdi</option>'+
+        '<option value="Nawalparasi">Nawalparasi</option>'+
+        '<option value="Nuwakot">Nuwakot</option>'+
+        '<option value="Okhaldhunga">Okhaldhunga</option>'+
+        '<option value="Palpa">Palpa</option>'+
+        '<option value="Panchthar">Panchthar</option>'+
+        '<option value="Parbat">Parbat</option>'+
+        '<option value="Parsa">Parsa</option>'+
+        '<option value="Pyuthan">Pyuthan</option>'+
+        '<option value="Ramechhap">Ramechhap</option>'+
+        '<option value="Rasuwa">Rasuwa</option>'+
+        '<option value="Rautahat">Rautahat</option>'+
+        '<option value="Rolpa">Rolpa</option>'+
+        '<option value="Rukum">Rukum</option>'+
+        '<option value="Rupandehi">Rupandehi</option>'+
+        '<option value="Salyan">Salyan</option>'+
+        '<option value="Sankhuwasabha">Sankhuwasabha</option>'+
+        '<option value="Saptari">Saptari</option>'+
+        '<option value="Sarlahi">Sarlahi</option>'+
+        '<option value="Sindhuli">Sindhuli</option>'+
+        '<option value="Sindhulpalchok">Sindhulpalchok</option>'+
+        '<option value="Siraha">Siraha</option>'+
+        '<option value="Solukhumbu">Solukhumbu</option>'+
+        '<option value="Sunsari">Sunsari</option>'+
+        '<option value="Surkhet">Surkhet</option>'+
+        '<option value="Syangja">Syangja</option>'+
+        '<option value="Tanahu">Tanahu</option>'+
+        '<option value="Taplejung">Taplejung</option>'+
+        '<option value="Terhathum">Terhathum</option>'+
+        '<option value="Udayapur">Udayapur</option>'+
+
         '</select>' +
         '</div>' +
 

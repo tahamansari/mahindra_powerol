@@ -808,11 +808,12 @@ myApp.onPageInit('product_specification', function(page) {
 
     if(title == '7.5 kVA - 20 kVA'){
 
+
                 var html  = 
-                "<div class='book_content'>"+
+                "<img class='machine-container' src='img/smallcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>7.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"7.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"7.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -878,7 +879,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>10 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"10 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"10 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -944,7 +945,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>12.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"12.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"12.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1010,7 +1011,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>15 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"15 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"15 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1076,7 +1077,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>20 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"20 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"20 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1141,10 +1142,10 @@ myApp.onPageInit('product_specification', function(page) {
 
     }else if(title == '25 kVA - 40 kVA'){
         var html = 
-                "<div class='book_content'>"+
+                "<img class='machine-container' src='img/smallcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>25 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"25 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"25 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1210,7 +1211,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>30 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"30 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"30 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1276,7 +1277,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>40 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"40 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"40 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1344,10 +1345,10 @@ myApp.onPageInit('product_specification', function(page) {
     }else if(title == "50 kVA - 62.5 kVA"){
 
         var html = 
-            "<div class='book_content'>"+
+            "<img class='machine-container' src='img/smallcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>50 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"50 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"50 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1413,7 +1414,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>62.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"62.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"62.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1479,10 +1480,10 @@ myApp.onPageInit('product_specification', function(page) {
     }else if(title == '75 kVA'){
 
         var html = 
-             "<div class='book_content'>"+
+             "<img class='machine-container' src='img/smallcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>75 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"75 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"75 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1548,10 +1549,10 @@ myApp.onPageInit('product_specification', function(page) {
     }else if(title == '82.5 kVA - 100 kVA'){
 
         var html = 
-            "<div class='book_content'>"+
+            "<img class='machine-container' src='img/bigcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>82.5 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"82.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"82.5 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1617,7 +1618,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>100 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"100 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"100 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1682,10 +1683,10 @@ myApp.onPageInit('product_specification', function(page) {
 
     }else if(title == '125 kVA - 140 kVA'){
         var html = 
-            "<div class='book_content'>"+
+            "<img class='machine-container' src='img/bigcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>125 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"125 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"125 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1746,7 +1747,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>140 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"140 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"140 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1806,10 +1807,10 @@ myApp.onPageInit('product_specification', function(page) {
             
     }else if(title == '160 kVA'){
         var html = 
-        "<div class='book_content'>"+
+        "<img class='machine-container' src='img/bigcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>160 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"160 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"160 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1869,10 +1870,10 @@ myApp.onPageInit('product_specification', function(page) {
         
     }else if(title == '180 kVA - 200 KVA'){
         var html = 
-            "<div class='book_content'>"+
+            "<img class='machine-container' src='img/bigcontainer.jpg'><div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>180 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"180 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"180 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -1933,7 +1934,7 @@ myApp.onPageInit('product_specification', function(page) {
                 "<div class='book_content'>"+
                     "<h2 class='book_heading' class='product_specification_title'>200 kVA<hr class='cust-line hvr-underline-from-left'></h2>"+
                     "<div class='outzoom'></div>"+
-                    "<a href='#' onclick='redirect_book_now(\"200 kVA\")'><input class='book_now hvr-fade' type='submit' value='BOOK NOW' name=''></a>"+
+                    "<a href='#' onclick='redirect_book_now(\"200 kVA\")'><input class='book_now hvr-fade' type='submit' value='ENQUIRY NOW' name=''></a>"+
                 "</div>"+
                 "<div style='clear:both'></div>"+
                 "<div class='book_now_input'>"+
@@ -2186,7 +2187,7 @@ myApp.onPageInit('enquiry_form', function(page) {
             '<td class="vz_inner_content_left">Compnay</td>' +
             '<td class="vz_inner_content_dot">:</td>' +
             '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + value.company + '" readonly="false" id="list_company_' + count + '" style="background: rgba(255, 255, 255, 0); border: none;"></td>' +
-            '<td class="vz_inner_content_left">State</td>' +
+            '<td class="vz_inner_content_left">District</td>' +
             '<td class="vz_inner_content_dot">:</td>' +
             '<td class="vz_inner_content_right"><input class="book_list_inp" type="text" name="" value="' + value.state + '" readonly="false" id="list_state_' + count + '" style="background: rgba(255, 255, 255, 0); border: none;"></td>' +
             '</tr>' +
@@ -2236,12 +2237,11 @@ myApp.onPageInit('our_story', function(page) {
     })
 
 
-      // $(".owl-carousel-rise").owlCarousel({
-      //   items : 1,
-      //   singleItem:true,
-      //   navigation:true,
-      // });
-
+      $(".owl-carousel-rise").owlCarousel({
+        items : 1,
+        singleItem:true,
+        navigation:true,
+      });
 
       $(".owl-carousel-powerol").owlCarousel({
         items : 1,
@@ -2250,6 +2250,12 @@ myApp.onPageInit('our_story', function(page) {
       });
 
       $(".owl-carousel-agni").owlCarousel({
+        items : 1,
+        singleItem:true,
+        navigation:true,
+      });
+
+     $(".owl-carousel-reach").owlCarousel({
         items : 1,
         singleItem:true,
         navigation:true,
@@ -2282,27 +2288,32 @@ myApp.onPageInit('our_story', function(page) {
         $('.agni-overlay').animate({
             top:'100%',
         },'slow');
+
+        $('.reach-overlay').animate({
+            top:'100%',
+        },'slow');
+
       })
 
 
-    // $('.showpptRise').on('click', function() {
+    $('.showpptRise').on('click', function() {
 
-    //     console.log('clicked');
-    //     $('.rise-overlay').animate({
-    //         top:'0%',
-    //     },'slow');
+        console.log('clicked');
+        $('.rise-overlay').animate({
+            top:'0%',
+        },'slow');
 
-    //     $('.navbar').css('z-index','1');
+        $('.navbar').css('z-index','1');
 
 
-    //     // var onSuccess = function(data) {
-    //     // };
-    //     // function onError(error) {
-    //     //     alert('message: ' + error.message);
-    //     // }
-    //     // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
-    //     // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
-    // })
+        // var onSuccess = function(data) {
+        // };
+        // function onError(error) {
+        //     alert('message: ' + error.message);
+        // }
+        // window.cordova.plugins.FileOpener.openFile("files/Download/mahindraRise.ppsx", onSuccess, onError);
+        // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    })
 
     $('.showpptPowerol').on('click', function() {
 
@@ -2324,11 +2335,32 @@ myApp.onPageInit('our_story', function(page) {
         // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
     })
 
+
     $('.showpptAgni').on('click', function() {
 
         console.log('clicked');
 
         $('.agni-overlay').animate({
+            top:'0%',
+        },'slow');
+
+        $('.navbar').css('z-index','1');
+
+
+        // var onSuccess = function(data) {
+        // };
+        // function onError(error) {
+        //     alert('Amessage: ' + error.message);
+        // }
+        // window.cordova.plugins.FileOpener.openFile("files/Download/agni.ppsx", onSuccess, onError);
+        // // file:///storage/emulated/0/Android/data/com.kreaserv.Powerol/
+    })
+
+    $('.showpptReach').on('click', function() {
+
+        console.log('clicked');
+
+        $('.reach-overlay').animate({
             top:'0%',
         },'slow');
 
