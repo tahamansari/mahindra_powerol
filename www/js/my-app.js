@@ -50,6 +50,24 @@ mainView.hideNavbar();
 myApp.onPageInit('cba', function(page) {
 
 
+    $('#form_data input').attr('disabled','true');
+    $('#form_data select').attr('disabled','true');
+
+
+    $('#cust_currency').change(function(){
+
+        if(!$('#cust_currency').val()){
+
+                $('#form_data input').attr('disabled','true');
+                $('#form_data select').attr('disabled','true');
+
+        }else{
+                $('#form_data input').removeAttr('disabled');
+                $('#form_data select').removeAttr('disabled');
+        }
+    })
+
+
     console.log('5ka page called');
 
     $('.backbutton').on('click', function() {

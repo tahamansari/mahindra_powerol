@@ -96,6 +96,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
+    
+
     // console.log('device is now ready');
 
     // if (Lockr.get('downloadall') == undefined) {
@@ -1002,7 +1004,10 @@ function redirect_product_specification(inp) {
 
 function cba_submit() {
 
-
+    if(!$("#brand_name").val()){
+        // myApp.alert('Service Period Required');
+        return false;
+    }
     if(!$("#p_no_of_year").val()){
         // myApp.alert('No Of Years Required');
         return false;
@@ -1028,7 +1033,14 @@ function cba_submit() {
         // myApp.alert('Usage Required');
         return false;
     }
-
+    if(!$("#p_price_of_diesel").val()){
+        // myApp.alert('Usage Required');
+        return false;
+    }
+    if(!$("#k_price_of_diesel").val()){
+        // myApp.alert('Usage Required');
+        return false;
+    }
     // if($("p_price_of_brand").empty()){
     //     myApp.alert('Price Required');
     //     return false;
@@ -1093,10 +1105,6 @@ function cba_submit() {
     //     myApp.alert('Service Cost 5 Years Required');
     //     return false;
     // }
-
-
-
-
 
     var p_no_of_service = parseFloat($("#p_no_of_service").val());
     var k_no_of_service = parseFloat($("#k_no_of_service").val());
@@ -1248,6 +1256,54 @@ function cba_submit() {
     }]
 });
 
+// Highcharts.chart('chart2', {
+//     chart: {
+//         type: 'pie',
+//         options3d: {
+//             enabled: true,
+//             alpha: 45,
+//             beta: 0
+//         }
+//     },
+//     title: {
+//         text: 'Calculation for '+brand_name
+//     },
+//     tooltip: {
+//         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+//     },
+//     plotOptions: {
+//         pie: {
+//             allowPointSelect: true,
+//             cursor: 'pointer',
+//             depth: 35,
+//             dataLabels: {
+//                 enabled: true,
+//                 format: '{point.name}'
+//             }
+//         }
+//     },
+//     series: [{
+//         type: 'pie',
+//         name: 'Browser share',
+//         data: [
+//                 {
+//                     name: 'Service Cost',
+//                     y: k_service_cost5,
+//                     color: 'yellow',
+//                 },{
+//                     name: 'Price of Brand',
+//                     y: k_price_of_brand,
+//                     color: 'red',
+//                 },{
+//                     name: 'Running Cost in 5 years',
+//                     y: k_running_fuel,
+//                     sliced: true,
+//                     selected: true,
+//                     color: 'green',
+//                 }
+//             ]
+//     }]
+// });
 Highcharts.chart('chart2', {
     chart: {
         type: 'pie',
@@ -1293,7 +1349,7 @@ Highcharts.chart('chart2', {
                     selected: true,
                     color: 'green',
                 }
-            ]
+        ]
     }]
 });
 
